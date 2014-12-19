@@ -2,17 +2,17 @@
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
       <div class="panel-body">
-          <a href="/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
+          <a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
           <hr/>
           {% if not page %}
-          特定の話題を探している場合は<a href="/table-of-contents.html">目次</a>を参照して下さい。
+          特定の話題を探している場合は<a href="./table-of-contents.html">目次</a>を参照して下さい。
           {% else %}
           There's a work-in-progress
-          現在、作成中の<a href="/full-stack-python-map.pdf">subjects map (.pdf)</a>は、目次に加え各章を視覚化したものです。
+          現在、作成中の<a href="./full-stack-python-map.pdf">subjects map (.pdf)</a>は、目次に加え各章を視覚化したものです。
           {% endif %}
           <hr/>
           より詳細なチュートリアルが必要ですか?
-          <a href="/email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
+          <a href="./email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
           <hr/>
           このサイトは<a href="http://twitter.com/mattmakai">Matt Makai</a>により、
           コミュニティからプルリクエストによる協力を得て作成されています。GitHubで
@@ -26,7 +26,7 @@
       </div>
       <div class="list-group">
           {% for p in pages|sort(attribute='sort-order') %}
-              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+              <a href="./{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
           {% endfor %}
       </div>
   </div>

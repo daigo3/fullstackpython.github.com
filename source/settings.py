@@ -9,6 +9,8 @@ GITHUB_URL = 'https://github.com/makaimc/fullstackpython.github.com'
 DISQUS_SITENAME = 'makaimc'
 PDF_GENERATOR = False
 
+RELATIVE_URLS = False
+
 DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email', 'all')
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
@@ -26,5 +28,4 @@ SOCIAL = (
 
 PROJECTS = ()
 
-JINJA_EXTENSIONS = (['jinja2.ext.autoescape',])
-
+JINJA_EXTENSIONS = (['jinja2.ext.autoescape', ])
