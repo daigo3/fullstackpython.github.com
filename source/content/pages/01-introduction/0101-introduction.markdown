@@ -2,13 +2,13 @@ title: Introduction
 category: page
 slug: introduction
 sort-order: 0101
-choice1url: /web-frameworks.html
+choice1url: ./web-frameworks.html
 choice1icon: fa-code fa-inverse
 choice1text: PythonでWebアプリケーションを開発する方法を知りたい。
-choice2url: /deployment.html
+choice2url: ./deployment.html
 choice2icon: fa-share
 choice2text: すでにPythonでWebアプリケーションを作った。デプロイの方法を知りたい。
-choice3url: /best-python-resources.html
+choice3url: ./best-python-resources.html
 choice3icon: fa-book fa-inverse
 choice3text: Pythonを学ぶのに最適なリソースを知りたい。
 choice4url:
