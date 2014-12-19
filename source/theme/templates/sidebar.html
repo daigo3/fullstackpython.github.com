@@ -2,29 +2,21 @@
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
       <div class="panel-body">
-          <a href="/">Full Stack Python</a> is an open book that explains
-          each Python web application stack layer and provides the
-          best web resources for those topics.
+          <a href="/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
           <hr/>
           {% if not page %}
-          Check out the 
-          <a href="/table-of-contents.html">table of contents</a> if you're
-          searching for a particular topic.
+          特定の話題を探している場合は<a href="/table-of-contents.html">目次</a>を参照して下さい。
           {% else %}
-          There's a work-in-progress 
-          <a href="/full-stack-python-map.pdf">subjects map (.pdf)</a> 
-          that visually lays out each chapter in addition to the table of
-          contents found below.
+          There's a work-in-progress
+          現在、作成中の<a href="/full-stack-python-map.pdf">subjects map (.pdf)</a>は、目次に加え各章を視覚化したものです。
           {% endif %}
           <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
-          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          より詳細なチュートリアルが必要ですか?
+          <a href="/email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
           <hr/>
-          <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          このサイトは<a href="http://twitter.com/mattmakai">Matt Makai</a>により、
+          コミュニティからプルリクエストによる協力を得て作成されています。GitHubで
+          <a href="https://github.com/makaimc">Mattをフォロー</a>すれば、日々の更新を見ることができます。
       </div>
   </div>
   {% if page %}
