@@ -13,459 +13,615 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19910497-7']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>  </head>
+  </head>
 
 <body>
     <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
     </a>
     <div class="container">
-        <div class="row">
+<div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
-            <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
-            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+            <a href="http://daigo3.github.io/fullstackpython.github.com/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
+            <span class="logo-title"><a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a></span>
         </div>
     </div>
-</div>        <div class="row">
+</div><div class="row">
     <div class="col-md-8">
-                      <h1>Introduction</h1>
-<p>You're knee deep in learning the <a href="http://www.python.org/">Python</a>
+              <!--# Introduction-->
+
+<h1>イントロダクション</h1>
+<p><!--You're knee deep in learning the <a href="http://www.python.org/">Python</a>
 programming language. The syntax is starting to make sense. The first
-few "<em>ahh-ha</em>!" moments are hitting you as you're learning conditional
-statements, for loops and classes while playing around with the open source 
-libraries that make Python such an amazing language.</p>
-<p>Now you want to take your initial Python knowledge and make something real.
-A real web application that's available on the web which you can show off or 
-sell as a service to other people. That's where Full Stack Python comes in. 
-You've come to the right place to learn everything you need to deploy and 
-run a production Python web application.</p>
-<p>This guide branches out on topic because your learning needs depend on what
-you're currently trying to do. </p>
-<h3>Let's get started. What do you need to do right now?</h3>
-                      <h1>Web frameworks</h1>
-<p>A web application framework is a code library that makes a developer's life
-easier when building reliable, scalable and maintainable web applications.</p>
-<h2>Why are web frameworks necessary?</h2>
-<p>Web frameworks encapsulate what developers have learned over the past twenty
+few "*ahh-ha*!" moments are hitting you as you're learning conditional
+statements, for loops and classes while playing around with the open source
+libraries that make Python such an amazing language.-->
+あなたは<a href="http://www.python.org/">Python</a>の学習にのめり込んでいます。文法が理解できるようになってきました。Pythonを素晴らしい言語にしているオープンソースのライブラリを使いながら、条件分岐やforループ、クラスを学び理解できるようになります。</p>
+<!--Now you want to take your initial Python knowledge and make something real.
+A real web application that's available on the web which you can show off or
+sell as a service to other people. That's where Full Stack Python comes in.
+You've come to the right place to learn everything you need to deploy and
+run a production Python web application.-->
+
+<p>さあ、あなたのPythonの知識を使って、実際に何かを作りましょう。実際のWebアプリケーションはWeb上で見ることが出来たり、他人にそのサービスを売却することもできるものです。何かを作り始めるならFull Stack Pythonが役に立ちます。プロダクトをデプロイしたり、PythonのWebアプリケーションとして運用するための知識を全て学ぶことができます。</p>
+<!--This guide branches out on topic because your learning needs depend on what
+you're currently trying to do.-->
+
+<p>あなたがこれからやることに対応できるように、このガイドはトピックごとに分けて書かれています。</p>
+<!--### Let's get started. What do you need to do right now?-->
+
+<h3>さっそく始めましょう。まず何からしたいですか?</h3>
+              <!--# Web frameworks-->
+
+<h1>Webフレームワーク</h1>
+<p><!--A web application framework is a code library that makes a developer's life
+easier when building reliable, scalable and maintainable web applications.-->
+Webアプリケーションフレームワークは、開発者が信頼性が高く、スケーラブルでメンテナンス性の高いWebアプリケーションを構築する手助けをしてくれるライブラリです。</p>
+<!--## Why are web frameworks necessary?-->
+
+<h2>なぜWebフレームワークが必要？</h2>
+<p><!--Web frameworks encapsulate what developers have learned over the past twenty
 years while building dynamic web applications. Frameworks make it easier
 to reuse code for common HTTP operations and to structure your code so that 
-it is maintainable.</p>
-<h2>Common web framework functionality</h2>
-<p>Frameworks provide functionality in their code or through extensions to 
+it is maintainable.-->
+Webフレームワークには開発者たちが20年間、動的なWebアプリケーションを構築してきたノウハウが詰まっています。一般的なHTTPの操作やメンテナンス性の高いコード構造を簡単に再利用できるように作られています。</p>
+<!--## Common web framework functionality-->
+
+<h2>一般的なWebフレームワークの機能</h2>
+<p><!--Frameworks provide functionality in their code or through extensions to 
 perform common operations required to run web applications. These common 
-operations include:</p>
+operations include:-->
+フレームワーク自体が機能を提供している場合もありますし、拡張することによってWebアプリケーションを動作させるのに必要な機能を備えていく物もあります。一般的な機能とは以下の様なものです。</p>
+<!--1. URL routing
+2. HTML, XML, JSON, and other output format templating
+3. Database manipulation
+4. Security against Cross-site request forgery (CSRF) and other attacks-->
+
 <ol>
-<li>URL routing</li>
-<li>HTML, XML, JSON, and other output format templating</li>
-<li>Database manipulation</li>
-<li>Security against Cross-site request forgery (CSRF) and other attacks</li>
+<li>URLのルーティング</li>
+<li>HTML、XML、JSONなどのフォーマットを出力するテンプレート</li>
+<li>データベースの操作</li>
+<li>CSRFなどの脆弱性に対するセキュリティ対策</li>
 </ol>
-<p>Not all web frameworks include code for all of the above 
+<!--Not all web frameworks include code for all of the above 
 functionality. Frameworks fall somewhere between simply executing a 
 single use case and attempting to be everything to every developer with
 increased complexity. Some frameworks take the "batteries-included" approach 
 where everything possible comes bundled with the framework while others 
-have a minimal code library that plays well with extensions.</p>
-<p>For example, the Django web application framework includes an 
+have a minimal code library that plays well with extensions.-->
+
+<p>すべてのフレームワークが、上記の機能のすべてを備えてるわけではありません。フレームワークは、単純な用途に的を絞って提供されているものもあれば、複雑な機能を全て備えているものもあります。「電池付属(batteries-included)」のアプローチで、すべての機能を提供しているフレームワークがある一方で、フレームワーク自体はシンプルに保ち、特定の機能は拡張機能として提供されているものもあります。</p>
+<!--For example, the Django web application framework includes an 
 Object-Relational Mapping (ORM) layer that abstracts relational database 
 read, write, query, and delete operations. However, Django's ORM
 cannot work without significant modification on non-relational databases such as 
-<a href="http://www.mongodb.org/">MongoDB</a>.
-Some other web frameworks such as Flask and Pyramid are easier to
-use with non-relational databases by incorporating external Python libraries.
-There is a spectrum between minimal functionality with easy extensibility and
-including everything in the framework with tight integration.</p>
-<h2>General web framework resources</h2>
-<ul>
-<li>
-<p>"<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">What is a web framework?</a>"
-  by <a href="https://twitter.com/jeffknupp">Jeff Knupp</a>
+[MongoDB](http://www.mongodb.org/).-->
+
+<p>例えば、DjangoというWebアプリケーションフレームワークには関係データベースのCRUD操作を抽象化するためのORM(Object-Relational Mapping)を提供しています。ただし、DjangoのORMでは<a href="http://www.mongodb.org/">MongoDB</a>のようなNOSQLデータベースをそのまま使うことはできません。</p>
+<!--Some other web frameworks such as Flask and Pyramid are easier to
+use with non-relational databases by incorporating external Python libraries.-->
+
+<p>一方、FlaskやPyramidというフレームワークでは外部のPythonライブラリを利用することで、比較的簡単にNOSQLデータベースを利用することができます。</p>
+<!--There is a spectrum between minimal functionality with easy extensibility and
+including everything in the framework with tight integration.-->
+
+<p>最小限の機能と拡張性を持つフレームワークから、すべての機能が密に結合されたフレームワークが存在します。</p>
+<!--## General web framework resources-->
+
+<h2>Webフレームワークに関する一般的な資料</h2>
+<p><!--* "<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">What is a web framework?</a>"-->
+<!--by <a href="https://twitter.com/jeffknupp">Jeff Knupp</a>
   is an in-depth explanation of what a web framework is and their relation
-  to web servers.</p>
-</li>
-<li>
-<p>Check out the answer to the 
-  "<a href="http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp">What is a web framework and how does it compare to LAMP?</a>"
-  question on Stack Overflow.</p>
-</li>
-<li>
-<p><a href="https://www.airpair.com/python/posts/django-flask-pyramid">Django vs Flask vs Pyramid: Choosing a Python Web Framework</a>
+  to web servers.-->
+* "<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">What is a web framework?</a>" - <a href="https://twitter.com/jeffknupp">Jeff Knupp</a>による記事ではWebフレームワークに関する詳しい説明と、Webサーバとの関係について触れています。</p>
+<!--* Check out the answer to the -->
+
+<!--  "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
+  question on Stack Overflow.-->
+
+<ul>
+<li>Stack Overflowの"<a href="http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp">What is a web framework and how does it compare to LAMP?</a>"という質問に対する回答を見てみましょう。</li>
+</ul>
+<!--* [Django vs Flask vs Pyramid: Choosing a Python Web Framework](https://www.airpair.com/python/posts/django-flask-pyramid)
   contains background information and code comparisons for similar
-  web applications built in these three big Python frameworks.</p>
-</li>
-<li>
-<p>This <a href="http://www.konstruktor.ee/blog/python-web-framework-roundup/">Python web framework roundup</a>
+  web applications built in these three big Python frameworks.-->
+
+<ul>
+<li><a href="https://www.airpair.com/python/posts/django-flask-pyramid">Django vs Flask vs Pyramid: Choosing a Python Web Framework</a>では、Pythonの3大Webフレームワークについて、その背景の説明やコードの比較が行われています。</li>
+</ul>
+<!--* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
   covers Django, Flask and Bottle as well as several other lesser known Python
-  frameworks.</p>
-</li>
-<li>
-<p>This fascinating blog post takes a look at the 
-  <a href="http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/">code complexity of several Python web frameworks</a>
-  by providing visualizations based on their code bases.</p>
-</li>
-<li>
-<p><a href="http://www.reddit.com/r/webdev/comments/2les4x/what_frameworks_do_you_use_and_why_are_they/">What web frameworks do you use and why are they awesome?</a>
+  frameworks.-->
+
+<ul>
+<li><a href="http://www.konstruktor.ee/blog/python-web-framework-roundup/">Python web framework roundup</a>では、Django、Flask、Bottle、その他のWebフレームワークが比較されています。</li>
+</ul>
+<!--* This fascinating blog post takes a look at the
+  [code complexity of several Python web frameworks](http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/)
+  by providing visualizations based on their code bases.-->
+
+<ul>
+<li><a href="http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/">code complexity of several Python web frameworks</a>では、それぞれのWebフレームワークのコードベースを視覚化しています。</li>
+</ul>
+<!--* [What web frameworks do you use and why are they awesome?](http://www.reddit.com/r/webdev/comments/2les4x/what_frameworks_do_you_use_and_why_are_they/)
   is a language agnostic Reddit discussion on web frameworks. It's interesting
   to see what programmers in other languages like and dislike about their
-  suite of web frameworks compared to the main Python frameworks.</p>
-</li>
+  suite of web frameworks compared to the main Python frameworks.-->
+
+<ul>
+<li><a href="http://www.reddit.com/r/webdev/comments/2les4x/what_frameworks_do_you_use_and_why_are_they/">What web frameworks do you use and why are they awesome?</a>では、Webフレームワークに関する議論が行われています。興味深いのは他の言語を利用している開発者が参加し、PythonのWebフレームワークと比較して、彼らが利用しているWebフレームワークの利点や欠点を話していることです。</li>
 </ul>
-<h2>Web frameworks learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i> 
-Choose a major Python web framework (<a href="/django.html">Django</a> or 
+<!--## Web frameworks learning checklist-->
+
+<h2>Webフレームを学ぶためのチェックリスト</h2>
+<p><i class="fa fa-check-square-o"></i>
+<!--Choose a major Python web framework (<a href="/django.html">Django</a> or 
 <a href="/flask.html">Flask</a> are recommended) and stick with it. When you're just
 starting it's best to learn one framework first instead of bouncing around
-trying to understand every framework. </p>
-<p><i class="fa fa-check-square-o"></i> 
-Work through a detailed tutorial found within the resources links on the
-framework's page.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Study open source examples built with your framework of choice so you can 
-take parts of those projects and reuse the code in your application.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Build the first simple iteration of your web application then go to
+trying to understand every framework. -->
+有名なPython Webフレームワークを選んで（<a href="/django.html">Django</a>か<a href="/flask.html">Flask</a>がお勧めです）、使ってみましょう。これから始めるのであれば、いろいろなフレームワークをいっぺんに理解しようとするよりも、ひとつのフレームワークを学ぶほうが効果的です。</p>
+<p><i class="fa fa-check-square-o"></i>
+<!--Work through a detailed tutorial found within the resources links on the
+framework's page.-->
+フレームワークのページにある資料のリンクからチュートリアルを探して、やってみましょう。</p>
+<p><i class="fa fa-check-square-o"></i>
+<!--Study open source examples built with your framework of choice so you can 
+take parts of those projects and reuse the code in your application.-->
+選択したフレームワークで構築されたオープンソースのアプリケーションを探し、参加したり、自分のアプリケーションで再利用してみましょう。</p>
+<p><i class="fa fa-check-square-o"></i>
+<!--Build the first simple iteration of your web application then go to
 the <a href="/deployment.html">deployment</a> section to make it accessible on the 
-web.</p>
-<h3>Which web framework do you want to learn about?</h3>
-                      <h1>Django</h1>
-<p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
+web.-->
+最初にシンプルなアプリケーションを作成し、<a href="./deployment.html">deployment</a>の章を読み公開してみましょう。</p>
+<!--### Which web framework do you want to learn about?-->
+
+<h3>どのWebフレームワークを学びたいですか?</h3>
+              <h1>Django</h1>
+<p><!--<a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
-libraries. </p>
+libraries. -->
+<a href="http://www.djangoproject.com/">Django</a> は「電池付属（batteries-included)」というコンセプトでPythonのWebフレームワークとして広く利用されています。「電池付属」というのは、Webアプリケーションを構築するための一般的な機能が、他のライブラリを利用するのではなく、フレームワーク自身によって提供されていることを指します。</p>
 <p><a href="http://www.djangoproject.com/" style="border: none;"><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a></p>
-<p>For example, 
-<a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
-<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
-<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-an <a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
-and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
-(as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/">Django framework</a>. 
-Compare that included functionality to the Flask framework which requires a 
+<!--For example, 
+[authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
+[URL routing](https://docs.djangoproject.com/en/dev/topics/http/urls/), a 
+[templating system](https://docs.djangoproject.com/en/dev/topics/templates/),
+an [object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
+and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
+(as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/). -->
+
+<p><a href="https://pypi.python.org/pypi/Django/">Django framework</a>では、<a href="https://docs.djangoproject.com/en/dev/topics/auth/">認証</a>、<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URLルーティング</a>、<a href="https://docs.djangoproject.com/en/dev/topics/templates/">テンプレートシステム</a>、<a href="https://docs.djangoproject.com/en/dev/topics/db/">ORM</a>や<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">データベースマイグレーション</a>(v1.7以降) が提供されています。</p>
+<!-- Compare that included functionality to the Flask framework which requires a 
 separate library such as 
-<a href="https://flask-login.readthedocs.org/en/latest/">Flask-Login</a>
-to perform user authentication. </p>
-<p>The batteries-included and extensibility philosophies are simply two different 
+[Flask-Login](https://flask-login.readthedocs.org/en/latest/)
+to perform user authentication. -->
+
+<p>ユーザ認証を実装するために<a href="https://flask-login.readthedocs.org/en/latest/">Flask-Login</a>のような、分離したライブラリを必要とするFlaskのようなフレームワークと、組み込みの認証機能を比較してみましょう。</p>
+<!--The batteries-included and extensibility philosophies are simply two different 
 ways to tackle framework building.  Neither philosophy is inherently better 
-than the other.</p>
-<h2>Why is Django a good web framework choice?</h2>
-<p>The Django project's stability, performance and community have grown 
+than the other.-->
+
+<p>電池付属と拡張性という考え方は、単純にフレームワークを作る際のアイデアの違いです。どちらのアイデアが優れているというものではありません。</p>
+<!--## Why is Django a good web framework choice?-->
+
+<h2>Djangoを選ぶ利点</h2>
+<p><!--The Django project's stability, performance and community have grown 
 tremendously over the past decade since the framework's creation. Detailed
 tutorials and best practices are readily available on the web and in books.
 The framework continues to add significant new functionality such as 
 <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database migrations</a>
-with each release. </p>
-<p>I highly recommend the Django framework as a starting place for new Python web 
+with each release. -->
+Djangoプロジェクトは安定していて、性能やコミュニティもフレームワークが作られた当時と比べて飛躍的に向上しています。詳しいチュートリアルやベストプラクティスもWebや書籍で簡単に見つかります。<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">データベースマイグレーション</a>のような、新しい機能の実装にも積極的です。</p>
+<!--I highly recommend the Django framework as a starting place for new Python web 
 developers because the official documentation and tutorials are some of the 
 best anywhere in software development. Many cities also have Django-specific
-groups such as <a href="http://www.meetup.com/django-district/">Django District</a>,
-<a href="http://www.meetup.com/djangoboston/">Django Boston</a> and 
-<a href="http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/">San Francisco Django</a> 
-so new developers can get help when they are stuck.</p>
-<p>There's some debate on whether 
-<a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">learning Python by using Django is a bad idea</a>. 
+groups such as [Django District](http://www.meetup.com/django-district/),
+[Django Boston](http://www.meetup.com/djangoboston/) and 
+[San Francisco Django](http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/) 
+so new developers can get help when they are stuck.-->
+
+<p>著者としては、最初のフレームワークとしてDjangoをお勧めします。公式ドキュメントやチュートリアルが素晴らしく、<a href="http://www.meetup.com/django-district/">Django District</a>、
+<a href="http://www.meetup.com/djangoboston/">Django Boston</a> や
+<a href="http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/">San Francisco Django</a>など各地域ごとにユーザグループがあり、初心者が問題を解決しやすいでしょう。</p>
+<!--There's some debate on whether 
+[learning Python by using Django is a bad idea](http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/). 
 However, that criticism is invalid if you take the time to learn the Python
-syntax and language semantics first before diving into web development.</p>
-<h2>Django tutorials</h2>
-<ul>
-<li>
-<p><a href="http://www.tangowithdjango.com/book/">Tango with Django</a> is an extensive 
+syntax and language semantics first before diving into web development.-->
+
+<p><a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">DjangoでPythonを学ぶな</a>という議論もありますが、Web開発に飛び込む前にPythonの基礎を学んでいれば問題ありません。</p>
+<!--## Django tutorials -->
+
+<h2>Djangoチュートリアル</h2>
+<!--* [Tango with Django](http://www.tangowithdjango.com/book/) is an extensive 
   set of free introductions to using the most popular Python web framework. Several
   current developers said this book really helped them get over the initial
-  framework learning curve.</p>
-</li>
-<li>
-<p><a href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a> 
+  framework learning curve.-->
+
+<ul>
+<li><a href="http://www.tangowithdjango.com/book/">Tango with Django</a>は無料で読めるDjangoの包括的なガイドです。このガイドがDjangoの学び始めには最も役立ったという人もいます。</li>
+</ul>
+<!--* [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
-  you're serious about learning how to correctly develop Django websites.</p>
-</li>
-<li>
-<p><a href="http://effectivedjango.com/">Effective Django</a> is another free introduction
-  to the web framework.</p>
-</li>
-<li>
-<p><a href="http://www.obeythetestinggoat.com/">Test-Driven Development with Python</a> 
+  you're serious about learning how to correctly develop Django websites.-->
+
+<ul>
+<li>Daniel GreenfeldとAudrey Royによる<a href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a>は、DjangoによるWeb開発を正しく学びたいのなら、購入する価値のある書籍です。</li>
+</ul>
+<!--* [Effective Django](http://effectivedjango.com/) is another free introduction
+  to the web framework.-->
+
+<ul>
+<li><a href="http://effectivedjango.com/">Effective Django</a>は無料のイントロダクションです。</li>
+</ul>
+<!--* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
   the development of a website using the Django web framework as a real
   world example of how to perform test-driven development (TDD). There is
   also coverage of NoSQL, websockets and asynchronous responses. The book can
-  be read online for free or purchased in hard copy via O'Reilly.</p>
-</li>
-<li>
-<p>The <a href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
+  be read online for free or purchased in hard copy via O'Reilly.-->
+
+<ul>
+<li><a href="http://www.obeythetestinggoat.com/">Test-Driven Development with Python</a>はDjangoとJavaScriptを使ったWeb開発にフォーカスしています。Djangoを使って実践的なアプリケーションをテスト駆動開発によって開発する方法を学ぶことができます。また、NoSQL、WebSocket、非同期通信についても触れられています。オンラインであれば無料、書籍版はO'Reillyから出版されています。</li>
+</ul>
+<!--* The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django and is also a good spot to ask 
-  questions about it.</p>
-</li>
-<li>
-<p>Lincoln Loop wrote a 
-  <a href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
-  for the community.</p>
-</li>
-<li>
-<p>Steve Losh wrote an incredibly detailed <a href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
-</li>
-<li>
-<p><a href="http://programming.oreilly.com/2014/04/simplifying-django.html">Lightweight Django</a>
+  questions about it.-->
+
+<ul>
+<li><a href="http://www.reddit.com/r/django">Django subreddit</a>では、Djangoを学ぶための最新のリソースが投稿され、質問するにも良い場所でしょう。</li>
+</ul>
+<!--* Lincoln Loop wrote a 
+  [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
+  for the community.-->
+
+<ul>
+<li>Lincoln Loopが<a href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>をコミュニティに執筆しています。</li>
+</ul>
+<!--* Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).-->
+
+<ul>
+<li>Steve Loshは細部まで素晴らしい<a href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>を執筆しています。</li>
+</ul>
+<!--* [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
   has several nice examples for breaking Django into smaller simplier 
-  components.</p>
-</li>
-<li>
-<p>The <a href="https://github.com/rogueleaderr/definitive_guide_to_django_deployment">Definitive Guide to Django Deployment</a>
+  components.-->
+
+<ul>
+<li><a href="http://programming.oreilly.com/2014/04/simplifying-django.html">Lightweight Django</a>はDjangoをより小さくシンプルなコンポーネントに分割して利用するための方法を学ぶことができます。</li>
+</ul>
+<!--* The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
   explains the architecture of the resulting set up and includes Chef scripts
-  to automate the deployment.</p>
-</li>
-<li>
-<p><a href="http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/">Deploying a Django app on Amazon EC2 instance</a>
+  to automate the deployment.-->
+
+<ul>
+<li><a href="https://github.com/rogueleaderr/definitive_guide_to_django_deployment">Definitive Guide to Django Deployment</a>はChefを利用したデプロイの自動化を含めた、アプリケーションの構成ガイドです。</li>
+</ul>
+<!--* [Deploying a Django app on Amazon EC2 instance](http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/)
   is a detailed walkthrough for deploying an example Django app to Amazon
-  Web Services.</p>
-</li>
-<li>
-<p>This <a href="http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/">step-by-step guide for Django</a>
-  shows how to transmit data via AJAX with JQuery.</p>
-</li>
-<li>
-<p><a href="http://www.nickpolet.com/blog/deploying-django-on-aws/1/">Deploying Django on AWS</a>
-  is another walkthrough for deploying Django to AWS.</p>
-</li>
-<li>
-<p><a href="https://github.com/rosarior/awesome-django">django-awesome</a> is a curated
-  list of Django libraries and resources.</p>
-</li>
-<li>
-<p><a href="https://realpython.com/learn/start-django/">Starting a Django Project</a> answers the question, “How do I set up a Django (1.5, 1.6, or /1.7) project from scratch?”</p>
-</li>
-<li>
-<p>The <a href="http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/">recommended Django project layout</a>
+  Web Services.-->
+
+<ul>
+<li><a href="http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/">Deploying a Django app on Amazon EC2 instance</a>はDjangoアプリケーションをAmazon Web Servicesにデプロイする詳細なチュートリアルです。</li>
+</ul>
+<!--* This [step-by-step guide for Django](http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/)
+  shows how to transmit data via AJAX with JQuery.-->
+
+<ul>
+<li><a href="http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/">step-by-step guide for Django</a>はjQuetyを使ったAjaxによる通信する方法を解説しています。</li>
+</ul>
+<!--* [Deploying Django on AWS](http://www.nickpolet.com/blog/deploying-django-on-aws/1/)
+  is another walkthrough for deploying Django to AWS.-->
+
+<ul>
+<li><a href="http://www.nickpolet.com/blog/deploying-django-on-aws/1/">Deploying Django on AWS</a>でもDjangoをAWSにデプロイする方法を解説しています。</li>
+</ul>
+<!--* [django-awesome](https://github.com/rosarior/awesome-django) is a curated
+  list of Django libraries and resources.-->
+
+<ul>
+<li><a href="https://github.com/rosarior/awesome-django">django-awesome</a>では、Djangoに関係するライブラリや資料のリストが紹介されています。</li>
+</ul>
+<!--* [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I set up a Django (1.5, 1.6, or /1.7) project from scratch?”-->
+
+<ul>
+<li><a href="https://realpython.com/learn/start-django/">Starting a Django Project</a>ではDjango（v1.5~1.7）によるプロジェクトのセットアップ方法について説明されています。</li>
+</ul>
+<!--* The [recommended Django project layout](http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/)
   is helpful for developers new to Django to understand how to structure
-  the directories and files within apps for projects.</p>
-</li>
-<li>
-<p>The <a href="http://irisbeta.com/article/245366784/the-django-request-response-cycle/">Django Request-Response Cycle</a>
-  explains what happens when you visit a webpage generated by Django.</p>
-</li>
-<li>
-<p><a href="http://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/">Using Amazon S3 to Store your Django Site's Static and Media Files</a>
+  the directories and files within apps for projects.-->
+
+<ul>
+<li><a href="http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/">recommended Django project layout</a>では、初心者向けにDjangoプロジェクト内のアプリケーションにおけるディレクトリ構成を説明しています。</li>
+</ul>
+<!--* The [Django Request-Response Cycle](http://irisbeta.com/article/245366784/the-django-request-response-cycle/)
+  explains what happens when you visit a webpage generated by Django.-->
+
+<ul>
+<li><a href="http://irisbeta.com/article/245366784/the-django-request-response-cycle/">Django Request-Response Cycle</a>では、Djangoアプリケーションへアクセスした際に内部で何が起こっているのかを説明しています。</li>
+</ul>
+<!--* [Using Amazon S3 to Store your Django Site's Static and Media Files](http://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/)
   is a well written guide to a question commonly asked about static and
-  media file serving.</p>
-</li>
-</ul>
-<h2>Django videos</h2>
+  media file serving.-->
+
 <ul>
-<li>
-<p>Kate Heddleston and I gave a talk at DjangoCon 2014 called
-  <a href="https://www.youtube.com/watch?v=QrFEKghISEI">Choose Your Own Django Deployment Adventure</a>
+<li><a href="http://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/">Using Amazon S3 to Store your Django Site's Static and Media Files</a>では、静的ファイルやメディアファイルを配信する方法を詳しく解説しています。</li>
+</ul>
+<!-- ## Django videos -->
+
+<h2>Djangoのビデオ</h2>
+<!--* Kate Heddleston and I gave a talk at DjangoCon 2014 called
+  [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
   which walked through many of the scenarios you'd face when deploying your
-  first Django website.</p>
-</li>
-<li>
-<p><a href="https://godjango.com/">GoDjango</a> screencasts and tutorials are free short
-  videos for learning how to build Django applications.</p>
-</li>
-<li>
-<p><a href="http://gettingstartedwithdjango.com/">Getting Started with Django</a> is a
-  series of video tutorials for the framework.</p>
-</li>
-<li>
-<p>The videos and slides from 
-  <a href="http://www.djangounderthehood.com/talks/">Django: Under the Hood 2014</a>
-  are from Django core commiters and provide insight into the ORM, 
-  internationalization, templates and other topics.</p>
-</li>
-<li>
-<p>DjangoCon US videos from 
-  <a href="https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3">2014</a>, 
-  <a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>, 
-  <a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>, 
-  <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
-<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
-  all available free of charge.</p>
-</li>
-</ul>
-<h2>Django 1.7-specific resources</h2>
+  first Django website.-->
+
+<p>Kate Heddlestonと著者によるDjangoCon 2014での<a href="https://www.youtube.com/watch?v=QrFEKghISEI">Choose Your Own Django Deployment Adventure</a>では、初めてDjangoアプリケーションをデプロイする際に直面する様々なシナリオについて解説しています。</p>
+<!--* [GoDjango](https://godjango.com/) screencasts and tutorials are free short
+  videos for learning how to build Django applications.-->
+
 <ul>
-<li>
-<p>Paul Hallett wrote a 
-  <a href="https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html">detailed Django 1.7 app upgrade guide</a> 
+<li><a href="https://godjango.com/">GoDjango</a>スクリーンキャスト及びチュートリアルでは、Djangoアプリケーションを構築するための短いチュートリアルを無料で観ることができます。</li>
+</ul>
+<!--* [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
+  series of video tutorials for the framework.-->
+
+<ul>
+<li><a href="http://gettingstartedwithdjango.com/">Getting Started with Django</a>はDjangoのビデオチュートリアルシリーズです。</li>
+</ul>
+<!--* The videos and slides from 
+  [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
+  are from Django core commiters and provide insight into the ORM, 
+  internationalization, templates and other topics.-->
+
+<ul>
+<li>Djangoの中心的なコミッターによる<a href="http://www.djangounderthehood.com/talks/">Django: Under the Hood 2014</a>のビデオ、スライドはORM、国際化、テンプレートなどの話題について触れられています。</li>
+</ul>
+<!--* DjangoCon US videos from 
+  [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
+  [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
+  [2012](http://pyvideo.org/category/23/djangocon-2012), 
+  [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
+  [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
+  all available free of charge.-->
+
+<ul>
+<li>DjangoCon USのビデオ、<a href="https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3">2014</a>、<a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>、<a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>、<a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>、<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a>は無料で視聴することができます。</li>
+</ul>
+<!-- ## Django 1.7-specific resources -->
+
+<h2>Django 1.7のリソース</h2>
+<!--* Paul Hallett wrote a 
+  [detailed Django 1.7 app upgrade guide](https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html) 
   on the Twilio blog from his experience working with the django-twilio 
-  package.</p>
-</li>
-<li>
-<p><a href="http://pyvideo.org/video/2630/designing-djangos-migrations">Designing Django's Migrations</a>
+  package.-->
+
+<ul>
+<li>TwilioブログでPaul Halleteが投稿した<a href="https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html">detailed Django 1.7 app upgrade guide</a>は、django-twilioパッケージを開発した経験に基づいた記事です。</li>
+</ul>
+<!--* [Designing Django's Migrations](http://pyvideo.org/video/2630/designing-djangos-migrations)
   covers Django 1.7's new migrations from the main programmer 
-  of South and now Django's built-in migrations, Andrew Godwin.</p>
-</li>
-<li>
-<p>Real Python's <a href="https://realpython.com/blog/python/django-migrations-a-primer/">migrations primer</a>
+  of South and now Django's built-in migrations, Andrew Godwin.-->
+
+<ul>
+<li><a href="http://pyvideo.org/video/2630/designing-djangos-migrations">Designing Django's Migrations</a>では、South及び、Djangoに組み込まれたマイグレーションツールのメイン開発者であるAndrew GodwinがDjango 1.7の新しいマイグレーションについて解説しています。</li>
+</ul>
+<!--* Real Python's [migrations primer](https://realpython.com/blog/python/django-migrations-a-primer/)
   explores the difference between South's migrations and the built-in
-  Django 1.7 migrations as well as how you use them.</p>
-</li>
-<li>
-<p>Andrew Pinkham's "Upgrading to Django 1.7" series is great learning
+  Django 1.7 migrations as well as how you use them.-->
+
+<ul>
+<li>Real Pythonの<a href="https://realpython.com/blog/python/django-migrations-a-primer/">migrations primer</a>では、Southによるマイグレーションと、Django 1.7のマイグレーションの違いについて解説しています。</li>
+</ul>
+<!--* Andrew Pinkham's "Upgrading to Django 1.7" series is great learning
   material for understanding what's changed in this major release and
   how to adapt your Django project.
-  <a href="http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/">Part 1</a>,
-  <a href="http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/">part 2</a> and
-  <a href="http://andrewsforge.com/article/upgrading-django-to-17/part-3-django-17-new-features/">part 3</a>
+  [Part 1](http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/),
+  [part 2](http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/) and
+  [part 3](http://andrewsforge.com/article/upgrading-django-to-17/part-3-django-17-new-features/)
   and
-  <a href="http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/">part 4</a>
-  are now all available to read.</p>
-</li>
-</ul>
-<h2>Django with Angular (Djangular) resources</h2>
+  [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
+  are now all available to read.-->
+
 <ul>
-<li>
-<p><a href="http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html">Getting Started with Django Rest Framework and AngularJS</a>
-  is a very detailed introduction to Djangular with example code. </p>
-</li>
-<li>
-<p><a href="https://thinkster.io/brewer/angular-django-tutorial/">Building Web Applications with Django and AngularJS</a>
-  is a very detailed guide for using Django as an API layer and AngularJS
-  as the MVC front end in the browser.</p>
-</li>
-<li>
-<p>This <a href="http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework">end to end web app with Django-Rest-Framework &amp; AngularJS part 1</a>
-  tutorial along with 
-  <a href="http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework">part 2</a>,
-  <a href="http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework">part 3</a>
-  and
-  <a href="http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework">part 4</a>
-  creates an example blog application with Djangular. There is also a
-  corresponding <a href="https://github.com/mouradmourafiq/django-angular-blog">GitHub repo</a>
-  for the project code.</p>
-</li>
+<li>Andrew Pinkhamによる"Upgrading to Django 1.7"シリーズは、Djangoの新しい機能について、そしてそれを利用する方法を学ぶことができます。<a href="http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/">Part 1</a>、<a href="http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/">part 2</a>、<a href="http://andrewsforge.com/article/upgrading-django-to-17/part-3-django-17-new-features/">part 3</a>、<a href="http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/">part 4</a>を読むことができるようになっています。</li>
 </ul>
-<h2>Django ORM resources</h2>
-<p>The <a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a> works well
+<!-- ## Django with Angular (Djangular) resources -->
+
+<h2>DjangoとAngularJS(Djangular)のリソース</h2>
+<!-- * [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
+  is a very detailed introduction to Djangular with example code.  -->
+
+<ul>
+<li><a href="http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html">Getting Started with Django Rest Framework and AngularJS</a>は、サンプルコードを交えたDjangularの詳しいイントロダクションです。</li>
+</ul>
+<!-- * [Building Web Applications with Django and AngularJS](https://thinkster.io/brewer/angular-django-tutorial/)
+  is a very detailed guide for using Django as an API layer and AngularJS
+  as the MVC front end in the browser. -->
+
+<ul>
+<li><a href="https://thinkster.io/brewer/angular-django-tutorial/">Building Web Applications with Django and AngularJS</a>は、DjangoをAPIレイヤーとして、AngularJSをクライアントサイドMVCとして利用するための詳細なガイドです。</li>
+</ul>
+<!-- * This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework)
+  tutorial along with 
+  [part 2](http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework),
+  [part 3](http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework)
+  and
+  [part 4](http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework)
+  creates an example blog application with Djangular. There is also a
+  corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
+  for the project code. -->
+
+<ul>
+<li><a href="http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework">end to end web app with Django-Rest-Framework &amp; AngularJS part 1</a>、及び<a href="http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework">part 2</a>、<a href="http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework">part 3</a>、<a href="http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework">part 4</a>はDjangularでブログアプリケーションを作るチュートリアルです。コードは<a href="https://github.com/mouradmourafiq/django-angular-blog">GitHub</a>でホストされています。</li>
+</ul>
+<!-- ## Django ORM resources -->
+
+<h2>Django ORMのリソース</h2>
+<!-- The [Django ORM](https://docs.djangoproject.com/en/dev/topics/db/) works well
 for simple and medium-complexity database operations. However, there are often
 complaints that the ORM makes complex queries much more complicated than
-writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
-<p>It's technically possible to drop down to SQL but it ties the queries to a 
+writing straight SQL or using [SQLAlchemy](http://www.sqlalchemy.org/).  -->
+
+<p><a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a>はシンプル〜やや複雑なデータベースの操作に適しています。場合によってORMを使うことで直接SQLを書くよりも複雑になってしまい、<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>を使う方法もあります。</p>
+<!-- It's technically possible to drop down to SQL but it ties the queries to a 
 specific database implementation. The ORM is coupled closely with Django so
 replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
 though that some of the Django core committers believe it is only a matter of
 time before the default ORM is replaced with SQLAlchemy. It will be a large
 effort to get that working though so it's likely to come in Django 1.9 or 
-later.</p>
-<p>Since the majority of Django projects are tied to the default ORM, it's best to
+later. -->
+
+<p>SQLを直接記述することは、技術的に可能ではありますがデータベースの実装によってクエリを書き分けなければなりません。ORMはDjangoと密接につながっているので、デフォルトのORMをSQLAlchemyに置き換えるためにはDjangoをハックしなければなりません。ただDjangoのコアコミッターたちはデフォルトのORMがSQLAlchemyに置き換わるのは時間の問題だと考えています。彼らの素晴らしい仕事によりDjango 1.9、またはそれ以降のバージョンで実現するかもしれません。</p>
+<!-- Since the majority of Django projects are tied to the default ORM, it's best to
 read up on advanced use cases and tools for doing your best work within the
-existing framework.</p>
-<ul>
-<li>
-<p><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>
+existing framework. -->
+
+<p>大部分のDjangoプロジェクトではデフォルトのORMが利用されているので、現在のフレームワークでの応用的な利用方法やツールに関する資料を読んでおきましょう。</p>
+<!-- * [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
   is a detailed article by Tom Christie on encapsulating Django models for
-  data integrity.</p>
-</li>
-<li>
-<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
+  data integrity. -->
+
+<ul>
+<li><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>はTom Christieによる、モデルのデータ完全性をカプセル化する方法を詳細に解説しています。</li>
+</ul>
+<!-- * [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/) 
   is a powerful Django ORM database query inspection tool. Highly recommended
   during development to ensure you're writing reasonable query code. 
-  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
-  has capabilities to do more than just SQL inspection.</p>
-</li>
-<li>
-<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
+  [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
+  has capabilities to do more than just SQL inspection. -->
+
+<ul>
+<li><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a>はDjango ORMのデータベースクエリをデバッグするための強力なツールです。開発中は適切なクエリを書いていることを確認することを強くお勧めします。<a href="http://mtford.co.uk/blog/2/">Django Silk</a>のようなSQLだけにとどまらないデバッグツールもあります。 </li>
+</ul>
+<!-- * [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
   is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
+  and optimizing based on the measured results. -->
+
+<ul>
+<li><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>はパフォーマンスの計測と最適化について解説されているポストです。</li>
+</ul>
+<!-- * [Why I Hate the Django ORM](https://speakerdeck.com/alex/why-i-hate-the-django-orm)
   is Alex Gaynor's overview of the bad designs decisions, some of which he
-  made, while building the Django ORM.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
-  is specific to using PostgreSQL with Django.</p>
-</li>
-<li>
-<p><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>
+  made, while building the Django ORM. -->
+
+<ul>
+<li><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>はAlex GaynorによるDjango ORM開発中の悪い設計について語られています。</li>
+</ul>
+<!-- * [Going Beyond Django ORM with Postgres](https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres)
+  is specific to using PostgreSQL with Django. -->
+
+<ul>
+<li><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>ではDjangoとPostgreSQLを利用する方法が解説されています。</li>
+</ul>
+<!-- * [Migrating a Django app from MySQL to PostgreSQL](http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/)
   is a quick look at how to move from MySQL to PostgreSQL. However, my guess
   is that any Django app that's been running for awhile on one relational
   database will require a lot more work to port over to another backend
-  even with the power of the ORM.</p>
-</li>
-<li>
-<p><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>
+  even with the power of the ORM. -->
+
+<ul>
+<li><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>ではMySQLからPostgreSQLに移行する方法が解説されています。しかし、著者個人の意見としては、すでに運用中のDjangoアプリケーションのデータベースを他のバックエンドに移行するのはORMのちからを借りても困難だと考えています。</li>
+</ul>
+<!-- * [Django Model Descriptors](http://blog.kevinastone.com/django-model-descriptors.html)
   discusses and shows how to incorporate business logic into Django models
   to reduce complexity from the views and make the code easier to reuse across
-  separate views.</p>
-</li>
-</ul>
-<h2>Open source Django example projects</h2>
+  separate views. -->
+
 <ul>
-<li>
-<p><a href="https://github.com/makaimc/txt2react">Txt 2 React</a> is a full Django web
+<li><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>では、ビジネスロジックをモデルに取り込みビューの複雑化を回避する方法、そして各ビュー間で再利用する方法について検討しています。</li>
+</ul>
+<!-- ## Open source Django example projects -->
+
+<h2>オープンソースのサンプルプロジェクト</h2>
+<!-- * [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
   app that allows audiences to text in during a presentation with feedback
-  or questions.</p>
-</li>
-<li>
-<p><a href="https://github.com/ustream/openduty">Openduty</a> is a website status checking
-  and alert system similar to PagerDuty.</p>
-</li>
-<li>
-<p><a href="https://github.com/myusuf3/courtside">Courtside</a> is a pick up sports web 
-  application written and maintained by the author of PyCoder's Weekly.</p>
-</li>
-<li>
-<p>These two Django Interactive Voice Response (IVR) system web application
-  repositorities <a href="https://github.com/phalt/twilio-django-part-1">part 1</a> and
-  <a href="https://github.com/phalt/twilio-django-part-2">part 2</a> show you how to
-  build a really cool Django application. There's also an accompanying 
-  <a href="https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html">blog post</a>
-  with detailed explanations of each step.</p>
-</li>
-</ul>
-<h2>Django project templates</h2>
+  or questions. -->
+
 <ul>
-<li>
-<p><a href="https://github.com/caktus/django-project-template">Caktus Group's Django project template</a> 
-  is Django 1.6+ ready.</p>
-</li>
-<li>
-<p><a href="https://github.com/pydanny/cookiecutter-django">Cookiecutter Django</a> is a 
-  project template from Daniel Greenfeld, for use with Audrey Roy's 
-  <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>. Heroku 
-  deployment-ready.</p>
-</li>
-<li>
-<p><a href="https://github.com/twoscoops/django-twoscoops-project">Two Scoops Django project template</a>
-  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
-  described in the Two Scoops of Django book.</p>
-</li>
+<li><a href="https://github.com/makaimc/txt2react">Txt 2 React</a>は、プレゼンテーション中に視聴者がフィードバックや質問を書き込めるアプリケーションです。</li>
 </ul>
-<h2>Django learning checklist</h2>
+<!-- * [Openduty](https://github.com/ustream/openduty) is a website status checking
+  and alert system similar to PagerDuty. -->
+
+<ul>
+<li><a href="https://github.com/ustream/openduty">Openduty</a>はPagerDutyに似たウェブサイトのステータス確認、及び監視システムです。</li>
+</ul>
+<!-- * [Courtside](https://github.com/myusuf3/courtside) is a pick up sports web 
+  application written and maintained by the author of PyCoder's Weekly. -->
+
+<ul>
+<li><a href="https://github.com/myusuf3/courtside">Courtside</a>はPyCoder's Weeklyの作者によって開発された、スポーツイベントを探すためのアプリケーションです。</li>
+</ul>
+<!-- * These two Django Interactive Voice Response (IVR) system web application
+  repositorities [part 1](https://github.com/phalt/twilio-django-part-1) and
+  [part 2](https://github.com/phalt/twilio-django-part-2) show you how to
+  build a really cool Django application. There's also an accompanying 
+  [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
+  with detailed explanations of each step. -->
+
+<ul>
+<li>Djangoで作られた音声による自動応答システムのレポジトリです。<a href="https://github.com/phalt/twilio-django-part-1">part 1</a>と<a href="https://github.com/phalt/twilio-django-part-2">part 2</a>に分けられています。<a href="https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html">blog post</a>で詳細に解説されています。</li>
+</ul>
+<!-- ## Django project templates -->
+
+<h2>Djangoプレジェクトのテンプレート</h2>
+<!-- * [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
+  is Django 1.6+ ready. -->
+
+<ul>
+<li><a href="https://github.com/caktus/django-project-template">Caktus Group's Django project template</a>はDjango1.6以降で利用できるプロジェクトのテンプレートです。</li>
+</ul>
+<!-- * [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
+  project template from Daniel Greenfeld, for use with Audrey Roy's 
+  [Cookiecutter](https://github.com/audreyr/cookiecutter). Heroku 
+  deployment-ready. -->
+
+<ul>
+<li><a href="https://github.com/pydanny/cookiecutter-django">Cookiecutter Django</a>はDaniel Greenfeldによるプロジェクトのテンプレートで、Audrey Royの<a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>で利用されています。Herokuにデプロイすることができます。</li>
+</ul>
+<!-- * [Two Scoops Django project template](https://github.com/twoscoops/django-twoscoops-project)
+  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
+  described in the Two Scoops of Django book. -->
+
+<ul>
+<li><a href="https://github.com/twoscoops/django-twoscoops-project">Two Scoops Django project template</a>もPyDannyとAudrey Royによる、プロジェクトテンプレートです。Two Scoopsの書籍で説明されている構成を素早く組み上げることができます。</li>
+</ul>
+<!-- ## Django learning checklist -->
+
+<h2>Djangoを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-<a href="https://docs.djangoproject.com/en/dev/topics/install/">Install Django</a> on
-your local development machine.</p>
+<!-- <a href="https://docs.djangoproject.com/en/dev/topics/install/">Install Django</a> on
+your local development machine. -->
+あなたの開発マシンに<a href="https://docs.djangoproject.com/en/dev/topics/install/">Djangoをインストール</a>しましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the initial 
-<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"polls" tutorial</a>.</p>
+<!-- Work through the initial 
+<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"polls" tutorial</a>. -->
+<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"polls"チュートリアル</a>をやりましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Build a few more simple applications using the tutorial resources found
-in the "Django resources" section.</p>
+<!-- Build a few more simple applications using the tutorial resources found
+in the "Django resources" section. -->
+Djangoのリソースにリストされているチュートリアルで学んだ知識を使って、シンプルなアプリケーションをいくつか作ってみましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Start coding your own Django project with help from the 
+<!-- Start coding your own Django project with help from the 
 <a href="https://docs.djangoproject.com/en/dev/">official documentation</a> and 
 resource links below. You'll make plenty of mistakes which is critical
-on your path to learning the right way to build applications.</p>
+on your path to learning the right way to build applications. -->
+<a href="https://docs.djangoproject.com/en/dev/">公式ドキュメント</a>や以下のリンクを読んで、自分のDjangoプロジェクトを書き始めましょう。アプリケーションを正しく構築する方法を学ぶ上で重要となる、失敗をたくさんすると思います。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Read <a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> 
+<!-- Read <a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> 
 to understand Django best practices and learn better ways of building 
-Django web applications.</p>
+Django web applications. -->
+<a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> を読んで、Djangoのベストプラクティスと、Djangoでアプリケーションを作るためのより良い方法を理解してください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Move on to the <a href="/deployment.html">deployment section</a> to get your Django 
-project on the web.</p>
-<h3>What do you need to learn next for your Django app?</h3>
-                      <h1>Flask</h1>
+<!-- Move on to the <a href="/deployment.html">deployment section</a> to get your Django 
+project on the web. -->
+<a href="./deployment.html">デプロイの章</a>に進み、あなたのDjangoプロジェクトを公開しましょう。</p>
+<!-- ### What do you need to learn next for your Django app? -->
+
+<h3>Djangoアプリケーションの次に学ぶことは？</h3>
+              <h1>Flask</h1>
 <p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
 <a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.png" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram" /></a></p>
@@ -477,15 +633,15 @@ Flask is easy to get started with as a beginner because there is little
 boilerplate code for getting a simple app up and running. </p>
 <p>For example, here's a valid "hello world" web application with Flask (the
 equivalent in Django would be significantly more code):</p>
-<div class="codehilite"><pre><span class="n">from</span> <span class="n">flask</span> <span class="n">import</span> <span class="n">Flask</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
-<span class="err">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">)</span>
-<span class="n">def</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
-    <span class="k">return</span> <span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">&#39;</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&#39;Hello World!&#39;</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="err">&#39;</span><span class="n">__main__</span><span class="err">&#39;</span><span class="o">:</span>
-    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 
 
@@ -690,190 +846,271 @@ Flask tutorial plus open source example applications found below. </p>
 Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
 Flask project on the web.</p>
 <h3>What do you need to learn about web frameworks next?</h3>
-                      <h1>Bottle</h1>
-<p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
+              <h1>Bottle</h1>
+<p><!-- <a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
 <a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
 web framework with no external dependencies except for the standard library
-included with Python.</p>
-<h2>Bottle resources</h2>
+included with Python. -->
+<a href="http://bottlepy.org/docs/dev/index.html">Bottle</a>はWSGI互換の<a href="https://github.com/defnull/bottle/blob/master/bottle.py">シングルファイル</a>のWebフレームワークで、Pythonの標準ライブラリだけで動作します。</p>
+<!-- ## Bottle resources -->
+
+<h2>Bottleのリソース</h2>
+<!-- * The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
+  provides a thorough view of basic concepts and features for the framework. -->
+
 <ul>
-<li>
-<p>The <a href="http://bottlepy.org/docs/dev/tutorial.html">official Bottle tutorial</a> 
-  provides a thorough view of basic concepts and features for the framework.</p>
-</li>
-<li>
-<p>Digital Ocean provides an extensive <a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">introductory post on Bottle</a>.</p>
-</li>
-<li>
-<p>This tutorial provides a walkthrough for
-<a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>.</p>
-</li>
-<li>
-<p>Here's a short code snippet for 
-  <a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>.</p>
-</li>
-<li>
-<p>This <a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">tutorial</a> 
-  is another Bottle walkthrough for creating a RESTful web API.</p>
-</li>
-<li>
-<p><a href="http://reachtim.com/articles/BAM-Short-Stack.html">BAM! A Web Framework "Short Stack"</a>
+<li><a href="http://bottlepy.org/docs/dev/tutorial.html">公式チュートリアル</a>では、基本的なコンセプトと機能を解説しています。</li>
+</ul>
+<!-- * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps). -->
+
+<ul>
+<li>Digital Oceanに<a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">Bottleの入門記事</a>が掲載されています。</li>
+</ul>
+<!-- * This tutorial provides a walkthrough for
+[getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598). -->
+
+<ul>
+<li><a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>はBottleの入門記事です。</li>
+</ul>
+<!-- * Here's a short code snippet for 
+  [creating a RESTful API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/). -->
+
+<ul>
+<li><a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>では、Bottleアプリケーションのサンプルコードを読むことができます。</li>
+</ul>
+<!-- * This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
+  is another Bottle walkthrough for creating a RESTful web API. -->
+
+<ul>
+<li>この<a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">チュートリアル</a>でもBottleを使ったRESTful APIの作り方が解説されています。</li>
+</ul>
+<!-- * [BAM! A Web Framework "Short Stack"](http://reachtim.com/articles/BAM-Short-Stack.html)
   is a walkthrough of using Bottle, Apache and MongoDB to create a web
-  application.</p>
-</li>
-<li>
-<p><a href="http://gengo.github.io/decanter/">Decanter</a> is a library for structuring 
-  Bottle projects.</p>
-</li>
-</ul>
-<h2>Open source Bottle example projects</h2>
+  application. -->
+
 <ul>
-<li><a href="https://github.com/thekad/pasttle">Pattle</a> is a pastebin clone built with
-  Bottle.</li>
+<li><a href="http://reachtim.com/articles/BAM-Short-Stack.html">BAM! A Web Framework "Short Stack"</a>はBottle、Apache、MongoDBを使ったWebアプリケーションのチュートリアルです。</li>
 </ul>
-<h2>Bottle framework learning checklist</h2>
+<!-- * [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
+  Bottle projects. -->
+
+<ul>
+<li><a href="http://gengo.github.io/decanter/">Decanter</a>はBottleプロジェクトを構造化するためのライブラリです。</li>
+</ul>
+<!-- ## Open source Bottle example projects -->
+
+<h2>オープンソースのサンプルプロジェクト</h2>
+<p><!-- * <a href="https://github.com/thekad/pasttle">Pattle</a> is a pastebin clone built with
+  Bottle. -->
+* <a href="https://github.com/thekad/pasttle">Pattle</a>はpastbinクローンです。</p>
+<!-- ## Bottle framework learning checklist -->
+
+<h2>Bottleフレームワークを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-<a href="https://github.com/defnull/bottle/raw/master/bottle.py">Download Bottle</a> or
-install via pip with <code>pip install bottle</code> on your local development machine.</p>
+<!-- <a href="https://github.com/defnull/bottle/raw/master/bottle.py">Download Bottle</a> or
+install via pip with <code>pip install bottle</code> on your local development machine. -->
+<a href="https://github.com/defnull/bottle/raw/master/bottle.py">Bottleをダウンロード</a>するか、<code>pip install bottle</code>でローカルマシンにインストールしてください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the official 
-<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>.</p>
+<!-- Work through the official 
+<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>. -->
+公式の<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>をやりましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Start coding your Bottle app based on what you learned in the official 
-tutorial plus reading open source example applications found below. </p>
+<!-- Start coding your Bottle app based on what you learned in the official 
+tutorial plus reading open source example applications found below.  -->
+公式チュートリアルとオープンソースのサンプルプロジェクトで学んだ知識を元にあなたのBottleプロジェクトを始めてください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
-Bottle application on the web.</p>
-<h3>What do you need to learn next?</h3>
-                      <h1>Other Web Frameworks</h1>
-<p>Python has a significant number of web frameworks outside the usual Django,
-Flask and Bottle suspects.</p>
+<!-- Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
+Bottle application on the web. -->
+Bottleアプリケーションを公開するために<a href="./deployment.html">デプロイの章</a>に進んでください。</p>
+<!-- ### What do you need to learn next? -->
+
+<h3>次は何を学びますか？</h3>
+              <!-- # Other Web Frameworks -->
+
+<h1>その他のWebフレームワーク</h1>
+<p><!-- Python has a significant number of web frameworks outside the usual Django,
+Flask and Bottle suspects. -->
+PythonにはDjango、Flask、Bottle以外にも様々なWebフレームワークがあります。</p>
 <h2>Pyramid</h2>
-<p>The <a href="http://www.pylonsproject.org/">Pyramid framework</a> stems from the Pylons
+<p><!-- The <a href="http://www.pylonsproject.org/">Pyramid framework</a> stems from the Pylons
 project which develops a set of open source web application frameworks. 
-Pyramid applications are built using a model-view-controller architecture.</p>
+Pyramid applications are built using a model-view-controller architecture. -->
+<a href="http://www.pylonsproject.org/">Pyramid framework</a>は様々なWebフレームワークを開発してきたPylonsプロジェクトから始まったフレームワークです。PyramidアプリケーションはMVCアーキテクチャを使って構成されます。</p>
 <h2>TurboGears2</h2>
-<p><a href="http://www.turbogears.org">TurboGears2</a> born as a full stack layer on top
+<p><!-- <a href="http://www.turbogears.org">TurboGears2</a> born as a full stack layer on top
 of Pylons is now a standalone web framework that can act both as a full stack
-solution (like Django) or as a micro framework.</p>
+solution (like Django) or as a micro framework. -->
+<a href="http://www.turbogears.org">TurboGears2</a>はPylonsプロジェクトからなるフルスタックレイヤーとして誕生し、現在では、Djangoのようなフルスタックフレームワークとしても、マイクロフレームワークとしても利用可能な、単独のフレームワークになっています。</p>
 <h2>Falcon</h2>
-<p><a href="http://falconframework.org/">Falcon</a> is a minimalist web framework designed
-with web application speed as a top priority.</p>
+<p><!-- <a href="http://falconframework.org/">Falcon</a> is a minimalist web framework designed
+with web application speed as a top priority. -->
+<a href="http://falconframework.org/">Falcon</a>はパフォーマンスの高さを意識して作られているミニマルなWebフレームワークです。</p>
 <h2>Morepath</h2>
-<p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
-framework that routes URLs directly to model code.</p>
+<p><!-- <a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
+framework that routes URLs directly to model code. -->
+<a href="http://morepath.readthedocs.org/en/latest/">Morepath</a>はURLを直接Modelにひもづけることができるマイクロフレームワークです。</p>
+<!-- * Morepath's creator gave a 
+  [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
+  at EuroPython 2014. -->
+
 <ul>
-<li>Morepath's creator gave a 
-  <a href="https://www.youtube.com/watch?v=gyDKMAWPyuY">great talk on the motivation and structure for the new framework</a> 
-  at EuroPython 2014.</li>
+<li>Morepathの開発者はEuroPython 2014で、新しいフレームワークのモチベーションと構造について素晴らしい<a href="https://www.youtube.com/watch?v=gyDKMAWPyuY">プレゼンテーション</a>を行っています。</li>
 </ul>
 <h2>web.py</h2>
-<p><a href="http://webpy.org/">web.py</a> is a Python web framework designed for simplicity
-in building web applications.</p>
+<p><!-- <a href="http://webpy.org/">web.py</a> is a Python web framework designed for simplicity
+in building web applications. -->
+<a href="http://webpy.org/">web.py</a>はシンプルにWebアプリケーションを作成できるように設計されたPythonのWebフレームワークです。</p>
 <h2>web2py</h2>
-<p><a href="http://www.web2py.com/">Web2py</a> is a batteries-included philosophy framework
-with project structure based on model-view-controller patterns.</p>
-<h2>Other web framework resources</h2>
-<ul>
-<li>
-<p>This <a href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>
-  contains both familiar and less known Python libraries.</p>
-</li>
-<li>
-<p>The <a href="http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/">web micro-framework battle</a>
+<p><!-- <a href="http://www.web2py.com/">Web2py</a> is a batteries-included philosophy framework
+with project structure based on model-view-controller patterns. -->
+<a href="http://www.web2py.com/">Web2py</a>はMVC形式の「電池付属」なフレームワークです。</p>
+<!-- ## Other web framework resources -->
+
+<h2>その他Webフレームワークのリソース</h2>
+<p><!-- * This <a href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>
+  contains both familiar and less known Python libraries. -->
+* <a href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>は有名、無名を含むPythonフレームワークのまとめです。</p>
+<!-- * The [web micro-framework battle](http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/)
   presentation goes over Bottle, Flask, and many other lesser known Python
-  web frameworks.</p>
-</li>
-<li>
-<p>A Python newcomer asked the Python Subreddit to 
- <a href="http://www.reddit.com/r/Python/comments/28qr7c/can_anyone_explain_the_differences_between_web2py/">explain the differences between numerous Python web frameworks</a>
- and received some interesting responses from other users.</p>
-</li>
+  web frameworks. -->
+
+<ul>
+<li><a href="http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/">web micro-framework battle</a>はBottle、Flaskとその他のPython Web Frameworkを比較しています。</li>
 </ul>
-<h2>Other frameworks learning checklist</h2>
+<!-- * A Python newcomer asked the Python Subreddit to 
+ [explain the differences between numerous Python web frameworks](http://www.reddit.com/r/Python/comments/28qr7c/can_anyone_explain_the_differences_between_web2py/)
+ and received some interesting responses from other users. -->
+
+<ul>
+<li>Pythonの初学者が<a href="http://www.reddit.com/r/Python/comments/28qr7c/can_anyone_explain_the_differences_between_web2py/">PythonのWebフレームワークの違い</a>について質問しており、興味深い回答が寄せられています。</li>
+</ul>
+<!-- ## Other frameworks learning checklist -->
+
+<h2>その他フレームワークを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-Read through the web frameworks listed above and check out their project
-websites. </p>
+<!-- Read through the web frameworks listed above and check out their project
+websites.  -->
+各フレームワークのウェブサイトを見てみましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-It's useful to know what other web frameworks exist besides Django and Flask.
+<!-- It's useful to know what other web frameworks exist besides Django and Flask.
 However, when you're just starting to learn to program there are significantly 
 more tutorials and resources for <a href="/django.html">Django</a> and 
 <a href="/flask.html">Flask</a> on the web. My recommendation is to start with one of
-those two frameworks then expand your knowledge from there.</p>
-<h3>What do you need to learn next?</h3>
-                      <h1>Deployment</h1>
-<p>Deployment involves packaging up your web application and putting it in a 
-production environment that can run the app.</p>
-<h2>Why is deployment necessary?</h2>
-<p>Your web application must live somewhere other than your own desktop or 
+those two frameworks then expand your knowledge from there. -->
+DjangoやFlask以外のWebフレームワークが存在していることを知っておくのは役立つことです。しかし、あなたが初学者の場合、<a href="./django.html">Django</a>や<a href="./flask.html">Flask</a>に関するチュートリアルや資料のほうが多いため、まずはこの2つのフレームワークのどちらかを深く利用できるように成るべきでしょう。</p>
+<!-- ### What do you need to learn next? -->
+
+<h3>次は何を学びますか？</h3>
+              <!-- # Deployment -->
+
+<h1>デプロイメント</h1>
+<p><!-- Deployment involves packaging up your web application and putting it in a 
+production environment that can run the app. -->
+デプロイはWebアプリケーションをパッケージングし、アプリケーションを動かすための本番環境に配置することです。</p>
+<!-- ## Why is deployment necessary? -->
+
+<h2>なぜデプロイが必要？</h2>
+<p><!-- Your web application must live somewhere other than your own desktop or 
 laptop. A production environment is the canonical version of your current 
-application and its associated data.</p>
-<h2>Deployment topics map</h2>
-<p>Python web application deployments are comprised of many pieces that need to
+application and its associated data. -->
+Webアプリケーションを作ったのであれば、あなたのデスクトップやラップトップで動かしているだけではいけません。本番環境に置くことで、あなたのアプリケーションは正式なバージョンを持ち、データと交信することになります。</p>
+<!-- ## Deployment topics map -->
+
+<h2>デプロイに関するテーマのマップ</h2>
+<p><!-- Python web application deployments are comprised of many pieces that need to
 be individually configured. Here is a map that visually depicts how each
 deployment topic relates to each other. Click the image to pull up a PDF 
-version.</p>
-<p><a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
-<h2>Deployment hosting options</h2>
-<p>There are four options for deploying and hosting a web application:</p>
+version. -->
+PythonのWebアプリケーション開発は、それぞれ設定が必要な部品で構成されています。以下の図はデプロイの各テーマの関係を図式化したものです。クリックするとPDF版を見ることができます。</p>
+<p><a href="./full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
+<!-- ## Deployment hosting options -->
+
+<h2>デプロイホスティングの選択肢</h2>
+<p><!-- There are four options for deploying and hosting a web application: -->
+Webアプリケーションをデプロイしホスティングするには4つの選択肢があります。</p>
+<!-- 1. ["Bare metal" servers](/servers.html) -->
+
+<!-- 2. [Virtualized servers](/servers.html) -->
+
+<!-- 3. [Infrastructure-as-a-service](/servers.html) -->
+
+<!-- 4. [Platform-as-a-service](/platform-as-a-service.html) -->
+
 <ol>
 <li>
-<p><a href="/servers.html">"Bare metal" servers</a></p>
+<p><a href="./servers.html">ベアメタルサーバ</a></p>
 </li>
 <li>
-<p><a href="/servers.html">Virtualized servers</a></p>
+<p><a href="./servers.html">仮想化サーバ</a></p>
 </li>
 <li>
-<p><a href="/servers.html">Infrastructure-as-a-service</a></p>
+<p><a href="./servers.html">IaaS(Infrastructure as a Service)</a></p>
 </li>
 <li>
-<p><a href="/platform-as-a-service.html">Platform-as-a-service</a></p>
+<p><a href="./platform-as-a-service.html">PaaS(Platform as a Service)</a></p>
 </li>
 </ol>
-<p>The first three options are similar. The deployer needs to provision one or
+<!-- The first three options are similar. The deployer needs to provision one or
 more servers with a Linux distribution. System packages, a web server, 
 WSGI server, database and the Python environment are then installed. Finally
-the application can be pulled from source and installed in the environment.</p>
-<p>Note that there are other ways of installing a Python web application through
+the application can be pulled from source and installed in the environment. -->
+
+<p>1~3の選択肢は似たような特徴を持っています。Webアプリケーションを配置するために一つ以上のLinuxディストリビューションサーバを準備します。システムパッケージ、Webサーバ、WSGIサーバ、データベース、Pythonの実行環境をインストールします。最後にアプリケーションのソースを配置し、サーバに配置します。</p>
+<!-- Note that there are other ways of installing a Python web application through
 system-specific package management systems. We won't cover those in this
-guide as they are considered advanced deployment techniques.</p>
-<h2>Deployment resources</h2>
-<ul>
-<li>
-<p><a href="http://omniti.com/seeds/thoughts-on-web-application-deployment">Thoughts on web application deployment</a>
+guide as they are considered advanced deployment techniques. -->
+
+<p>また、PythonのWebアプリケーションをサーバに配置する方法として、システム特有のパッケージ管理システムを利用する方法もありますが、応用的な方法のため触れません。</p>
+<!-- ## Deployment resources -->
+
+<h2>デプロイのリソース</h2>
+<!-- * [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
   walks through stages of deployment with source control, planning, 
-  continuous deployment and monitoring the results.</p>
-</li>
-<li>
-<p><a href="http://blogs.atlassian.com/2014/04/practical-continuous-deployment/">Practical continuous deployment</a>
-  defines delivery versus deployment and walks through a continuous deployment
-  workflow.</p>
-</li>
-<li>
-<p>If you're using Flask this 
-  <a href="https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/">detailed post on deploying it to Ubuntu</a>
-  is a great way to familiarize yourself with the deployment process.</p>
-</li>
+  continuous deployment and monitoring the results. -->
+
+<ul>
+<li><a href="http://omniti.com/seeds/thoughts-on-web-application-deployment">Thoughts on web application deployment</a>は、ソース管理、プランニング、継続的開発、モニタリングなど各ステージの外観を学べます。</li>
 </ul>
-<h2>Deployment learning checklist</h2>
+<!-- * [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
+  defines delivery versus deployment and walks through a continuous deployment
+  workflow. -->
+
+<ul>
+<li><a href="http://blogs.atlassian.com/2014/04/practical-continuous-deployment/">Practical continuous deployment</a>は、アプリケーションの配信とデプロイを比較し、継続的開発のワークフローについて解説しています。</li>
+</ul>
+<!-- * If you're using Flask this 
+  [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
+  is a great way to familiarize yourself with the deployment process. -->
+
+<ul>
+<li>Flaskを使っているのであれば<a href="https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/">Ubuntuへのデプロイ</a>が、デプロイのプロセスに関する良いリソースとなります。</li>
+</ul>
+<!-- ## Deployment learning checklist -->
+
+<h2>デプロイについて学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-If you're tight on time look at the 
+<!-- If you're tight on time look at the 
 <a href="/platform-as-a-service.html">platform-as-a-service (PaaS)</a> options. You can
 deploy a low traffic project web app for free or low cost. You won't have to
 worry about setting up the operating system and web server compared to going
 the traditional server route. In theory you should be able to get your 
-application live on the web sooner with PaaS hosting.</p>
+application live on the web sooner with PaaS hosting. -->
+時間が限られた状況ならば<a href="./platform-as-a-service.html">PaaS</a>の利用を検討してください。アクセスの少ないプロジェクトであれば無料、あるいは安く運用できます。伝統的なサーバーと比べ、OSやWebサーバをセットアップする手間を省くことができます。PaaSでホスティングすることで、素早くアプリケーションをWebで公開することができるでしょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-<a href="/servers.html">Traditional server options</a> are your best bet for learning
+<!-- <a href="/servers.html">Traditional server options</a> are your best bet for learning
 how the entire Python web stack works. You'll often save money with a virtual
-private server instead of a platform-as-a-service as you scale up.</p>
+private server instead of a platform-as-a-service as you scale up. -->
+<a href="./servers.html">伝統的なサーバ</a>を使うことは、PythonのWebスタックが動作する仕組みを学ぶのに最適な選択肢です。スケールアップしたPaaSを使うよりVPSを使うほうが経済的なケースが多いです。</p>
 <p><i class="fa fa-check-square-o"></i>
-Read about servers, <a href="/operating-systems.html">operating systems</a>, 
+<!-- Read about servers, <a href="/operating-systems.html">operating systems</a>, 
 <a href="/web-servers.html">web servers</a> and <a href="/wsgi-servers.html">WSGI servers</a> to get
 a broad picture of what components need to be set up to run a Python web 
-application.</p>
-<h3>How would you like to deploy your web app?</h3>
-                      <h1>Servers</h1>
+application. -->
+サーバ、<a href="./operating-systems.html">OS</a>、<a href="./web-servers.html">Webサーバ</a>、<a href="./wsgi-servers.html">WSGIサーバ</a>の章を読み、各コンポーネントがPythonのWebアプリケーションを動作させるために何の役割を持っているかを理解してください。</p>
+<!-- ### How would you like to deploy your web app? -->
+
+<h3>どの方法でWebアプリケショーンをデプロイしますか？</h3>
+              <h1>Servers</h1>
 <p>Servers are the physical infrastructure to run all the layers of software
 so your web application can respond to requests from clients such as web 
 browsers.</p>
@@ -1008,7 +1245,7 @@ awaiting your instructions.</p>
 Move to the <a href="/operating-systems.html">operating systems</a> section to learn 
 how to load Ubuntu 14.04 LTS as a base OS for Python web applications.</p>
 <h3>Keep going with setting up a server or try a PaaS?</h3>
-                      <h1>Platform-as-a-service</h1>
+              <h1>Platform-as-a-service</h1>
 <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
 a PaaS removes the need to know as much about the underlying servers, 
@@ -1115,79 +1352,111 @@ handles this deployment step for you.</p>
 <p><i class="fa fa-check-square-o"></i>
 Check if the application's functionality is working and tweak as necessary.</p>
 <h3>Do you want to use a PaaS or deploy to a traditional server?</h3>
-                      <h1>Operating Systems</h1>
-<p>An operating system runs on the server or virtual server and controls access 
+              <!-- # Operating Systems -->
+
+<h1>オペレーティングシステム</h1>
+<p><!-- An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
-programs necessary for running your Python web application.</p>
-<h2>Why are operating systems necessary?</h2>
-<p>An operating system makes many of the computing tasks we take for granted easy.
+programs necessary for running your Python web application. -->
+サーバや仮想サーバ上で動作するオペレーティングシステムは、コンピュータのリソースへのアクセスを管理しています。また、オペレーティングシステムはPythonのWebアプリケーションを動作させるために必要なプログラムをインストールする方法も提供します。</p>
+<!-- ## Why are operating systems necessary? -->
+
+<h2>なぜオペレーティングシステムが必要？</h2>
+<p><!-- An operating system makes many of the computing tasks we take for granted easy.
 For example, the operating system enables writing to files, 
 communicating over a network and running multiple programs at once. 
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
-and many other components with your own low-level implementation.</p>
-<p>Without using an existing operating system like Linux, Mac OS X, or Windows,
+and many other components with your own low-level implementation. -->
+オペレーティングシステムは様々な演算処理を簡単に行えるようにしてくれます。例えば、ファイルへの書き込みやネットワーク越しの通信、一度に複数のプログラムを実行といったことです。さもなければ、あなた自身がCPU、メモリ、ネットワーク、グラフィックカードなどの低レベルな実装を行わなければなりません。</p>
+<!-- Without using an existing operating system like Linux, Mac OS X, or Windows,
 you'd be forced to write a new operating system as part of your web 
 application.  It would be impossible to write features for your Python 
 web application because you'd be too busy hunting down a memory leak in 
-your assembly code, if you even were able to get that far.</p>
-<p>Fortunately, the open source community provides Linux to the Python world 
-as a rock solid free operating system for running our applications.</p>
-<h2>Recommended operating systems</h2>
-<p>The only recommended operating system for production Python web stack 
+your assembly code, if you even were able to get that far. -->
+
+<p>LinuxやMac OS X、Windowsのような既存のオペレーティングシステムを使う場合を除けば、Webアプリケーションの一部として、新しいオペレーティングシステムを書かなくてはなりません。これではPythonのWebアプリケーションの処理を書くことは不可能です。アセンブラのコードのメモリリークを探すのに忙しくそんな暇はありません。</p>
+<!-- Fortunately, the open source community provides Linux to the Python world 
+as a rock solid free operating system for running our applications. -->
+
+<p>幸運にも、Pythonの世界にはオープンソースのコミュニティによって、Webアプリケーションを動かすために使用することができるLinuxが提供されています。</p>
+<!-- ## Recommended operating systems -->
+
+<h2>お勧めのオペレーティングシステム</h2>
+<p><!-- The only recommended operating system for production Python web stack 
 deployments is Linux. There are several Linux distributions commonly used 
 for running production servers. Ubuntu Long Term Support (LTS) releases, 
-Red Hat Enterprise Linux, and CentOS are all viable options. </p>
-<p>Mac OS X is fine for development activities. Windows and Mac 
+Red Hat Enterprise Linux, and CentOS are all viable options.  -->
+本番環境でPythonのWebアプリケーションを動かすためのオペレーティングシステムとしておすすめするのはLinuxです。Linuxにはいくつかのディストリビューションがあり、本番サーバを稼働するのに一般的に使われています。Ubuntu Long Term Support(LTS)リリースや、Red Hat Enterprise Linux、CentOSが良い選択肢でしょう。</p>
+<!-- Mac OS X is fine for development activities. Windows and Mac 
 OS X are not appropriate for production deployments unless there is a 
-major reason why you must use them in lieu of Linux.</p>
+major reason why you must use them in lieu of Linux. -->
+
+<p>Mac OS Xは開発環境に向いています。Linuxではなく、WindowsやMac OS Xを使わなければならない明確な理由が無い限り、本番環境にはLinuxを利用すことをお勧めします。</p>
 <h3>Ubuntu</h3>
-<p>Ubuntu is a Linux distribution packaged by the 
+<p><!-- Ubuntu is a Linux distribution packaged by the 
 <a href="http://www.canonical.com/">Canonical Ltd</a> company. Ubuntu uses the
 Debian distribution as a base for packages, including the 
 <a href="http://wiki.debian.org/Apt">aptitude package manager</a>. For desktop versions 
 of Ubuntu, GNOME (until the 11.04 release) or Unity (11.10 through current)
-is bundled with the distribution to provide a user interface.</p>
-<p>Ubuntu <a href="https://wiki.ubuntu.com/LTS">Long Term Support</a> (LTS) releases
+is bundled with the distribution to provide a user interface. -->
+Ubuntuは<a href="http://www.canonical.com/">Canonical Ltd</a>社によって開発されているLinuxディストリビューションです。Ubuntuは<a href="http://wiki.debian.org/Apt">aptitude package manager</a>を含むDebianディストリビューションのパッケージをベースに使用しています。</p>
+<!-- Ubuntu [Long Term Support](https://wiki.ubuntu.com/LTS) (LTS) releases
 are the recommended versions to use for deployments. LTS versions receive
 five years of post-release updates from Canonical. Every two years, Canonical 
 creates a new LTS release, which allows for an easy upgrade path as well 
 as flexibility in skipping every other LTS release if necessary. As of
-November 2014, 
-<a href="http://releases.ubuntu.com/14.04/">14.04 Trusty Tahr</a>
-is the latest Ubuntu LTS release.</p>
-<h4>Ubuntu Python Packages</h4>
-<p>There are several 
+November 2014, [14.04 Trusty Tahr](http://releases.ubuntu.com/14.04/)
+is the latest Ubuntu LTS release. -->
+
+<p>Ubuntu <a href="https://wiki.ubuntu.com/LTS">LTS</a>は開発向けにお勧めのバージョンです。LTS版はCanonicalによるポストリリース更新が5年間続きます。2年毎にCanonicalは新しいLTSをリリースし、簡単にアップグレードが行え、また必要であれば更新をスキップすることも柔軟にできます。2014年11月時点で<a href="http://releases.ubuntu.com/14.04/">14.04 Trusty Tahr</a>が最新のUbuntu LTSです。</p>
+<!-- #### Ubuntu Python Packages -->
+
+<h4>Ubuntu Pythonパッケージ</h4>
+<p><!-- There are several 
 <a href="https://help.ubuntu.com/12.04/serverguide/aptitude.html">Aptitude</a>
-packages found on Linux servers running a Python stack. These packages are: </p>
+packages found on Linux servers running a Python stack. These packages are:  -->
+LinuxsサーバでPythonアプリケーションを運用するには複数の<a href="https://help.ubuntu.com/12.04/serverguide/aptitude.html">Aptitude</a>パッケージがあります。</p>
+<!-- * [python-dev](http://packages.ubuntu.com/precise/python-dev) for header
+  files and static library for Python -->
+
 <ul>
-<li>
-<p><a href="http://packages.ubuntu.com/precise/python-dev">python-dev</a> for header
-  files and static library for Python</p>
-</li>
-<li>
-<p><a href="http://packages.ubuntu.com/precise/python-virtualenv">python-virtualenv</a>
-  for creating and managing Python 
-  <a href="http://www.virtualenv.org/en/latest/">virtualenvs</a> to isolate library
-  dependencies</p>
-</li>
+<li><a href="http://packages.ubuntu.com/precise/python-dev">python-dev</a>はPythonのためのヘッダファイルとスタティックライブラリです。</li>
 </ul>
-<h3>Red Hat and CentOS</h3>
-<p><a href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
+<!-- * [python-virtualenv](http://packages.ubuntu.com/precise/python-virtualenv)
+  for creating and managing Python 
+  [virtualenvs](http://www.virtualenv.org/en/latest/) to isolate library
+  dependencies -->
+
+<ul>
+<li><a href="http://packages.ubuntu.com/precise/python-virtualenv">python-virtualenv</a>は、ライブラリの依存関係を独立して管理するためのPythonの<a href="http://www.virtualenv.org/en/latest/">virtualenvs</a>を作ったり管理するためのパッケージです。</li>
+</ul>
+<!-- ### Red Hat and CentOS -->
+
+<h3>Red HatとCentOS</h3>
+<p><!-- <a href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
 (RHEL) and <a href="http://www.centos.org/">Community ENTerprise Operating System</a>
 (CentOS) are the same distribution. The primary difference between the two 
-is that CentOS is an open source, liberally licensed free derivative of RHEL.</p>
-<p>RHEL and CentOS use a different package manager and command-line interface 
+is that CentOS is an open source, liberally licensed free derivative of RHEL. -->
+<a href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
+(RHEL)と<a href="http://www.centos.org/">Community ENTerprise Operating System</a>
+(CentOS)は同じディストリビューションです。大きな違いはCentOSはオープンソースでRed Hatの派生物を無償で利用します。</p>
+<!-- RHEL and CentOS use a different package manager and command-line interface 
 from Debian-based Linux distributions: RPM Package Manager (RPM) and the 
 Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
-provides a command-line interface for interacting with the RPM system.</p>
-<h2>Operating System Resources</h2>
+provides a command-line interface for interacting with the RPM system. -->
+
+<p>Red HatとCentOSはDebianベースのLinuxディストリビューションとは異なるパッケージマネージャとコマンドラインインタフェースを利用します。RPMパッケージマネージャとYellowdog Updater, Modified(YUM)です。RPMは<code>.rpm</code>ファイルを使ってパッケージングの管理とライブラリやアプリケーションのインストールを行います。YUMはRPMシステムをコマンドラインで利用するためのツールです。</p>
+<!-- ## Operating System Resources -->
+
+<h2>オペレーティングシステムのリソース</h2>
+<p><!-- * <a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a> -->
+* <a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a></p>
+<!-- * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you). -->
+
 <ul>
 <li>
-<p><a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a></p>
-</li>
-<li>
-<p>Lifehacker's <a href="http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you">guide to choosing a Linux distro</a>.</p>
+<p>Lifehackerの<a href="http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you">guide to choosing a Linux distro</a>.</p>
 </li>
 <li>
 <p><a href="http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution">Choosing a Linux Distribution</a></p>
@@ -1195,85 +1464,120 @@ provides a command-line interface for interacting with the RPM system.</p>
 <li>
 <p><a href="http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers">First 5 Minutes on a Server</a></p>
 </li>
-<li>
-<p>Digital Ocean has a detailed 
-  <a href="https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications">walkthrough for setting up Python web applications on Ubuntu</a>.</p>
-</li>
 </ul>
-<h2>Operating systems learning checklist</h2>
+<!-- * Digital Ocean has a detailed 
+  [walkthrough for setting up Python web applications on Ubuntu](https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications). -->
+
+<ul>
+<li>Digital Oceanの<a href="https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications">walkthrough for setting up Python web applications on Ubuntu</a>.</li>
+</ul>
+<!-- ## Operating systems learning checklist -->
+
+<h2>オペレーティングシステムを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Choose either a Debian-based Linux distribution such as Ubuntu or a 
-Fedora-based distribution like CentOS.</p>
+<!-- Choose either a Debian-based Linux distribution such as Ubuntu or a 
+Fedora-based distribution like CentOS. -->
+UbuntuのようなDebianベースか、CentOSのようなFedoraベースのLinuxディストリビューションのいずれかを選択します。</p>
 <p><i class="fa fa-check-square-o"></i>
-Harden the security through a few basic steps. Install basic security 
+<!-- Harden the security through a few basic steps. Install basic security 
 packages such as <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> 
 or its equivalent. Create a new user account with sudo privileges and disable
 root logins. Disable password-only logins and use a public-private keypair 
-instead. Read more about hardening systems in the resources listed below.</p>
+instead. Read more about hardening systems in the resources listed below. -->
+基本的なセキュリティを固めましょう。<a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a>や、それに類似する基本セキュリティパッケージをインストールします。sudo権限を持つ新しいユーザを作成し、ルートでのログインは禁止します。パスワードでのログインを禁止し、公開鍵・非公開鍵の鍵交換方式によるログインを設定します。システムのセキュリティに関しての詳細は以下も読んでください。</p>
 <p><i class="fa fa-check-square-o"></i>
-Install Python-specific packages to prepare the environment for running a
+<!-- Install Python-specific packages to prepare the environment for running a
 Python application. Which packages you'll need to install depends on the 
-distribution you've selected.</p>
+distribution you've selected. -->
+Pythonアプリケーションを動作させるために必要な環境を用意します。これは選択したディストリビューションによって必要なパッケージは異なります。</p>
 <p><i class="fa fa-check-square-o"></i>
-Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
-next step in the deployment process.</p>
-<h3>What topic do you need to learn to keep going?</h3>
-                      <h1>Web servers</h1>
-<p>Web servers respond to 
+<!-- Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
+next step in the deployment process. -->
+<a href="./web-servers.html">Webサーバ</a>の章を読み、インストールを行ったら開発プロセスの次のステップに進みます。</p>
+<!-- ### What topic do you need to learn to keep going? -->
+
+<h3>続いて何を学びますか？</h3>
+              <!-- # Web servers -->
+
+<h1>Webサーバ</h1>
+<p><!-- Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
 requests from clients and send back a response containing a status code and
-often content such as HTML, XML or JSON as well.</p>
-<h2>Why are web servers necessary?</h2>
-<p>Web servers are the ying to the web client's yang. The server and client speak
+often content such as HTML, XML or JSON as well. -->
+Webサーバは<a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)リクエストに対して、クライアントへステータスコード、HTML,XML、JSONなどのコンテンツとしてレスポンスを返します。</p>
+<!-- ## Why are web servers necessary? -->
+
+<h2>Webサーバはなぜ必要？</h2>
+<p><!-- Web servers are the ying to the web client's yang. The server and client speak
 the standardized language of the World Wide Web. This standard language
 is why an old Mozilla Netscape browser can still talk to a modern Apache or
 Nginx web server, even if it cannot properly render the page design like a 
-modern web browser can. </p>
-<p>The basic language of the Web with the request and response cycle from 
+modern web browser can.  -->
+Webサーバが陰なら、Webクライアントは陽です。サーバとクライアントはWWWで標準化された言語で通信を行います。この標準言語のおかげで古いNetscapeでも、ページのデザインは崩れるかもしれませんが、モダンなApacheやNginxのWebサーバと通信することができるのです。</p>
+<!-- The basic language of the Web with the request and response cycle from 
 client to server then server back to client remains the same as it was when
 the Web was invented by 
-<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
+[Tim Berners-Lee](http://www.w3.org/People/Berners-Lee/) at CERN in 1989.
 Modern browsers and web servers have simply extended the language of the Web
-to incorporate new standards.</p>
-<h2>Client requests</h2>
-<p>A client that sends a request to a web server is usually a browser such 
-as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
+to incorporate new standards. -->
+
+<p>クライアントからサーバへ送られ、サーバがクライアントへ返すというリクエストとレスポンスの仕組みとWeb上の基本的な言語は、1989年にCERNの<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>がWebを発明した当時から変わっていません。モダンブラウザとWebサーバは新しい標準に対応するようにWebの言語を拡張してきました。</p>
+<!-- ## Client requests -->
+
+<h2>クライアントのリクエスト</h2>
+<p><!-- A client that sends a request to a web server is usually a browser such 
+as Internet Explorer, Firefox, or Chrome, but it can also be a -->
+Webサーバへリクエストを送信するクライアントは、通常、Internet ExplorerやFirefox、Chromeのようなブラウザですが、以下もクライアントの一種です。</p>
+<!--* headless browser, commonly use for testing, such as [phantomjs](http://phantomjs.org/)
+* commandline utility, for example [wget](https://www.gnu.org/software/wget/)and [curl](http://curl.haxx.se/)
+* text-based web browser such as [Lynx](http://lynx.browser.org/)
+* web crawler. -->
+
 <ul>
-<li>headless browser, commonly use for testing, such as 
-  <a href="http://phantomjs.org/">phantomjs</a></li>
-<li>commandline utility, for example <a href="https://www.gnu.org/software/wget/">wget</a>
-  and <a href="http://curl.haxx.se/">curl</a></li>
-<li>text-based web browser such as 
-  <a href="http://lynx.browser.org/">Lynx</a></li>
-<li>web crawler. </li>
+<li><a href="http://phantomjs.org/">Phantomjs</a>のような、一般的にテストに用いるヘッドレスブラウザ</li>
+<li><a href="https://www.gnu.org/software/wget/">wget</a>や<a href="http://curl.haxx.se/">curl</a>のようなコマンドラインユーティリティ</li>
+<li><a href="http://lynx.browser.org/">Lynx</a>のようなテキストベースのWebブラウザ</li>
+<li>Webクローラー</li>
 </ul>
-<p>Web server process requests from the above clients. The result of the web
+<!-- Web server process requests from the above clients. The result of the web
 server's processing is a 
-<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">response code</a>
+[response code](https://developer.mozilla.org/en-US/docs/HTTP/Response_codes)
 and commonly a content response. Some status codes, such as 204 (No content) 
-and 403 (Forbidden), do not have content responses.</p>
-<p>In a simple case, the client will request a static asset such as a picture
+and 403 (Forbidden), do not have content responses. -->
+
+<p>サーバは以上のようなクライアントからのリクエスト処理します。サーバによる処理の結果として<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">レスポンスコード</a>とコンテンツがレスポンスとして返されます。204 (No content)や403 (Forbidden)のような一部のコードにはコンテントは含まれません。</p>
+<!-- In a simple case, the client will request a static asset such as a picture
 or JavaScript file. The file sits on the file system in a location the
 web server is authorized to access and the web server sends the file
 to the client with a 200 status code. If the client already requested the
 file and the file has not changed, the web server will pass back a 304 
 "Not modified" response indicating the client already has the latest version
-of that file.</p>
+of that file. -->
+
+<p>単純なケースとしてクライアントが画像やJavaScriptファイルのような静的なファイルをリクエストします。リクエストされたファイルはサーバのファイルシステム上にあり、アクセスが許可されるとWebサーバはクライアントへステータスコード200と一緒に返します。すでにファイルへのリクエストをしていて、ファイルにも変更がなければ304 "Not modified"を返しクライアントにはすでに最新のファイルを持っていることを知らせます。</p>
 <p><img src="theme/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" /></p>
-<p>A web server sends files to a web browser based on the web browser's 
+<!-- A web server sends files to a web browser based on the web browser's 
 request. In the first request, the browser accessed the 
 "www.fullstackpython.com"
 address and the server responded with the index.html HTML-formatted file. 
 That HTML file contained references to other files, such as style.css and 
-script.js that the browser then requested from the server.</p>
-<p>Sending static assets (such as CSS and JavaScript files) can eat up a 
+script.js that the browser then requested from the server. -->
+
+<p>Webサーバはブラウザのリクエストに応じてファイルをブラウザに送ります。最初のリクエストではぶらうざは"www.fullstackpython.com"というアドレスにアクセスし、サーバはindex.htmlというHTML形式のレスポンスを返します。そのHTMLファイルが他のファイルへの参照、例えばstyle.cssやscript.js、があればブラウザは続けてサーバへリクエストを送ります。</p>
+<!-- Sending static assets (such as CSS and JavaScript files) can eat up a 
 large amount of bandwidth which is why using a Content Delivery Network 
 (CDN) is important when possible (see the content delivery network 
-section for a more detailed explanation).</p>
-<h2>Web server resources</h2>
+section for a more detailed explanation). -->
+
+<p>CSSやJavaScriptのファイルのような静的なアセットは多くの通信を行うことがあるので、Content Delivery Network(CDN)を使うことが望ましいでしょう。（詳細はCDNの章を参照してください）</p>
+<!-- ## Web server resources -->
+
+<h2>Webサーバのリソース</h2>
+<!-- * [HTTP/1.1 Specification](http://www.w3.org/Protocols/rfc2616/rfc2616.html) -->
+
 <ul>
 <li>
-<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 Specification</a></p>
+<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 仕様</a></p>
 </li>
 <li>
 <p><a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
@@ -1287,17 +1591,25 @@ section for a more detailed explanation).</p>
 <li>
 <p><a href="http://carrot.is/coding/nginx_introduction">Nginx for Developers: An Introduction</a></p>
 </li>
+</ul>
+<!-- * An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/). -->
+
+<ul>
+<li><a href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration</a>の例.</li>
+</ul>
+<!-- * A reference with the full list of 
+[HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+is provided by W3C. -->
+
+<ul>
+<li>W3Cが提供している<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP ステータスコード</a>のリスト</li>
+</ul>
+<!-- * An optimization guide for 
+"[battle ready Nginx](http://blog.zachorr.com/nginx-setup/)." -->
+
+<ul>
 <li>
-<p>An example of an <a href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration</a>.</p>
-</li>
-<li>
-<p>A reference with the full list of 
-<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP status codes</a>
-is provided by W3C.</p>
-</li>
-<li>
-<p>An optimization guide for 
-"<a href="http://blog.zachorr.com/nginx-setup/">battle ready Nginx</a>."</p>
+<p>Nginxの最適化ガイド "<a href="http://blog.zachorr.com/nginx-setup/">battle ready Nginx</a>."</p>
 </li>
 <li>
 <p><a href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">A faster Web server: ripping out Apache for Nginx</a></p>
@@ -1305,30 +1617,40 @@ is provided by W3C.</p>
 <li>
 <p><a href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
 </li>
-<li>
-<p><a href="http://lincolnloop.com/blog/rate-limiting-nginx/">Rate Limiting with Nginx</a>
-  covers how to mitigate against brute force password guessing attempts using
-  Nginx rate limits.</p>
-</li>
 </ul>
-<h2>Web servers learning checklist</h2>
+<!-- * [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
+  covers how to mitigate against brute force password guessing attempts using
+  Nginx rate limits. -->
+
+<ul>
+<li><a href="http://lincolnloop.com/blog/rate-limiting-nginx/">Rate Limiting with Nginx</a>では、Nginxのレート制限を使ってブルートフォース攻撃からパスワードのを守る方法が紹介されています。</li>
+</ul>
+<!-- ## Web servers learning checklist -->
+
+<h2>Webサーバを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
-<a href="http://httpd.apache.org/">Apache</a> is also a great choice.</p>
+<!-- Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
+<a href="http://httpd.apache.org/">Apache</a> is also a great choice. -->
+Webサーバを選択しましょう。<a href="http://nginx.org/en/">Nginx</a>がお勧めですが、<a href="http://httpd.apache.org/">Apache</a>も良い選択でしょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Create an SSL certificate. For testing use a self-signed certificate and for a
+<!-- Create an SSL certificate. For testing use a self-signed certificate and for a
 production app buy one from <a href="http://www.digicert.com/">Digicert</a>. Configure 
 the web server to serve traffic over SSL. You'll need SSL for serving only
 HTTPS traffic and preventing security issues that occur with unencrypted user 
-input.</p>
+input. -->
+SSL証明書を作成します。テスト目的なら自己署名の証明書、本番環境なら<a href="http://www.digicert.com/">Digicert</a>などから買います。SSLを通じてWebサーバがコンテンツを配信できるように設定しましょう。SSLはHTTPSを使用する場合や、ユーザの入力を暗号化しない場合に起こるリスクを防ぐために必要です。</p>
 <p><i class="fa fa-check-square-o"></i>
-Configure the web server to serve up static files such as CSS, JavaScript
-and images.</p>
+<!-- Configure the web server to serve up static files such as CSS, JavaScript
+and images. -->
+CSS、JavaScript、画像などの静的ファイルを配信できるようにWebサーバを設定しましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
-the web server as a pass through for dynamic content.</p>
-<h3>What do you want to learn after the web server is set up?</h3>
-                      <h1>WSGI Servers</h1>
+<!-- Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
+the web server as a pass through for dynamic content. -->
+<a href="/wsgi-servers.html">WSGIサーバ</a>をセットアップしたら、Webサーバが動的なコンテンツを受け取ることができるように設定する必要があります。</p>
+<!-- ### What do you want to learn after the web server is set up? -->
+
+<h3>Websサーバを設定したら、次に何を学びますか？</h3>
+              <h1>WSGI Servers</h1>
 <p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. </p>
@@ -1423,34 +1745,34 @@ the browser. </p>
 Nginx should handle static assets (such as images, JavaScript, and CSS
 files) under the /static directory and pass all other requests to the WSGI
 server running on port 8000:</p>
-<div class="codehilite"><pre><span class="cp"># this specifies that there is a WSGI server running on port 8000</span>
-<span class="n">upstream</span> <span class="n">app_server_djangoapp</span> <span class="p">{</span>
-    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
+<span class="nt">upstream</span> <span class="nt">app_server_djangoapp</span> <span class="p">{</span>
+    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="cp"># Nginx is set up to run on the standard HTTP port and listen for requests</span>
-<span class="n">server</span> <span class="p">{</span>
-  <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+<span class="err">#</span> <span class="nt">Nginx</span> <span class="nt">is</span> <span class="nt">set</span> <span class="nt">up</span> <span class="nt">to</span> <span class="nt">run</span> <span class="nt">on</span> <span class="nt">the</span> <span class="nt">standard</span> <span class="nt">HTTP</span> <span class="nt">port</span> <span class="nt">and</span> <span class="nt">listen</span> <span class="nt">for</span> <span class="nt">requests</span>
+<span class="nt">server</span> <span class="p">{</span>
+  <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
 
   <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="k">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
-  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="p">{</span>
+  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="err">{</span>
     <span class="n">autoindex</span> <span class="n">on</span><span class="p">;</span>
     <span class="n">alias</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">assets</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="err">#</span> <span class="n">requests</span> <span class="n">that</span> <span class="k">do</span> <span class="n">not</span> <span class="n">fall</span> <span class="n">under</span> <span class="o">/</span><span class="k">static</span> <span class="n">are</span> <span class="n">passed</span> <span class="n">on</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span>
-  <span class="err">#</span> <span class="n">server</span> <span class="n">that</span> <span class="n">was</span> <span class="n">specified</span> <span class="n">above</span> <span class="n">running</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">8000</span>
-  <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+  <span class="err">#</span> <span class="nt">requests</span> <span class="nt">that</span> <span class="nt">do</span> <span class="nt">not</span> <span class="nt">fall</span> <span class="nt">under</span> <span class="o">/</span><span class="nt">static</span> <span class="nt">are</span> <span class="nt">passed</span> <span class="nt">on</span> <span class="nt">to</span> <span class="nt">the</span> <span class="nt">WSGI</span>
+  <span class="err">#</span> <span class="nt">server</span> <span class="nt">that</span> <span class="nt">was</span> <span class="nt">specified</span> <span class="nt">above</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
+  <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
     <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_djangoapp;</span>
-      <span class="k">break</span><span class="p">;</span>
+    <span class="n">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="err">{</span>
+      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_djangoapp</span><span class="p">;</span>
+      <span class="n">break</span><span class="p">;</span>
     <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
 </pre></div>
 
 
@@ -1543,161 +1865,228 @@ Test that the WSGI server responds to local requests but not direct requests
 outside your infrastructure. The web server should be the pass through for
 requests to and responses from the WSGI server.</p>
 <h3>What's next after your Python code is running?</h3>
-                      <h1>Source control</h1>
-<p>Source control, also known as <em>version control</em>, stores software code files
-with a detailed history of every modification made to those files.</p>
-<h2>Why is source control necessary?</h2>
-<p>Version control systems allow developers to modify code without worrying 
+              <!-- # Source control -->
+
+<h1>ソース管理</h1>
+<!-- Source control, also known as *version control*, stores software code files
+with a detailed history of every modification made to those files. -->
+
+<p>ソース管理、または<em>バージョン管理</em>は、ソフトウェアのコードを記述したファイルを変更した履歴を管理しています。</p>
+<!-- ## Why is source control necessary? -->
+
+<h2>なぜソース管理が必要？</h2>
+<!-- Version control systems allow developers to modify code without worrying 
 about permanently screwing something up. Unwanted changes can be easily rolled
-back to previous working versions of the code. </p>
-<p>Source control also makes team software development easier. One developer 
+back to previous working versions of the code.  -->
+
+<p>バージョン管理をすることで、これまで作り上げたものを台無しにする心配をせずにコードを編集することができるようになります。コードの変更を無かったことにしたい場合も、前のバージョンのコードに巻き戻すことができます。</p>
+<!-- Source control also makes team software development easier. One developer 
 can combine her code modifications with other developers' code through 
-<a href="http://en.wikipedia.org/wiki/Diff">diff</a> views that show line-by-line 
-changes then merge the appropriate code into the main code branch.</p>
-<p>Version control is a necessity on all software projects regardless of 
+[diff](http://en.wikipedia.org/wiki/Diff) views that show line-by-line 
+changes then merge the appropriate code into the main code branch. -->
+
+<p>また、ソース管理はチームでの開発を簡単に行えるようになります。ある開発者が他の開発者のコードを<a href="http://ja.wikipedia.org/wiki/Diff">diff</a>によって1行づつ見比べることができるので、メインのコードブランチにマージすることができます。</p>
+<!-- Version control is a necessity on all software projects regardless of 
 development time, codebase size or the programming language used. Every
 project should immediately begin by using a version control system such
-as Git or Mercurial.</p>
-<h2>Source control during deployment</h2>
-<p>Pulling code during a deployment is a potential way source control systems fit
-into the deployment process. </p>
-<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
-<p>Note that some developers recommend deployment pipelines package the source 
+as Git or Mercurial. -->
+
+<p>バージョン管理は開発期間、規模、言語に関わらず必須です。すべてのプロジェクトで直ちにGitやMercurialの様なバージョン管理システムを導入するべきです。</p>
+<!-- ## Source control during deployment -->
+
+<h2>開発中のソース管理</h2>
+<!-- Pulling code during a deployment is a potential way source control systems fit
+into the deployment process.  -->
+
+<p>開発段階において、開発中のコードを取り出すのがソース管理システムの用途です。</p>
+<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="ソース管理システムからコードを取り出すためのサーバを利用する"></p>
+<!-- Note that some developers recommend deployment pipelines package the source 
 code to deploy it and never have a production environment touch a source 
 control system directly. However, for small scale deployments it's often
 easiest to pull from source code when you're getting started instead of 
-figuring out how to wrap the Python code in a system installation package.</p>
-<h2>Source control projects</h2>
-<p>Numerous source control systems have been created over the past several
+figuring out how to wrap the Python code in a system installation package. -->
+
+<p>デプロイにはソースコードをパッケージングし、プロダクション環境には一切ソース管理システムを利用しないというケースもあります。しかし、初学者にとってはシステムのインストールパッケージにPythonコードをパッケージングする方法を学び始めるよりも、小規模のデプロイにはソースコードを取り出して行うほうが簡単でしょう。</p>
+<!-- ## Source control projects -->
+
+<h2>ソース管理プロジェクト</h2>
+<p><!-- Numerous source control systems have been created over the past several
 decades. In the past, proprietary source control software offered features
 tailored to large development teams and specific project workflows. However,
 open source systems are now used for version control on the largest and most
 complicated software projects in existence. There's no reason why your project
 should use anything other than an open source version control system in
-today's Python development world. The two primary choices are:</p>
+today's Python development world. The two primary choices are: -->
+この2~30年の間様々なソース管理システムが作られてきました。過去にはプロプライエタリなソース管理ソフトウェアが大規模なプロジェクトチームのために作られたり、特定のプロジェクトに対応してきました。しかし、今日では最も巨大で複雑なプロジェクトが実際にオープンソースのバージョン管理システムを利用しています。今日のPythonプロジェクトでオープンソースのバージョン管理システムを使わない理由はありません。主な選択肢は2つです。</p>
+<!-- * [Git](http://git-scm.com/) is a free and open source distributed version
+  control system. -->
+
 <ul>
-<li>
-<p><a href="http://git-scm.com/">Git</a> is a free and open source distributed version
-  control system.</p>
-</li>
-<li>
-<p><a href="http://mercurial.selenic.com/">Mercurial</a> is similar to Git, also a free
-  and open source distributed version control system.</p>
-</li>
+<li><a href="http://git-scm.com/">Git</a>はフリーでオープンソースのバージョン管理システムです。</li>
 </ul>
-<h2>Hosted source control services</h2>
-<p>Git and Mercurial can be downloaded and run on your own server. However,
+<!-- * [Mercurial](http://mercurial.selenic.com/) is similar to Git, also a free
+  and open source distributed version control system. -->
+
+<ul>
+<li><a href="http://mercurial.selenic.com/">Mercurial</a>はGitに似た、フリーでオープンなバージョン管理システムです。</li>
+</ul>
+<!-- ## Hosted source control services -->
+
+<h2>ソース管理のホスティング</h2>
+<!-- Git and Mercurial can be downloaded and run on your own server. However,
 it's easy and cheap to get started with a hosted version control service.
 You can transition away from the service at a later time by moving your 
 repositories if your needs change. A couple of recommended hosted version
-control services are:</p>
+control services are: -->
+
+<p>GitやMercurialはあなたのサーバにインストールして利用することができますが、ソース管理のホスティングサービスを使うほうが、扱いやすく経済的です。必要に応じて利用するサービスは変更できます。お勧めのホスティングサービスは2つです。</p>
+<!-- * [GitHub](https://github.com/) is currently the most commonly used source
+  control platform for using Git. -->
+
 <ul>
-<li>
-<p><a href="https://github.com/">GitHub</a> is currently the most commonly used source
-  control platform for using Git.</p>
-</li>
-<li>
-<p><a href="https://bitbucket.org/">BitBucket</a> provides free Git and Mercurial 
-  repositories for open projects and private repositories for up to five
-  users. Users pay for hosting private repositories with more than five users.</p>
-</li>
+<li><a href="https://github.com/">GitHub</a>は、現時点で最も利用されているGitホスティングサービスです。</li>
 </ul>
-<h2>General source control resources</h2>
+<!-- * [BitBucket](https://bitbucket.org/) provides free Git and Mercurial 
+  repositories for open projects and private repositories for up to five
+  users. Users pay for hosting private repositories with more than five users. -->
+
 <ul>
-<li>
-<p><a href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> 
+<li><a href="https://bitbucket.org/">BitBucket</a>はGitとMercurialに対応し、5人までのチームであれば公開・非公開のレポジトリを無料でホスティングすることができます。</li>
+</ul>
+<!-- ## General source control resources -->
+
+<h2>一般的なソース管理のリソース</h2>
+<!-- * [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
   is a comprehensive overview by Patrick McKenzie of why you need source 
-  control.</p>
-</li>
-<li>
-<p><a href="https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/">Version control best practices</a>
+  control. -->
+
+<ul>
+<li><a href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a>はPatrick McKenzieによる、なぜソース管理が必要なのかを解説した記事です。</li>
+</ul>
+<!-- * [Version control best practices](https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/)
   is a good write up of how to work with version control systems. The post is 
   part of an ongoing deployment guide written by the folks at 
-  <a href="https://www.rainforestqa.com/">Rainforest</a>.</p>
-</li>
-<li>
-<p>This lighthearted guide to the 
-  <a href="http://www.flourish.org/blog/?p=397">ten astonishments in version control history</a> 
-  is a fun way to learn how systems developed over the past several decades.</p>
-</li>
-<li>
-<p><a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A visual guide to version control</a> 
-  is a detailed article with real-life examples for why version control is
-  necessary in software development.</p>
-</li>
-<li>
-<p><a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">An introduction to version control</a> 
-  shows the basic concepts behind version control systems.</p>
-</li>
-<li>
-<p><a href="http://oss-watch.ac.uk/resources/versioncontrol">What Is Version Control? Why Is It Important For Due Diligence?</a> 
-  explains the benefits and necessity of version control systems.</p>
-</li>
-<li>
-<p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">About version control</a> 
-reviews the basics of distributed version control systems.</p>
-</li>
-</ul>
-<h2>Git resources</h2>
+  [Rainforest](https://www.rainforestqa.com/). -->
+
 <ul>
-<li>
-<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
-  through all aspects of using the version control system.</p>
-</li>
-<li>
-<p><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git">A Hacker's Guide to Git</a>
-  covers the basics as well as more advanced Git commands while explaining each
-  step along the way.</p>
-</li>
-<li>
-<p><a href="http://mrchlblng.me/2014/09/practical-git-introduction/">A practical git introduction</a>
-  is exactly what the title says it is. This is a well written guide with 
-  plenty of code snippets to get you up to speed with Git.</p>
-</li>
-<li>
-<p><a href="http://gitready.com/">git ready</a> has a nice collection of blog posts based on
-  beginner, intermediate and advanced Git use cases.</p>
-</li>
-<li>
-<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> details
-  a Git branching model for small teams.</p>
-</li>
-<li>
-<p><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a> builds on
-  git-flow, goes over some of the issues that arise with it and presents a
-  few solutions to those problems.</p>
-</li>
-<li>
-<p><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>
-  is a helpful post with diagrams to show how teams can create a Git workflow
-  that will help their development process.</p>
-</li>
-<li>
-<p>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"
-  by Braintree goes over how this payments company uses Git for development
-  and merging source code.</p>
-</li>
+<li><a href="https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/">Version control best practices</a>は、バージョン管理システムの利用方法について書かれています。記事は<a href="https://www.rainforestqa.com/">Rainforest</a>によってフォークされ、継続しています。</li>
 </ul>
-<h2>Source control learning checklist</h2>
+<!-- * This lighthearted guide to the 
+  [ten astonishments in version control history](http://www.flourish.org/blog/?p=397) 
+  is a fun way to learn how systems developed over the past several decades. -->
+
+<ul>
+<li><a href="http://www.flourish.org/blog/?p=397">ten astonishments in version control history</a>は、ソフトウェア開発の歴史について楽しく学ぶことができます。</li>
+</ul>
+<!-- * [A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 
+  is a detailed article with real-life examples for why version control is
+  necessary in software development. -->
+
+<ul>
+<li><a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A visual guide to version control</a>は、なぜバージョン管理が必要なのかということが実践的なバージョン管理とともに解説されています。</li>
+</ul>
+<!-- * [An introduction to version control](http://guides.beanstalkapp.com/version-control/intro-to-version-control.html) 
+  shows the basic concepts behind version control systems. -->
+
+<ul>
+<li><a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">An introduction to version control</a>では、バージョン管理の基本的なコンセプトについて解説されています。</li>
+</ul>
+<!-- * [What Is Version Control? Why Is It Important For Due Diligence?](http://oss-watch.ac.uk/resources/versioncontrol) 
+  explains the benefits and necessity of version control systems. -->
+
+<ul>
+<li><a href="http://oss-watch.ac.uk/resources/versioncontrol">What Is Version Control? Why Is It Important For Due Diligence?</a>ではバージョン管理システムの恩恵と必要性について解説されています。</li>
+</ul>
+<!-- * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
+reviews the basics of distributed version control systems. -->
+
+<ul>
+<li><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">About version control</a>では、分散型バージョン管理システムの基礎について解説されています。</li>
+</ul>
+<!-- ## Git resources -->
+
+<h2>Gitのリソース</h2>
+<!-- * [Pro Git](http://git-scm.com/book) is a free open source book that walks 
+  through all aspects of using the version control system. -->
+
+<ul>
+<li><a href="http://git-scm.com/book">Pro Git</a>はバージョン管理システムを利用に関して、すべてを網羅したオープンな書籍です。</li>
+</ul>
+<!-- * [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
+  covers the basics as well as more advanced Git commands while explaining each
+  step along the way. -->
+
+<ul>
+<li><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git">A Hacker's Guide to Git</a>は、Gitコマンドの基礎と応用を学ぶことができます。</li>
+</ul>
+<!-- * [A practical git introduction](http://mrchlblng.me/2014/09/practical-git-introduction/)
+  is exactly what the title says it is. This is a well written guide with 
+  plenty of code snippets to get you up to speed with Git. -->
+
+<ul>
+<li><a href="http://mrchlblng.me/2014/09/practical-git-introduction/">A practical git introduction</a>はタイトル通り、実践的なGitガイドです。Gitの使用を加速する豊富なコードとともに詳細な解説が掲載されています。</li>
+</ul>
+<!-- * [git ready](http://gitready.com/) has a nice collection of blog posts based on
+  beginner, intermediate and advanced Git use cases. -->
+
+<ul>
+<li><a href="http://gitready.com/">git ready</a>は初心者向けから中級者、上級者向けに分けれられたGitの利用方法について解説しているブログです。</li>
+</ul>
+<!-- * [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) details
+  a Git branching model for small teams. -->
+
+<ul>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a>は、小規模なチームに最適なブランチモデルについて解説しています。</li>
+</ul>
+<!-- * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) builds on
+  git-flow, goes over some of the issues that arise with it and presents a
+  few solutions to those problems. -->
+
+<ul>
+<li><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a>はgit-flowをベースに構築され、その問題点と解決方法を紹介しています。</li>
+</ul>
+<!-- * [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
+  is a helpful post with diagrams to show how teams can create a Git workflow
+  that will help their development process. -->
+
+<ul>
+<li><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>は、チームでGitを使う際に参考となる、ワークフローのダイアグラムを紹介しています。</li>
+</ul>
+<!-- * "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
+  by Braintree goes over how this payments company uses Git for development
+  and merging source code. -->
+
+<ul>
+<li>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"はBraintreeがGitを使いソースコードをマージするためのノウハウを紹介しています。</li>
+</ul>
+<!-- ## Source control learning checklist -->
+
+<h2>ソース管理を学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Pick a version control system. Git is recommended because on the web there 
-are a significant number of tutorials to help both new and advanced users.</p>
+<!-- Pick a version control system. Git is recommended because on the web there 
+are a significant number of tutorials to help both new and advanced users. -->
+バージョン管理システムを選択しましょう。Web上のリソース、チュートリアルの数、様々なレベルのユーザ層の数からすると、Gitがお勧めです。</p>
 <p><i class="fa fa-check-square-o"></i>
-Learn basic use cases for version control such as committing changes, rolling 
+<!-- Learn basic use cases for version control such as committing changes, rolling 
 back to earlier file versions and searching for when lines of code were 
-modified during development history.</p>
+modified during development history. -->
+変更のコミット、変更の取り消し、履歴から変更箇所を探す方法など、基本的な使い方を学びましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Ensure your source code is backed up in a central repository. A central
+<!-- Ensure your source code is backed up in a central repository. A central
 repository is critical not only if your local development version is corrupted
-but also for the deployment process.</p>
+but also for the deployment process. -->
+あなたのソースコードが中央のレポジトリにパックアップされているかを確認して下さい。中央レポジトリは、ローカルの開発バージョンが壊れた場合だけでなく、開発段階でも重要なものです。</p>
 <p><i class="fa fa-check-square-o"></i>
-Integrate source control into your deployment process in three ways. First,
+<!-- Integrate source control into your deployment process in three ways. First,
 pull the project source code from version control during deployments. Second, 
 kick off deployments when code is modified by using webhooks or polling on 
 the repository. Third, ensure you can roll back to a previous version if a 
-code deployment goes wrong.</p>
-<h3>Now that your source code is versioned, what's next?</h3>
-                      <h1>Application Dependencies</h1>
+code deployment goes wrong. -->
+3つの方法であなたの開発プロセスにソース管理を組み込みましょう。まずはデプロイ時にバージョン管理システムからソースコードを取り出します。次にコードが変更されたらデプロイが起こるようにwebhookやレポジトリのポーリングをしてみます。最後に開発が間違ったら以前のバージョンに巻き戻すことができることを確認しましょう。</p>
+<!-- ### Now that your source code is versioned, what's next? -->
+
+<h3>あなたのソースコードはバージョン管理されました。次は？</h3>
+              <h1>Application Dependencies</h1>
 <p>Application dependencies are the libraries other than your project code
 that are required to create and run your application. </p>
 <h2>Why are application dependencies important?</h2>
@@ -1765,17 +2154,17 @@ requirements.txt file. </p>
 requirements.txt with 
 <a href="https://devcenter.heroku.com/articles/python-pip">pegged dependencies</a> like
 the following:</p>
-<div class="codehilite"><pre><span class="n">django</span><span class="o">==</span><span class="mf">1.6</span>
-<span class="n">bpython</span><span class="o">==</span><span class="mf">0.12</span>
-<span class="n">django</span><span class="o">-</span><span class="n">braces</span><span class="o">==</span><span class="mf">0.2.1</span>
-<span class="n">django</span><span class="o">-</span><span class="n">model</span><span class="o">-</span><span class="n">utils</span><span class="o">==</span><span class="mf">1.1.0</span>
-<span class="n">logutils</span><span class="o">==</span><span class="mf">0.3.3</span>
-<span class="n">South</span><span class="o">==</span><span class="mf">0.7.6</span>
-<span class="n">requests</span><span class="o">==</span><span class="mf">1.2.0</span>
-<span class="n">stripe</span><span class="o">==</span><span class="mf">1.9.1</span>
-<span class="n">dj</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">url</span><span class="o">==</span><span class="mf">0.2.1</span>
-<span class="n">django</span><span class="o">-</span><span class="n">oauth2</span><span class="o">-</span><span class="n">provider</span><span class="o">==</span><span class="mf">0.2.4</span>
-<span class="n">djangorestframework</span><span class="o">==</span><span class="mf">2.3.1</span>
+<div class="highlight"><pre>django==1.6
+bpython==0.12
+django-braces==0.2.1
+django-model-utils==1.1.0
+logutils==0.3.3
+South==0.7.6
+requests==1.2.0
+stripe==1.9.1
+dj-database-url==0.2.1
+django-oauth2-provider==0.2.4
+djangorestframework==2.3.1
 </pre></div>
 
 
@@ -1843,7 +2232,7 @@ command.</p>
 Check that your application runs properly with the fresh virtualenv and only
 the installed dependencies from the requirements.txt file.</p>
 <h3>What do you need to learn after installing your app dependencies?</h3>
-                      <h1>Databases</h1>
+              <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. </p>
 <h2>Why are databases necessary?</h2>
@@ -2054,7 +2443,7 @@ Sync the ORM models with the PostgreSQL instance.</p>
 Start creating, reading, updating and deleting data in the database from your 
 web application.</p>
 <h3>What's next to get your app running?</h3>
-                      <h1>NoSQL Data Stores</h1>
+              <h1>NoSQL Data Stores</h1>
 <p>Relational databases store the vast majority of web application 
 persistent data. However, there are several alternative classifications of 
 storage representations.</p>
@@ -2223,7 +2612,7 @@ be persistent must still be backed up to disk on a regular basis.</p>
 Evaluate other use cases such as storing transient logs in document-oriented
 data stores such as MongoDB.</p>
 <h3>What's next?</h3>
-                      <h1>Web Design</h1>
+              <h1>Web Design</h1>
 <p>Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.</p>
 <h2>Why is web design important?</h2>
@@ -2265,7 +2654,7 @@ width.</p>
   that will show you how to build a simple rendering engine.</p>
 </li>
 </ul>
-                      <h1>Cascading Style Sheets (CSS)</h1>
+              <h1>Cascading Style Sheets (CSS)</h1>
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
@@ -2409,7 +2798,7 @@ so you get comfortable with how to use the framework.</p>
 Apply the framework to your web application and tweak the design until you
 have something that looks much better than generic HTML.</p>
 <h3>Once your app is styled what do you need to learn next?</h3>
-                      <h1>JavaScript</h1>
+              <h1>JavaScript</h1>
 <p>JavaScript is a small scripting programming language embedded in web browsers 
 to enable dynamic content and interaction. </p>
 <h2>Why is JavaScript necessary?</h2>
@@ -2496,7 +2885,7 @@ Integrate JavaScript into your web application and check the
 <a href="/static-content.html">static content</a> section for how to host the JavaScript
 files.</p>
 <h3>Do you need to style your app or deploy it next?</h3>
-                      <h1>Continuous Integration</h1>
+              <h1>Continuous Integration</h1>
 <p>Continuous integration (CI) automates building, testing and deploying 
 applications.</p>
 <h2>Why is continuous integration important?</h2>
@@ -2606,7 +2995,7 @@ relatively simple set up.</p>
 </li>
 </ul>
 <h3>What do you want to add to your application next?</h3>
-                      <h1>Code Metrics</h1>
+              <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
 <h2>Why are code metrics important?</h2>
@@ -2655,7 +3044,7 @@ system are occurring.</p>
 </li>
 </ul>
 <h3>What's next after obtaining code metrics?</h3>
-                      <h1>Configuration Management</h1>
+              <h1>Configuration Management</h1>
 <p>Configuration management involves modifying servers from an existing state to 
 a desired state and automating how an application is deployed.</p>
 <h2>Configuration management tools</h2>
@@ -2779,7 +3168,7 @@ pay dividends every time you deploy your project.</p>
 <p><i class="fa fa-check-square-o"></i>
 Hook the automated deployment tool into your existing deployment process.</p>
 <h3>What's next after automating your app configuration?</h3>
-                      <h1>Static content</h1>
+              <h1>Static content</h1>
 <p>Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.</p>
@@ -2837,7 +3226,7 @@ Move static content serving from the www subdomain to a static (or similarly
 named) subdomain so browsers will load static content in parallel to www
 HTTP requests.</p>
 <h3>What's next for building your app?</h3>
-                      <h1>Caching</h1>
+              <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
 <p>For example, instead of retrieving data from database tables that rarely 
@@ -2886,7 +3275,7 @@ on a regular basis and save them in the data store.</p>
 Incorporate a cache invalidation scheme so the precomputed results remain 
 accurate when served up to the user.</p>
 <h3>What do you want to learn now that your app is responding faster?</h3>
-                      <h1>Task queues</h1>
+              <h1>Task queues</h1>
 <p>Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.</p>
 <h2>Why are task queues necessary?</h2>
@@ -3058,7 +3447,7 @@ Use Celery to invoke the function from step one on a regular basis.</p>
 Have the HTTP request function use the precomputed value instead of the 
 slow running code it originally relied upon.</p>
 <h3>What's next after task queues?</h3>
-                      <h1>Application Programming Interfaces</h1>
+              <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
 <h2>Why are APIs important?</h2>
@@ -3133,7 +3522,7 @@ Use a framework to create an API for your own application. </p>
 Expose your web application's API so other applications can consume data you
 want to share.</p>
 <h3>What's next after learning about APIs?</h3>
-                      <h1>API Integration</h1>
+              <h1>API Integration</h1>
 <p>The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 
@@ -3246,7 +3635,7 @@ the HTTP calls.</p>
 Move your API calls into a <a href="/task-queues.html">task queue</a> so they do not 
 block the HTTP request-response cycle for your web application.</p>
 <h3>What's next after integrating APIs into your app?</h3>
-                      <h1>API Creation</h1>
+              <h1>API Creation</h1>
 <p>Creating and exposing APIs allows your web application to interact with other
 applications through machine-to-machine communication.</p>
 <h2>API creation frameworks</h2>
@@ -3405,7 +3794,7 @@ and used.</p>
 Figure out other use cases and expand based on what you learned with the 
 initial API use case.</p>
 <h3>What's next after building an API for your web app?</h3>
-                      <h1>Logging</h1>
+              <h1>Logging</h1>
 <p>Logging saves output such as errors, warnings and event information to 
 files for debugging purposes. </p>
 <h2>Why is logging important?</h2>
@@ -3532,7 +3921,7 @@ Integrate logging for system events you may need to use for debugging purposes
 later. For example, you may want to know the return values on functions when
 they are above a certain threshold. </p>
 <h3>Logging isn't enough. How do I analyze more data about the app?</h3>
-                      <h1>Monitoring</h1>
+              <h1>Monitoring</h1>
 <p>Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
 all levels of the web stack. Monitoring tools provide transparency so
@@ -3694,7 +4083,7 @@ monitoring projects such as StatsD with Graphite. The combination of those
 two projects will give you fine-grained control over the system metrics 
 you're collecting and visualizing.</p>
 <h3>What topic do you want to learn next?</h3>
-                      <h1>Web analytics</h1>
+              <h1>Web analytics</h1>
 <p>Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.</p>
 <h2>Why is web analytics important?</h2>
@@ -3816,7 +4205,7 @@ Continuously reevaluate whether the metrics you've chosen are still the
 appropriate ones defining your application's success. Improve and refine the
 metrics generated by the web analytics as necessary.</p>
 <h3>What's the next topic you want to learn about?</h3>
-                      <h1>Web Application Security</h1>
+              <h1>Web Application Security</h1>
 <p>Website security must be thought about while building every level of the web 
 stack. However, this section includes topics that deserve particular
 treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
@@ -3931,7 +4320,7 @@ Recognize that no system is ever totally secure. However, the more popular
 an application becomes the more attractive a target it is to attackers.
 Reevaluate your web application security on a frequent basis.</p>
 <h3>What topic do you want to learn about next?</h3>
-                      <h1>Best Python Resources</h1>
+              <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. </p>
@@ -4121,7 +4510,7 @@ should skip down to the next section for "experienced developers".</p>
 </li>
 </ul>
 <h3>Those resources should help get you started. What's next?</h3>
-                      <h1>Development Environments</h1>
+              <h1>Development Environments</h1>
 <p>A development environment is a combination of a text editor and the Python
 interpreter. The text editor allows you to write the code. The interpreter
 provides a way to execute the code you've written. A text editor can be
@@ -4232,7 +4621,7 @@ up your application.</p>
   other three in this review.</p>
 </li>
 </ul>
-                      <h1>About the Author</h1>
+              <h1>About the Author</h1>
 <p>This website was coded and written by
 <a href="http://www.mattmakai.com/">Matt Makai</a> 
 (<a href="http://twitter.com/mattmakai">@mattmakai</a>), currently a 
@@ -4251,7 +4640,7 @@ or <a href="https://github.com/makaimc">GitHub at makaimc</a>.</p>
 through a pull request on
 <a href="https://github.com/makaimc/fullstackpython.github.com/">GitHub</a>.</p>
 <h3>Where to now?</h3>
-                      <h1>Change Log</h1>
+              <h1>Change Log</h1>
 <p>This is a running list of the major changes to Full Stack Python since its
 inception in December 2012. Another way to view the modifications is through
 the 
@@ -4475,7 +4864,7 @@ the
   other areas.</li>
 </ul>
 <p>That's the whole history of Full Stack Python. What do you want to learn now?</p>
-                      <h1>Future Directions</h1>
+              <h1>Future Directions</h1>
 <p>Full Stack Python is a larger undertaking than I originally envisioned. My
 original intent was to link to the best resources by category. That grew into
 explaining the concepts plus including the best links I could find.</p>
@@ -4515,42 +4904,31 @@ submit one when you see a fix or improvement that needs to be made!</p>
 <p>After those updates are done I'll go back through and apply visuals to
 each section to make them easier to read and understand.</p>
 <h3>That's what coming. What would you like to learn right now?</h3>
-            </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
+    </div>
+<div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
       <div class="panel-body">
-          <a href="/">Full Stack Python</a> is an open book that explains
-          each Python web application stack layer and provides the
-          best web resources for those topics.
+          <a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
           <hr/>
-                    Check out the 
-          <a href="/table-of-contents.html">table of contents</a> if you're
-          searching for a particular topic.
-                    <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
-          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          特定の話題を探している場合は<a href="./table-of-contents.html">目次</a>を参照して下さい。
           <hr/>
-          <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          より詳細なチュートリアルが必要ですか?
+          <a href="./email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
+          <hr/>
+          このサイトは<a href="http://twitter.com/mattmakai">Matt Makai</a>により、
+          コミュニティからプルリクエストによる協力を得て作成されています。GitHubで
+          <a href="https://github.com/makaimc">Mattをフォロー</a>すれば、日々の更新を見ることができます。
       </div>
   </div>
-  </div></div>
+</div></div>
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
             2014
         </div>
     </div>
-    <script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-var b=document.getElementsByTagName("script")[0];
-a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>    <div style="display: none;">
+    <div style="display: none;">
         <img src="https://www.linkedin.com/profile/view?authToken=zRgB&authType=name&id=3952407" />
     </div>
 </body>
