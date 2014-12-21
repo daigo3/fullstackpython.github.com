@@ -13,121 +13,136 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19910497-7']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>  </head>
+  </head>
 
 <body>
     <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
     </a>
     <div class="container">
-        <div class="row">
+<div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
-            <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
-            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+            <a href="http://daigo3.github.io/fullstackpython.github.com/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
+            <span class="logo-title"><a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a></span>
         </div>
     </div>
-</div>        <div class="row">
+</div><div class="row">
     <div class="col-md-8">
       <h1>Bottle</h1>
-<p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
+<p><!-- <a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
 <a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
 web framework with no external dependencies except for the standard library
-included with Python.</p>
-<h2>Bottle resources</h2>
+included with Python. -->
+<a href="http://bottlepy.org/docs/dev/index.html">Bottle</a>はWSGI互換の<a href="https://github.com/defnull/bottle/blob/master/bottle.py">シングルファイル</a>のWebフレームワークで、Pythonの標準ライブラリだけで動作します。</p>
+<!-- ## Bottle resources -->
+
+<h2>Bottleのリソース</h2>
+<!-- * The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
+  provides a thorough view of basic concepts and features for the framework. -->
+
 <ul>
-<li>
-<p>The <a href="http://bottlepy.org/docs/dev/tutorial.html">official Bottle tutorial</a> 
-  provides a thorough view of basic concepts and features for the framework.</p>
-</li>
-<li>
-<p>Digital Ocean provides an extensive <a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">introductory post on Bottle</a>.</p>
-</li>
-<li>
-<p>This tutorial provides a walkthrough for
-<a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>.</p>
-</li>
-<li>
-<p>Here's a short code snippet for 
-  <a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>.</p>
-</li>
-<li>
-<p>This <a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">tutorial</a> 
-  is another Bottle walkthrough for creating a RESTful web API.</p>
-</li>
-<li>
-<p><a href="http://reachtim.com/articles/BAM-Short-Stack.html">BAM! A Web Framework "Short Stack"</a>
+<li><a href="http://bottlepy.org/docs/dev/tutorial.html">公式チュートリアル</a>では、基本的なコンセプトと機能を解説しています。</li>
+</ul>
+<!-- * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps). -->
+
+<ul>
+<li>Digital Oceanに<a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">Bottleの入門記事</a>が掲載されています。</li>
+</ul>
+<!-- * This tutorial provides a walkthrough for
+[getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598). -->
+
+<ul>
+<li><a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>はBottleの入門記事です。</li>
+</ul>
+<!-- * Here's a short code snippet for 
+  [creating a RESTful API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/). -->
+
+<ul>
+<li><a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>では、Bottleアプリケーションのサンプルコードを読むことができます。</li>
+</ul>
+<!-- * This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
+  is another Bottle walkthrough for creating a RESTful web API. -->
+
+<ul>
+<li>この<a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">チュートリアル</a>でもBottleを使ったRESTful APIの作り方が解説されています。</li>
+</ul>
+<!-- * [BAM! A Web Framework "Short Stack"](http://reachtim.com/articles/BAM-Short-Stack.html)
   is a walkthrough of using Bottle, Apache and MongoDB to create a web
-  application.</p>
-</li>
-<li>
-<p><a href="http://gengo.github.io/decanter/">Decanter</a> is a library for structuring 
-  Bottle projects.</p>
-</li>
-</ul>
-<h2>Open source Bottle example projects</h2>
+  application. -->
+
 <ul>
-<li><a href="https://github.com/thekad/pasttle">Pattle</a> is a pastebin clone built with
-  Bottle.</li>
+<li><a href="http://reachtim.com/articles/BAM-Short-Stack.html">BAM! A Web Framework "Short Stack"</a>はBottle、Apache、MongoDBを使ったWebアプリケーションのチュートリアルです。</li>
 </ul>
-<h2>Bottle framework learning checklist</h2>
+<!-- * [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
+  Bottle projects. -->
+
+<ul>
+<li><a href="http://gengo.github.io/decanter/">Decanter</a>はBottleプロジェクトを構造化するためのライブラリです。</li>
+</ul>
+<!-- ## Open source Bottle example projects -->
+
+<h2>オープンソースのサンプルプロジェクト</h2>
+<p><!-- * <a href="https://github.com/thekad/pasttle">Pattle</a> is a pastebin clone built with
+  Bottle. -->
+* <a href="https://github.com/thekad/pasttle">Pattle</a>はpastbinクローンです。</p>
+<!-- ## Bottle framework learning checklist -->
+
+<h2>Bottleフレームワークを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-<a href="https://github.com/defnull/bottle/raw/master/bottle.py">Download Bottle</a> or
-install via pip with <code>pip install bottle</code> on your local development machine.</p>
+<!-- <a href="https://github.com/defnull/bottle/raw/master/bottle.py">Download Bottle</a> or
+install via pip with <code>pip install bottle</code> on your local development machine. -->
+<a href="https://github.com/defnull/bottle/raw/master/bottle.py">Bottleをダウンロード</a>するか、<code>pip install bottle</code>でローカルマシンにインストールしてください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the official 
-<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>.</p>
+<!-- Work through the official 
+<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>. -->
+公式の<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>をやりましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Start coding your Bottle app based on what you learned in the official 
-tutorial plus reading open source example applications found below. </p>
+<!-- Start coding your Bottle app based on what you learned in the official 
+tutorial plus reading open source example applications found below.  -->
+公式チュートリアルとオープンソースのサンプルプロジェクトで学んだ知識を元にあなたのBottleプロジェクトを始めてください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
-Bottle application on the web.</p>
-<h3>What do you need to learn next?</h3>
-                  <div class="row">
+<!-- Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
+Bottle application on the web. -->
+Bottleアプリケーションを公開するために<a href="./deployment.html">デプロイの章</a>に進んでください。</p>
+<!-- ### What do you need to learn next? -->
+
+<h3>次は何を学びますか？</h3>
+<div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-inverse fa-2x"></i></a>
+            <a href="./deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I deploy my Bottle app once I've built the initial concept?
+                Bottleで作ったアプリケーションをデプロイする方法は？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
+            <a href="./cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                The user interface I built looks terrible. How do I style my web app?
+                ひどいUIを作ってしまった。Webアプリケーションをかっこ良くするには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <a href="./web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                I'd like to go back to reviewing other web frameworks.
+                他のWebフレームワークも見たい。
             </p>
         </div>
     </div>
-        <div class="col-md-3">
+    <div class="col-md-3">
         <div class="well select-next">
-            <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
+            <a href="./source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How can I version and store my source code so I don't lose it?
+                どのようにコードのバージョン管理をすれば良いですか？
             </p>
         </div>
     </div>
-    </div>            <style type="text/css">
+</div><style type="text/css">
     #mc_embed_signup{background:#fff; clear:left; font:12px "Helvetica Neue",Arial,sans-serif; }
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
@@ -344,86 +359,75 @@ function mce_success_cb(resp){
 
 </script>
 <!--End mc_embed_signup-->     </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
+<div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Bottle</h3></div>
       <div class="panel-body">
-          <a href="/">Full Stack Python</a> is an open book that explains
-          each Python web application stack layer and provides the
-          best web resources for those topics.
+          <a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
           <hr/>
-                    There's a work-in-progress 
-          <a href="/full-stack-python-map.pdf">subjects map (.pdf)</a> 
-          that visually lays out each chapter in addition to the table of
-          contents found below.
-                    <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
-          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          There's a work-in-progress
+          現在、作成中の<a href="./full-stack-python-map.pdf">subjects map (.pdf)</a>は、目次に加え各章を視覚化したものです。
           <hr/>
-          <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          より詳細なチュートリアルが必要ですか?
+          <a href="./email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
+          <hr/>
+          このサイトは<a href="http://twitter.com/mattmakai">Matt Makai</a>により、
+          コミュニティからプルリクエストによる協力を得て作成されています。GitHubで
+          <a href="https://github.com/makaimc">Mattをフォロー</a>すれば、日々の更新を見ることができます。
       </div>
   </div>
-    <div class="panel panel-success">
+  <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-head">Table of Contents</h3>
       </div>
       <div class="list-group">
-                        <a href="/introduction.html" class="list-group-item smaller-item ">Introduction</a>
-                        <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
-                        <a href="/django.html" class="list-group-item smaller-item ">Django</a>
-                        <a href="/flask.html" class="list-group-item smaller-item ">Flask</a>
-                        <a href="/bottle.html" class="list-group-item smaller-item active">Bottle</a>
-                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
-                        <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
-                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
-                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
-                        <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
-                        <a href="/web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
-                        <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
-                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
-                        <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
-                        <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
-                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
-                        <a href="/web-design.html" class="list-group-item smaller-item ">Web Design</a>
-                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
-                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
-                        <a href="/continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
-                        <a href="/code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
-                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
-                        <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
-                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
-                        <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
-                        <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
-                        <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
-                        <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
-                        <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
-                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
-                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
-                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
-                        <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
-                        <a href="/development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
-                        <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
-                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
-                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
-                </div>
+              <a href="./introduction.html" class="list-group-item smaller-item ">Introduction</a>
+              <a href="./web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
+              <a href="./django.html" class="list-group-item smaller-item ">Django</a>
+              <a href="./flask.html" class="list-group-item smaller-item ">Flask</a>
+              <a href="./bottle.html" class="list-group-item smaller-item active">Bottle</a>
+              <a href="./other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
+              <a href="./deployment.html" class="list-group-item smaller-item ">Deployment</a>
+              <a href="./servers.html" class="list-group-item smaller-item ">Servers</a>
+              <a href="./platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+              <a href="./operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
+              <a href="./web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
+              <a href="./wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
+              <a href="./source-control.html" class="list-group-item smaller-item ">Source Control</a>
+              <a href="./application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
+              <a href="./databases.html" class="list-group-item smaller-item ">Databases</a>
+              <a href="./no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
+              <a href="./web-design.html" class="list-group-item smaller-item ">Web Design</a>
+              <a href="./cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
+              <a href="./javascript.html" class="list-group-item smaller-item ">JavaScript</a>
+              <a href="./continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
+              <a href="./code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
+              <a href="./configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
+              <a href="./static-content.html" class="list-group-item smaller-item ">Static Content</a>
+              <a href="./caching.html" class="list-group-item smaller-item ">Caching</a>
+              <a href="./task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
+              <a href="./application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
+              <a href="./api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+              <a href="./api-creation.html" class="list-group-item smaller-item ">API Creation</a>
+              <a href="./logging.html" class="list-group-item smaller-item ">Logging</a>
+              <a href="./monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
+              <a href="./web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
+              <a href="./web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
+              <a href="./best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
+              <a href="./development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
+              <a href="./about-author.html" class="list-group-item smaller-item ">About the Author</a>
+              <a href="./change-log.html" class="list-group-item smaller-item ">Change Log</a>
+              <a href="./future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
+      </div>
   </div>
-  </div></div>
+</div></div>
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
             2014
         </div>
     </div>
-    <script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-var b=document.getElementsByTagName("script")[0];
-a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>    <div style="display: none;">
+    <div style="display: none;">
         <img src="https://www.linkedin.com/profile/view?authToken=zRgB&authType=name&id=3952407" />
     </div>
 </body>
