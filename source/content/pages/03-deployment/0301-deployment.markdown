@@ -47,15 +47,15 @@ PythonのWebアプリケーション開発は、それぞれ設定が必要な�
 Webアプリケーションをデプロイしホスティングするには4つの選択肢があります。
 
 <!-- 1. ["Bare metal" servers](/servers.html) -->
+<!-- 2. [Virtualized servers](/servers.html) -->
+<!-- 3. [Infrastructure-as-a-service](/servers.html) -->
+<!-- 4. [Platform-as-a-service](/platform-as-a-service.html) -->
 1. [ベアメタルサーバ](./servers.html)
 
-<!-- 2. [Virtualized servers](/servers.html) -->
 2. [仮想化サーバ](./servers.html)
 
-<!-- 3. [Infrastructure-as-a-service](/servers.html) -->
 3. [IaaS(Infrastructure as a Service)](./servers.html)
 
-<!-- 4. [Platform-as-a-service](/platform-as-a-service.html) -->
 4. [PaaS(Platform as a Service)](./platform-as-a-service.html)
 
 <!-- The first three options are similar. The deployer needs to provision one or
