@@ -13,87 +13,103 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19910497-7']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>  </head>
+  </head>
 
 <body>
     <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
     </a>
     <div class="container">
-        <div class="row">
+<div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
-            <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
-            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+            <a href="http://daigo3.github.io/fullstackpython.github.com/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
+            <span class="logo-title"><a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a></span>
         </div>
     </div>
-</div>        <div class="row">
+</div><div class="row">
     <div class="col-md-8">
-      <h1>Web servers</h1>
-<p>Web servers respond to 
+      <!-- # Web servers -->
+
+<h1>Webサーバ</h1>
+<p><!-- Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
 requests from clients and send back a response containing a status code and
-often content such as HTML, XML or JSON as well.</p>
-<h2>Why are web servers necessary?</h2>
-<p>Web servers are the ying to the web client's yang. The server and client speak
+often content such as HTML, XML or JSON as well. -->
+Webサーバは<a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)リクエストに対して、クライアントへステータスコード、HTML,XML、JSONなどのコンテンツとしてレスポンスを返します。</p>
+<!-- ## Why are web servers necessary? -->
+
+<h2>Webサーバはなぜ必要？</h2>
+<p><!-- Web servers are the ying to the web client's yang. The server and client speak
 the standardized language of the World Wide Web. This standard language
 is why an old Mozilla Netscape browser can still talk to a modern Apache or
 Nginx web server, even if it cannot properly render the page design like a 
-modern web browser can. </p>
-<p>The basic language of the Web with the request and response cycle from 
+modern web browser can.  -->
+Webサーバが陰なら、Webクライアントは陽です。サーバとクライアントはWWWで標準化された言語で通信を行います。この標準言語のおかげで古いNetscapeでも、ページのデザインは崩れるかもしれませんが、モダンなApacheやNginxのWebサーバと通信することができるのです。</p>
+<!-- The basic language of the Web with the request and response cycle from 
 client to server then server back to client remains the same as it was when
 the Web was invented by 
-<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
+[Tim Berners-Lee](http://www.w3.org/People/Berners-Lee/) at CERN in 1989.
 Modern browsers and web servers have simply extended the language of the Web
-to incorporate new standards.</p>
-<h2>Client requests</h2>
-<p>A client that sends a request to a web server is usually a browser such 
-as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
+to incorporate new standards. -->
+
+<p>クライアントからサーバへ送られ、サーバがクライアントへ返すというリクエストとレスポンスの仕組みとWeb上の基本的な言語は、1989年にCERNの<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>がWebを発明した当時から変わっていません。モダンブラウザとWebサーバは新しい標準に対応するようにWebの言語を拡張してきました。</p>
+<!-- ## Client requests -->
+
+<h2>クライアントのリクエスト</h2>
+<p><!-- A client that sends a request to a web server is usually a browser such 
+as Internet Explorer, Firefox, or Chrome, but it can also be a -->
+Webサーバへリクエストを送信するクライアントは、通常、Internet ExplorerやFirefox、Chromeのようなブラウザですが、以下もクライアントの一種です。</p>
+<!--* headless browser, commonly use for testing, such as [phantomjs](http://phantomjs.org/)
+* commandline utility, for example [wget](https://www.gnu.org/software/wget/)and [curl](http://curl.haxx.se/)
+* text-based web browser such as [Lynx](http://lynx.browser.org/)
+* web crawler. -->
+
 <ul>
-<li>headless browser, commonly use for testing, such as 
-  <a href="http://phantomjs.org/">phantomjs</a></li>
-<li>commandline utility, for example <a href="https://www.gnu.org/software/wget/">wget</a>
-  and <a href="http://curl.haxx.se/">curl</a></li>
-<li>text-based web browser such as 
-  <a href="http://lynx.browser.org/">Lynx</a></li>
-<li>web crawler. </li>
+<li><a href="http://phantomjs.org/">Phantomjs</a>のような、一般的にテストに用いるヘッドレスブラウザ</li>
+<li><a href="https://www.gnu.org/software/wget/">wget</a>や<a href="http://curl.haxx.se/">curl</a>のようなコマンドラインユーティリティ</li>
+<li><a href="http://lynx.browser.org/">Lynx</a>のようなテキストベースのWebブラウザ</li>
+<li>Webクローラー</li>
 </ul>
-<p>Web server process requests from the above clients. The result of the web
+<!-- Web server process requests from the above clients. The result of the web
 server's processing is a 
-<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">response code</a>
+[response code](https://developer.mozilla.org/en-US/docs/HTTP/Response_codes)
 and commonly a content response. Some status codes, such as 204 (No content) 
-and 403 (Forbidden), do not have content responses.</p>
-<p>In a simple case, the client will request a static asset such as a picture
+and 403 (Forbidden), do not have content responses. -->
+
+<p>サーバは以上のようなクライアントからのリクエスト処理します。サーバによる処理の結果として<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">レスポンスコード</a>とコンテンツがレスポンスとして返されます。204 (No content)や403 (Forbidden)のような一部のコードにはコンテントは含まれません。</p>
+<!-- In a simple case, the client will request a static asset such as a picture
 or JavaScript file. The file sits on the file system in a location the
 web server is authorized to access and the web server sends the file
 to the client with a 200 status code. If the client already requested the
 file and the file has not changed, the web server will pass back a 304 
 "Not modified" response indicating the client already has the latest version
-of that file.</p>
+of that file. -->
+
+<p>単純なケースとしてクライアントが画像やJavaScriptファイルのような静的なファイルをリクエストします。リクエストされたファイルはサーバのファイルシステム上にあり、アクセスが許可されるとWebサーバはクライアントへステータスコード200と一緒に返します。すでにファイルへのリクエストをしていて、ファイルにも変更がなければ304 "Not modified"を返しクライアントにはすでに最新のファイルを持っていることを知らせます。</p>
 <p><img src="theme/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" /></p>
-<p>A web server sends files to a web browser based on the web browser's 
+<!-- A web server sends files to a web browser based on the web browser's 
 request. In the first request, the browser accessed the 
 "www.fullstackpython.com"
 address and the server responded with the index.html HTML-formatted file. 
 That HTML file contained references to other files, such as style.css and 
-script.js that the browser then requested from the server.</p>
-<p>Sending static assets (such as CSS and JavaScript files) can eat up a 
+script.js that the browser then requested from the server. -->
+
+<p>Webサーバはブラウザのリクエストに応じてファイルをブラウザに送ります。最初のリクエストではぶらうざは"www.fullstackpython.com"というアドレスにアクセスし、サーバはindex.htmlというHTML形式のレスポンスを返します。そのHTMLファイルが他のファイルへの参照、例えばstyle.cssやscript.js、があればブラウザは続けてサーバへリクエストを送ります。</p>
+<!-- Sending static assets (such as CSS and JavaScript files) can eat up a 
 large amount of bandwidth which is why using a Content Delivery Network 
 (CDN) is important when possible (see the content delivery network 
-section for a more detailed explanation).</p>
-<h2>Web server resources</h2>
+section for a more detailed explanation). -->
+
+<p>CSSやJavaScriptのファイルのような静的なアセットは多くの通信を行うことがあるので、Content Delivery Network(CDN)を使うことが望ましいでしょう。（詳細はCDNの章を参照してください）</p>
+<!-- ## Web server resources -->
+
+<h2>Webサーバのリソース</h2>
+<!-- * [HTTP/1.1 Specification](http://www.w3.org/Protocols/rfc2616/rfc2616.html) -->
+
 <ul>
 <li>
-<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 Specification</a></p>
+<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 仕様</a></p>
 </li>
 <li>
 <p><a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
@@ -107,17 +123,25 @@ section for a more detailed explanation).</p>
 <li>
 <p><a href="http://carrot.is/coding/nginx_introduction">Nginx for Developers: An Introduction</a></p>
 </li>
+</ul>
+<!-- * An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/). -->
+
+<ul>
+<li><a href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration</a>の例.</li>
+</ul>
+<!-- * A reference with the full list of 
+[HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+is provided by W3C. -->
+
+<ul>
+<li>W3Cが提供している<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP ステータスコード</a>のリスト</li>
+</ul>
+<!-- * An optimization guide for 
+"[battle ready Nginx](http://blog.zachorr.com/nginx-setup/)." -->
+
+<ul>
 <li>
-<p>An example of an <a href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration</a>.</p>
-</li>
-<li>
-<p>A reference with the full list of 
-<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP status codes</a>
-is provided by W3C.</p>
-</li>
-<li>
-<p>An optimization guide for 
-"<a href="http://blog.zachorr.com/nginx-setup/">battle ready Nginx</a>."</p>
+<p>Nginxの最適化ガイド "<a href="http://blog.zachorr.com/nginx-setup/">battle ready Nginx</a>."</p>
 </li>
 <li>
 <p><a href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">A faster Web server: ripping out Apache for Nginx</a></p>
@@ -125,64 +149,74 @@ is provided by W3C.</p>
 <li>
 <p><a href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
 </li>
-<li>
-<p><a href="http://lincolnloop.com/blog/rate-limiting-nginx/">Rate Limiting with Nginx</a>
-  covers how to mitigate against brute force password guessing attempts using
-  Nginx rate limits.</p>
-</li>
 </ul>
-<h2>Web servers learning checklist</h2>
+<!-- * [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
+  covers how to mitigate against brute force password guessing attempts using
+  Nginx rate limits. -->
+
+<ul>
+<li><a href="http://lincolnloop.com/blog/rate-limiting-nginx/">Rate Limiting with Nginx</a>では、Nginxのレート制限を使ってブルートフォース攻撃からパスワードのを守る方法が紹介されています。</li>
+</ul>
+<!-- ## Web servers learning checklist -->
+
+<h2>Webサーバを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
-<a href="http://httpd.apache.org/">Apache</a> is also a great choice.</p>
+<!-- Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
+<a href="http://httpd.apache.org/">Apache</a> is also a great choice. -->
+Webサーバを選択しましょう。<a href="http://nginx.org/en/">Nginx</a>がお勧めですが、<a href="http://httpd.apache.org/">Apache</a>も良い選択でしょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Create an SSL certificate. For testing use a self-signed certificate and for a
+<!-- Create an SSL certificate. For testing use a self-signed certificate and for a
 production app buy one from <a href="http://www.digicert.com/">Digicert</a>. Configure 
 the web server to serve traffic over SSL. You'll need SSL for serving only
 HTTPS traffic and preventing security issues that occur with unencrypted user 
-input.</p>
+input. -->
+SSL証明書を作成します。テスト目的なら自己署名の証明書、本番環境なら<a href="http://www.digicert.com/">Digicert</a>などから買います。SSLを通じてWebサーバがコンテンツを配信できるように設定しましょう。SSLはHTTPSを使用する場合や、ユーザの入力を暗号化しない場合に起こるリスクを防ぐために必要です。</p>
 <p><i class="fa fa-check-square-o"></i>
-Configure the web server to serve up static files such as CSS, JavaScript
-and images.</p>
+<!-- Configure the web server to serve up static files such as CSS, JavaScript
+and images. -->
+CSS、JavaScript、画像などの静的ファイルを配信できるようにWebサーバを設定しましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
-the web server as a pass through for dynamic content.</p>
-<h3>What do you want to learn after the web server is set up?</h3>
-                  <div class="row">
+<!-- Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
+the web server as a pass through for dynamic content. -->
+<a href="/wsgi-servers.html">WSGIサーバ</a>をセットアップしたら、Webサーバが動的なコンテンツを受け取ることができるように設定する必要があります。</p>
+<!-- ### What do you want to learn after the web server is set up? -->
+
+<h3>Websサーバを設定したら、次に何を学びますか？</h3>
+<div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/wsgi-servers.html" class="btn btn-success btn-full"><i class="fa fa-play fa-inverse fa-2x"></i></a>
+            <a href="./wsgi-servers.html" class="btn btn-success btn-full"><i class="fa fa-play fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I execute Python since the web server doesn't do that?
+                Webサーバが行わないPythonの実行を行うには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/application-dependencies.html" class="btn btn-success btn-full"><i class="fa fa-archive fa-inverse fa-2x"></i></a>
+            <a href="./application-dependencies.html" class="btn btn-success btn-full"><i class="fa fa-archive fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How should I install Python libraries on the server?
+                サーバにPythonライブラリをインストールするには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-2x"></i></a>
+            <a href="./static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-2x"></i></a>
             <p class="under-btn">
-                What other ways can be used to host static content?
+                静的なコンテンツを配信する他の方法は？
             </p>
         </div>
     </div>
-        <div class="col-md-3">
+    <div class="col-md-3">
         <div class="well select-next">
-            <a href="/platform-as-a-service.html" class="btn btn-success btn-full"><i class="fa fa-puzzle-piece fa-inverse fa-2x"></i></a>
+            <a href="./platform-as-a-service.html" class="btn btn-success btn-full"><i class="fa fa-puzzle-piece fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                Forget servers. Tell me about platforms-as-a-service.
+                サーバはやめて、PaaSについて知りたい。
             </p>
         </div>
     </div>
-    </div>            <style type="text/css">
+</div><style type="text/css">
     #mc_embed_signup{background:#fff; clear:left; font:12px "Helvetica Neue",Arial,sans-serif; }
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
@@ -399,86 +433,75 @@ function mce_success_cb(resp){
 
 </script>
 <!--End mc_embed_signup-->     </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
+<div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Web Servers</h3></div>
       <div class="panel-body">
-          <a href="/">Full Stack Python</a> is an open book that explains
-          each Python web application stack layer and provides the
-          best web resources for those topics.
+          <a href="http://daigo3.github.io/fullstackpython.github.com/">Full Stack Python</a>はPythonでWebアプリケーションを開発するための情報を提供するオープンなガイドです。
           <hr/>
-                    There's a work-in-progress 
-          <a href="/full-stack-python-map.pdf">subjects map (.pdf)</a> 
-          that visually lays out each chapter in addition to the table of
-          contents found below.
-                    <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
-          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          There's a work-in-progress
+          現在、作成中の<a href="./full-stack-python-map.pdf">subjects map (.pdf)</a>は、目次に加え各章を視覚化したものです。
           <hr/>
-          <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          より詳細なチュートリアルが必要ですか?
+          <a href="./email.html">サインアップしてアップデートをメールで受け取ることができます。</a>
+          <hr/>
+          このサイトは<a href="http://twitter.com/mattmakai">Matt Makai</a>により、
+          コミュニティからプルリクエストによる協力を得て作成されています。GitHubで
+          <a href="https://github.com/makaimc">Mattをフォロー</a>すれば、日々の更新を見ることができます。
       </div>
   </div>
-    <div class="panel panel-success">
+  <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-head">Table of Contents</h3>
       </div>
       <div class="list-group">
-                        <a href="/introduction.html" class="list-group-item smaller-item ">Introduction</a>
-                        <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
-                        <a href="/django.html" class="list-group-item smaller-item ">Django</a>
-                        <a href="/flask.html" class="list-group-item smaller-item ">Flask</a>
-                        <a href="/bottle.html" class="list-group-item smaller-item ">Bottle</a>
-                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
-                        <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
-                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
-                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
-                        <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
-                        <a href="/web-servers.html" class="list-group-item smaller-item active">Web Servers</a>
-                        <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
-                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
-                        <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
-                        <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
-                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
-                        <a href="/web-design.html" class="list-group-item smaller-item ">Web Design</a>
-                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
-                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
-                        <a href="/continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
-                        <a href="/code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
-                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
-                        <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
-                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
-                        <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
-                        <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
-                        <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
-                        <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
-                        <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
-                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
-                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
-                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
-                        <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
-                        <a href="/development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
-                        <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
-                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
-                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
-                </div>
+              <a href="./introduction.html" class="list-group-item smaller-item ">Introduction</a>
+              <a href="./web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
+              <a href="./django.html" class="list-group-item smaller-item ">Django</a>
+              <a href="./flask.html" class="list-group-item smaller-item ">Flask</a>
+              <a href="./bottle.html" class="list-group-item smaller-item ">Bottle</a>
+              <a href="./other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
+              <a href="./deployment.html" class="list-group-item smaller-item ">Deployment</a>
+              <a href="./servers.html" class="list-group-item smaller-item ">Servers</a>
+              <a href="./platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+              <a href="./operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
+              <a href="./web-servers.html" class="list-group-item smaller-item active">Web Servers</a>
+              <a href="./wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
+              <a href="./source-control.html" class="list-group-item smaller-item ">Source Control</a>
+              <a href="./application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
+              <a href="./databases.html" class="list-group-item smaller-item ">Databases</a>
+              <a href="./no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
+              <a href="./web-design.html" class="list-group-item smaller-item ">Web Design</a>
+              <a href="./cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
+              <a href="./javascript.html" class="list-group-item smaller-item ">JavaScript</a>
+              <a href="./continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
+              <a href="./code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
+              <a href="./configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
+              <a href="./static-content.html" class="list-group-item smaller-item ">Static Content</a>
+              <a href="./caching.html" class="list-group-item smaller-item ">Caching</a>
+              <a href="./task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
+              <a href="./application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
+              <a href="./api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+              <a href="./api-creation.html" class="list-group-item smaller-item ">API Creation</a>
+              <a href="./logging.html" class="list-group-item smaller-item ">Logging</a>
+              <a href="./monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
+              <a href="./web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
+              <a href="./web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
+              <a href="./best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
+              <a href="./development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
+              <a href="./about-author.html" class="list-group-item smaller-item ">About the Author</a>
+              <a href="./change-log.html" class="list-group-item smaller-item ">Change Log</a>
+              <a href="./future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
+      </div>
   </div>
-  </div></div>
+</div></div>
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
             2014
         </div>
     </div>
-    <script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-var b=document.getElementsByTagName("script")[0];
-a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>    <div style="display: none;">
+    <div style="display: none;">
         <img src="https://www.linkedin.com/profile/view?authToken=zRgB&authType=name&id=3952407" />
     </div>
 </body>
