@@ -2885,116 +2885,165 @@ Integrate JavaScript into your web application and check the
 <a href="/static-content.html">static content</a> section for how to host the JavaScript
 files.</p>
 <h3>Do you need to style your app or deploy it next?</h3>
-              <h1>Continuous Integration</h1>
-<p>Continuous integration (CI) automates building, testing and deploying 
-applications.</p>
-<h2>Why is continuous integration important?</h2>
-<p>When CI is set up well it can dramatically reduce deployment times by 
+              <!-- # Continuous Integration -->
+
+<h1>継続的インテグレーション</h1>
+<p><!-- Continuous integration (CI) automates building, testing and deploying
+applications. -->
+継続的インテグレーション（CI）はビルド、テスト、デプロイを自動化するための方法です。</p>
+<!-- ## Why is continuous integration important? -->
+
+<h2>継続的インテグレーションはなぜ重要？</h2>
+<p><!-- When CI is set up well it can dramatically reduce deployment times by
 eliminating manual steps and ensure code does not have bugs that are being
 checked by automated tests. Source code changes as a project evolves.
-CI combined with unit and integration tests check that code modifications 
-do not break existing tests ensure the software works as intended.</p>
-<h2>Continuous integration example</h2>
-<p>The following picture represents a high level perspective on how continuous
-integration and deployment can work. </p>
-<p><img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
-<p>In the above diagram, when new code is commited to a source repository 
-there is a hook that notifies the continuous integration server that new 
+CI combined with unit and integration tests check that code modifications
+do not break existing tests ensure the software works as intended. -->
+CIを正しくセットアップすると、自動テストにより手動で動作確認するよりもデプロイにかかる時間を大幅に縮小できます。ソースコードはプロジェクトが進めば変わっていきます。CIをユニットテスト、インテグレーションテストと連携することで、コードの編集によりアプリケーションが壊れる心配は無くなるでしょう。</p>
+<!-- ## Continuous integration example -->
+
+<h2>継続的インテグレーションの例</h2>
+<p><!-- The following picture represents a high level perspective on how continuous
+integration and deployment can work. -->
+以下の図は、継続的インテグレーションとデプロイの役割を表したものです。</p>
+<p><img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="継続的インテグレーションの一例" /></p>
+<!-- In the above diagram, when new code is commited to a source repository
+there is a hook that notifies the continuous integration server that new
 code needs to be built (the continuous integration server could also
-poll the source code repository if a notification is not possible).</p>
-<p>The continuous integration server pulls the code to build and test it. If
+poll the source code repository if a notification is not possible). -->
+
+<p>上の図ではレポジトリに新しいコードがコミットされたら、新しいコードをビルドするように、CIサーバに通知が送られます。（通知を送ることができないCIサーバの場合、レポジトリサーバを定期的にチェックする必要があります。）</p>
+<!-- The continuous integration server pulls the code to build and test it. If
 all tests pass, the continuous integration server begins the deployment
 process. The new code is pulled down to the server where the deployment is
-taking place. Finally the deployment process is completed via restarting 
-services and related deployment activities.</p>
-<p>There are many other ways a continuous integration server and its 
-deployments can be structured. The above was just one example of a 
-relatively simple set up.</p>
-<h2>Open source CI projects</h2>
+taking place. Finally the deployment process is completed via restarting
+services and related deployment activities. -->
+
+<p>CIサーバはコードを取り込みビルドとテストを行います。全てのテストが成功したらデプロイプロセスを始めます。デプロイが始まるとサーバへ新しいコードが取り込まれ、サービスの再起動や他のデプロイプロセスを行った後、デプロイプロセスが完了します。</p>
+<!-- There are many other ways a continuous integration server and its
+deployments can be structured. The above was just one example of a
+relatively simple set up. -->
+
+<p>CIサーバとデプロイのプロセスの構成方法は様々な形式があります。上で説明したセットアップはシンプルな構成例の一つでしかありません。</p>
+<!-- ## Open source CI projects -->
+
+<h2>オープンソースのCIプロジェクト</h2>
+<!-- * [Jenkins](http://jenkins-ci.org/) is a common CI server for building and
+  deploying to test and production servers.
+  [Jenkins source code is on GitHub](https://github.com/jenkinsci/jenkins). -->
+
 <ul>
-<li>
-<p><a href="http://jenkins-ci.org/">Jenkins</a> is a common CI server for building and
-  deploying to test and production servers. 
-  <a href="https://github.com/jenkinsci/jenkins">Jenkins source code is on GitHub</a>.</p>
-</li>
-<li>
-<p><a href="http://www.go.cd/">Go CD</a> is a CI server by 
-  <a href="http://www.thoughtworks.com/">ThoughtWorks</a> that was designed with best 
-  practices for the build and test &amp; release cycles in mind. 
-  <a href="https://github.com/gocd/gocd">Go CD source code is on GitHub</a>.</p>
-</li>
-<li>
-<p><a href="http://stridercd.com/">Strider</a> is a CI server written in node.js. 
-  <a href="https://github.com/Strider-CD/strider">Strider source code is on GitHub</a>.</p>
-</li>
-<li>
-<p><a href="http://buildbot.net/">BuildBot</a> is a continuous integration <strong>framework</strong> 
+<li><a href="http://jenkins-ci.org/">Jenkins</a>はテストと本番環境のデプロイを構築するCIサーバの中でも一般的なソフトウェアです。<a href="https://github.com/jenkinsci/jenkins">GitHub</a>.</li>
+</ul>
+<!-- * [Go CD](http://www.go.cd/) is a CI server by
+  [ThoughtWorks](http://www.thoughtworks.com/) that was designed with best
+  practices for the build and test & release cycles in mind.
+  [Go CD source code is on GitHub](https://github.com/gocd/gocd). -->
+
+<ul>
+<li><a href="http://www.go.cd/">Go CD</a>は、<a href="http://www.thoughtworks.com/">ThoughtWorks</a>によるベストプラクティスを基に設計されたCIサーバです。<a href="https://github.com/gocd/gocd">GitHub</a>]</li>
+</ul>
+<!-- * [Strider](http://stridercd.com/) is a CI server written in node.js.
+  [Strider source code is on GitHub](https://github.com/Strider-CD/strider). -->
+
+<ul>
+<li><a href="http://stridercd.com/">Strider</a>はNode.js製のCIサーバです。<a href="https://github.com/Strider-CD/strider">GitHub</a></li>
+</ul>
+<!-- * [BuildBot](http://buildbot.net/) is a continuous integration **framework**
   with a set of components for creating your own CI server. It's written in
   Python and intended for development teams that want more controller over
   their build and deployment pipeline.
-  <a href="https://github.com/buildbot/buildbot">BuildBot source code is on GitHub</a>.</p>
-</li>
-</ul>
-<h2>Hosted CI services</h2>
+  [BuildBot source code is on GitHub](https://github.com/buildbot/buildbot). -->
+
 <ul>
-<li>
-<p><a href="https://travis-ci.org/">Travis CI</a> provides free CI for open source 
-  projects and has a <a href="https://travis-ci.com/">commercial version</a> for 
-  private repositories.</p>
-</li>
-<li>
-<p><a href="https://www.atlassian.com/software/bamboo">Bamboo</a> is 
-  <a href="https://www.atlassian.com/">Atlassian</a>'s hosted continuous integration that
-  is also free for open source projects.</p>
-</li>
-<li>
-<p><a href="https://circleci.com/">Circle CI</a> works with open or closed source projects
-  on GitHub and can deploy them to Heroku if builds are successful.</p>
-</li>
-<li>
-<p><a href="https://www.shippable.com/">Shippable</a> uses Docker containers to speed 
-  the build and integration process. It's free for public repositories.</p>
-</li>
-<li>
-<p><a href="https://drone.io/">Drone</a> is another CI service that also provides free
-  builds for open source projects.</p>
-</li>
-<li>
-<p><a href="https://www.codeship.io/">Codeship</a> provides continuous integration for
-  Python 2.7.</p>
-</li>
-<li>
-<p><a href="https://snap-ci.com/">Snap</a> is a CI server and build pipeline tool for
-  both integrating and deploying code.</p>
-</li>
+<li><a href="http://buildbot.net/">BuildBot</a>はCI<strong>フレームワーク</strong>です。コンポーネントを組み合わせて、自分のCIサーバを作ることができます。Pythonで書かれていて、ビルドとデプロイプロセスをより柔軟にコントロールしたい場合に使用します。<a href="https://github.com/buildbot/buildbot">GitHub</a></li>
 </ul>
-<h2>Continuous integration resources</h2>
+<!-- ## Hosted CI services -->
+
+<h2>CIサービスのホスティング</h2>
+<!-- * [Travis CI](https://travis-ci.org/) provides free CI for open source
+  projects and has a [commercial version](https://travis-ci.com/) for
+  private repositories. -->
+
 <ul>
-<li>
-<p><a href="http://martinfowler.com/articles/continuousIntegration.html">What is continuous integration?</a>
+<li><a href="https://travis-ci.org/">Travis CI</a>はオープンソースプロジェクトであれば無料で利用できます。プライベートリポジトリには<a href="https://travis-ci.com/">商用版</a>を利用できます。</li>
+</ul>
+<!-- * [Bamboo](https://www.atlassian.com/software/bamboo) is
+  [Atlassian](https://www.atlassian.com/)'s hosted continuous integration that
+  is also free for open source projects. -->
+
+<ul>
+<li><a href="https://www.atlassian.com/software/bamboo">Bamboo</a>は<a href="https://www.atlassian.com/">Atlassian</a>がホスティングするCIサービスです。こちらもオープンソースプロジェクトであれば無料で利用できます。</li>
+</ul>
+<!-- * [Circle CI](https://circleci.com/) works with open or closed source projects
+  on GitHub and can deploy them to Heroku if builds are successful. -->
+
+<ul>
+<li><a href="https://circleci.com/">Circle CI</a>はGitHub上のオープン、クローズドなプロジェクトをHerokuにデプロイすることができます。</li>
+</ul>
+<!-- * [Shippable](https://www.shippable.com/) uses Docker containers to speed
+  the build and integration process. It's free for public repositories. -->
+
+<ul>
+<li><a href="https://www.shippable.com/">Shippable</a>はDockerコンテナを利用しビルドとインテグレーションプロセスを高速化することができます。パブリックレポジトリであれば無料で利用できます。</li>
+</ul>
+<!-- * [Drone](https://drone.io/) is another CI service that also provides free
+  builds for open source projects. -->
+
+<ul>
+<li><a href="https://drone.io/">Drone</a>もオープンソースプロジェクトが無料で利用できるCIサービスです。</li>
+</ul>
+<!-- * [Codeship](https://www.codeship.io/) provides continuous integration for
+  Python 2.7. -->
+
+<ul>
+<li><a href="https://www.codeship.io/">Codeship</a>はPython2.7対応のCIを提供しています。</li>
+</ul>
+<!-- * [Snap](https://snap-ci.com/) is a CI server and build pipeline tool for
+  both integrating and deploying code. -->
+
+<ul>
+<li><a href="https://snap-ci.com/">Snap</a>はCIサーバとビルドツールを提供しているサービスです。</li>
+</ul>
+<!-- ## Continuous integration resources -->
+
+<h2>CIを学ぶためのリソース</h2>
+<!-- * [What is continuous integration?](http://martinfowler.com/articles/continuousIntegration.html)
   is a classic detailed article by Martin Fowler on the concepts behind CI
-  and how to implement it.</p>
-</li>
-<li>
-<p><a href="http://www.airpair.com/continuous-deployment/posts/continuous-deployment-for-practical-people">Continuous Deployment For Practical People</a>
-  is not specific to Python but a great read on what it entails.</p>
-</li>
-<li>
-<p><a href="http://bitcubby.com/continuous-integration-delivery-illustrated/">Continuous Integration &amp; Delivery - Illustrated</a>
-  uses well done drawings to show how continuous integration and delivery 
-  works for testing and managing data.</p>
-</li>
-<li>
-<p><a href="http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/">Diving into continuous integration as a newbie</a>
-  is a retrospective on learning CI from a Rackspace intern on how she learned
-  the subject.</p>
-</li>
-<li>
-<p><a href="http://stackshare.io/continuous-integration">StackShare's Continuous Integration tag</a> 
-  lists a slew of hosted CI services roughly ranked by user upvotes.</p>
-</li>
+  and how to implement it. -->
+
+<ul>
+<li><a href="http://martinfowler.com/articles/continuousIntegration.html">What is continuous integration?</a>はMartin FowlerによるCIのコンセプトと実装方法に関する記事です。</li>
 </ul>
-<h3>What do you want to add to your application next?</h3>
+<!-- * [Continuous Deployment For Practical People](http://www.airpair.com/continuous-deployment/posts/continuous-deployment-for-practical-people)
+  is not specific to Python but a great read on what it entails. -->
+
+<ul>
+<li><a href="http://www.airpair.com/continuous-deployment/posts/continuous-deployment-for-practical-people">Continuous Deployment For Practical People</a>はPythonでの例ではありませんが、有用な記事です。</li>
+</ul>
+<!-- * [Continuous Integration & Delivery - Illustrated](http://bitcubby.com/continuous-integration-delivery-illustrated/)
+  uses well done drawings to show how continuous integration and delivery
+  works for testing and managing data. -->
+
+<ul>
+<li><a href="http://bitcubby.com/continuous-integration-delivery-illustrated/">Continuous Integration &amp; Delivery - Illustrated</a>はCIとデリバリーについてイラストで説明されている良記事です。</li>
+</ul>
+<!-- * [Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)
+  is a retrospective on learning CI from a Rackspace intern on how she learned
+  the subject. -->
+
+<ul>
+<li><a href="http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/">Diving into continuous integration as a newbie</a>はRackspaceのインターン生が学んだことをまとめた記事です。</li>
+</ul>
+<!-- * [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration)
+  lists a slew of hosted CI services roughly ranked by user upvotes. -->
+
+<ul>
+<li><a href="http://stackshare.io/continuous-integration">StackShare's Continuous Integration tag</a>はユーザ投票によるCIホスティングサービスのランキングです。</li>
+</ul>
+<!-- ### What do you want to add to your application next? -->
+
+<h3>次にアプリケーションへ何を追加しますか？</h3>
               <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
