@@ -253,7 +253,7 @@ Kate Heddlestonと著者によるDjangoCon 2014での[Choose Your Own Django Dep
 for simple and medium-complexity database operations. However, there are often
 complaints that the ORM makes complex queries much more complicated than
 writing straight SQL or using [SQLAlchemy](http://www.sqlalchemy.org/).  -->
-[Django ORM](https://docs.djangoproject.com/en/dev/topics/db/)はシンプル〜やや複雑なデータベースの操作に適しています。場合によってORMを使うことで直接SQLを書くよりも複雑になってしまい、[SQLAlchemy](http://www.sqlalchemy.org/)を使う方法もあります。
+[Django ORM](https://docs.djangoproject.com/en/dev/topics/db/)はシンプル、またはやや複雑なデータベースの操作に適しています。場合によってORMを使うことで直接SQLを書くよりも複雑になってしまい、[SQLAlchemy](http://www.sqlalchemy.org/)を使う方法もあります。
 
 <!-- It's technically possible to drop down to SQL but it ties the queries to a 
 specific database implementation. The ORM is coupled closely with Django so
