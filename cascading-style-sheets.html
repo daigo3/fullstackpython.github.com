@@ -30,70 +30,96 @@
 </div><div class="row">
     <div class="col-md-8">
       <h1>Cascading Style Sheets (CSS)</h1>
-<p>Cascading Style Sheet (CSS) files contain rules for how to display and 
-lay out the HTML content when it is rendered by a web browser.</p>
-<h2>Why is CSS necessary?</h2>
-<p>CSS separates the content contained in HTML files from how the content 
+<p><!-- Cascading Style Sheet (CSS) files contain rules for how to display and 
+lay out the HTML content when it is rendered by a web browser. -->
+Cascading Style Sheet(CSS)は、Webブラウザに表示されたHTMLコンテンツをどのように表示するか、どのように配置するかを定義したルールを含んだファイルです。</p>
+<!-- ## Why is CSS necessary? -->
+
+<h2>なぜCSSが必要？</h2>
+<p><!-- CSS separates the content contained in HTML files from how the content 
 should be displayed. It is important to separate the content from the rules
 for how it should be rendered primarily because it is easier to reuse those
 rules across many pages. CSS files are also much easier to maintain on large
-projects than styles embedded within the HTML files.</p>
-<h2>How is CSS retrieved from a web server?</h2>
-<p>The HTML file sent by the web server contains a reference to the CSS file(s)
+projects than styles embedded within the HTML files. -->
+CSSはページのコンテンツを記述しているHTMLとは別に、ページをどのように表示するかを定義することができます。コンテンツと、その見せ方の定義を分離できるということは重要です。複数ページに対してCSSを再利用することができるからです。また、HTMLに直接CSSを埋め込まずに、CSSファイルとして独立させることで、プロジェクトの規模が大きくなった時にメンテナンスしやすくなるという利点もあります。</p>
+<!-- ## How is CSS retrieved from a web server? -->
+
+<h2>WebサーバでCSSを扱うには？</h2>
+<!-- The HTML file sent by the web server contains a reference to the CSS file(s)
 needed to render the content. The web browser requests the CSS file after the
 HTML file as shown below in a screenshot captured of the Chrome Web Developer 
-Tools network traffic.</p>
+Tools network traffic. -->
+
+<p>Webサーバによって配信されるHTMLファイルには、コンテンツを表示するために必要なCSSファイルへの参照が含まれています。ChromeのWeb Developer Toolsで確認できるように、WebブラウザはHTMLファイルをリクエストした後にCSSファイルをリクエストを行います。</p>
 <p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
-<p>That request for the fsp.css file is made because the HTML file for Full 
-Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
-in the view source screenshot below.</p>
+<!-- That request for the fsp.css file is made because the HTML file for Full 
+Stack Python contains a reference to ``theme/css/fsp.css`` which is shown
+in the view source screenshot below. -->
+
+<p><code>fsp.css</code>ファイルへのリクエストはFull Stack Pythonのページが<code>theme/css/fsp.css</code>を参照しているためです。以下のスクリーンショットを見てください。</p>
 <p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
-<h2>CSS preprocessors</h2>
-<p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
+<!-- ## CSS preprocessors -->
+
+<h2>CSSプリプロセッサ</h2>
+<p><!-- A CSS preprocessor compiles a processed language into plain CSS code. CSS 
 preprocessing languages add syntax such as variables, mixins and functions
 to reduce code duplication. The additional syntax also makes it possible for
 designers to use these basic programming constructs to write maintainable
-front end code.</p>
-<ul>
-<li>
-<p><a href="http://sass-lang.com/">Sass</a> is currently the favored preprocessor in
+front end code. -->
+CSSプリプロセッサはCSSに変換される言語です。CSSプリプロセッサは変数、ミックスイン、コードの重複を減らすための関数と言った機能をCSSに追加しています。CSSプリプロセッサで利用できる文法を使うことで、デザイナーが基本的なプログラミングの構造でメンテナンス性の高いフロントエンドのコードを書くことができるようになります。</p>
+<!-- * [Sass](http://sass-lang.com/) is currently the favored preprocessor in
   the design community. Sass is considered the most powerful CSS preprocessor
-  in terms of advanced language features.</p>
-</li>
-<li>
-<p><a href="http://lesscss.org/">LESS</a> is right up there with Sass and has an ace up
-  its sleeve in that the <a href="http://getbootstrap.com/">Bootstrap Framework</a> is
-  written in LESS which brings up its popularity.</p>
-</li>
-<li>
-<p><a href="http://learnboost.github.io/stylus/">Stylus</a> is often cited as the third
-  most popular CSS preprocessing language.</p>
-</li>
-</ul>
-<h3>CSS preprocessor resources</h3>
+  in terms of advanced language features. -->
+
 <ul>
-<li>
-<p>The Advanced Guide to HTML and CSS book has a well-written chapter on 
-  <a href="http://learn.shayhowe.com/advanced-html-css/preprocessors">preprocessors</a>.</p>
-</li>
-<li>
-<p><a href="http://css-tricks.com/sass-vs-less/">Sass vs LESS</a> provides a short answer
-  on which framework to use then a longer more detailed response for those
-  interested in understanding the details.</p>
-</li>
-<li>
-<p><a href="http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor">How to choose the right CSS preprocessor</a>
-  has a comparison of Sass, LESS and Stylus.</p>
-</li>
-<li>
-<p><a href="http://css-tricks.com/musings-on-preprocessing/">Musings on CSS preprocessors</a>
-  contains helpful advice ranging from how to work with preprocessors in a
-  team environment to what apps you can use to aid your workflow.</p>
-</li>
+<li><a href="http://sass-lang.com/">Sass</a>は、現時点で最も人気のあるプリプロセッサです。Sassは、CSSプリプロセッサの中でも最も強力な機能を持っていると言われています。</li>
 </ul>
-<h2>CSS frameworks</h2>
-<p>CSS frameworks provide structure and a boilerplate base for building a
-web application's design.</p>
+<!-- * [LESS](http://lesscss.org/) is right up there with Sass and has an ace up
+  its sleeve in that the [Bootstrap Framework](http://getbootstrap.com/) is
+  written in LESS which brings up its popularity. -->
+
+<ul>
+<li><a href="http://lesscss.org/">LESS</a>はSassに迫る人気があり、<a href="http://getbootstrap.com/">Bootstrap Framework</a>で利用されていることから、人気が出始めています。</li>
+</ul>
+<!-- * [Stylus](http://learnboost.github.io/stylus/) is often cited as the third
+  most popular CSS preprocessing language. -->
+
+<ul>
+<li><a href="http://learnboost.github.io/stylus/">Stylus</a>も有名なCSSプリプロセッサです。</li>
+</ul>
+<!-- ### CSS preprocessor resources -->
+
+<h3>CSSプリプロセッサを学ぶためのリソース</h3>
+<!-- * The Advanced Guide to HTML and CSS book has a well-written chapter on 
+  [preprocessors](http://learn.shayhowe.com/advanced-html-css/preprocessors). -->
+
+<p>HTMLとCSSについての応用的なガイドで<a href="http://learn.shayhowe.com/advanced-html-css/preprocessors">preprocessors</a>に関する詳しい章があります。</p>
+<!-- * [Sass vs LESS](http://css-tricks.com/sass-vs-less/) provides a short answer
+  on which framework to use then a longer more detailed response for those
+  interested in understanding the details. -->
+
+<ul>
+<li><a href="http://css-tricks.com/sass-vs-less/">Sass vs LESS</a>では、どちらのフレームワークを使うべきかを考察しています。また、この記事へのコメントを読むことで、より深い理解を得ることができます。</li>
+</ul>
+<!-- * [How to choose the right CSS preprocessor](http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor)
+  has a comparison of Sass, LESS and Stylus. -->
+
+<ul>
+<li><a href="http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor">How to choose the right CSS preprocessor</a>ではSass、LESS、Stylusの比較を行っています。</li>
+</ul>
+<!-- * [Musings on CSS preprocessors](http://css-tricks.com/musings-on-preprocessing/)
+  contains helpful advice ranging from how to work with preprocessors in a
+  team environment to what apps you can use to aid your workflow. -->
+
+<ul>
+<li><a href="http://css-tricks.com/musings-on-preprocessing/">Musings on CSS preprocessors</a>はチーム開発でのCSSプリプロセッサの使い方と、便利なツールを紹介しています。</li>
+</ul>
+<!-- ## CSS frameworks -->
+
+<h2>CSSフレームワーク</h2>
+<p><!-- CSS frameworks provide structure and a boilerplate base for building a
+web application's design. -->
+CSSフレームワークはWebアプリケーションのデザインに構造と基本スタイルを提供しているものです。</p>
 <ul>
 <li>
 <p><a href="http://getbootstrap.com/">Bootstrap</a></p>
@@ -117,93 +143,117 @@ web application's design.</p>
 <p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
 </li>
 </ul>
-<h2>CSS resources</h2>
+<!-- ## CSS resources -->
+
+<h2>CSSを学ぶためのリソース</h2>
+<!-- * [Frontend Development Bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
+  is one of the largest collections of valuable resources for frontend
+  learning both in CSS as well as JavaScript. -->
+
+<ul>
+<li><a href="https://github.com/dypsilon/frontend-dev-bookmarks">Frontend Development Bookmarks</a>はCSSとJavaScriptを学ぶための、最も価値のあるリソースの一つです。</li>
+</ul>
+<!-- * [Mozilla Developer Network's CSS page](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  contains an extensive set of resources, tutorials and demos for learning
+  CSS. -->
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network's CSS page</a>には、CSSを学ぶためのリソース集、チュートリアル、デモが紹介されています。</li>
+</ul>
+<!-- * [CSS Positioning 101](http://alistapart.com/article/css-positioning-101)
+  is a detailed guide for learning how to do element positioning correctly
+  with CSS. -->
+
 <ul>
 <li>
-<p><a href="https://github.com/dypsilon/frontend-dev-bookmarks">Frontend Development Bookmarks</a>
-  is one of the largest collections of valuable resources for frontend
-  learning both in CSS as well as JavaScript.</p>
-</li>
-<li>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network's CSS page</a>
-  contains an extensive set of resources, tutorials and demos for learning
-  CSS.</p>
-</li>
-<li>
-<p><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a>
-  is a detailed guide for learning how to do element positioning correctly
-  with CSS.</p>
+<p><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a>は、CSSを使って要素の配置を正しく行う方法を学ぶことができます。</p>
 </li>
 <li>
 <p><a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3 cheat sheet</a></p>
 </li>
-<li>
-<p><a href="http://learnlayout.com/toc.html">Learn CSS layout</a> is a simple guide that
-  breaks CSS layout topics into chapters so you can learn each part one
-  at a time.</p>
-</li>
-<li>
-<p><a href="https://developers.google.com/web/fundamentals/">Google's Web Fundamentals class</a>
-  shows how to create responsive designs and performant websites.</p>
-</li>
-<li>
-<p><a href="http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html">Tailoring CSS for performance</a>
-  is an interesting read since many developers do not consider the 
-  implications of CSS complexity in browser rendering time.</p>
-</li>
-<li>
-<p><a href="http://caniuse.com/">Can I Use...</a> is a compatibility table that shows
-  which versions of browsers implement specific CSS features.</p>
-</li>
 </ul>
-<h2>CSS learning checklist</h2>
+<!-- * [Learn CSS layout](http://learnlayout.com/toc.html) is a simple guide that
+  breaks CSS layout topics into chapters so you can learn each part one
+  at a time. -->
+
+<ul>
+<li><a href="http://learnlayout.com/toc.html">Learn CSS layout</a>はCSSのレイアウトに関して、トピック毎に学ぶことができます。</li>
+</ul>
+<!-- * [Google's Web Fundamentals class](https://developers.google.com/web/fundamentals/)
+  shows how to create responsive designs and performant websites. -->
+
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/">Google's Web Fundamentals class</a>では、レスポンシブデザインとWebサイトのパフォーマンスについて解説しています。</li>
+</ul>
+<!-- * [Tailoring CSS for performance](http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html)
+  is an interesting read since many developers do not consider the 
+  implications of CSS complexity in browser rendering time. -->
+
+<ul>
+<li><a href="http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html">Tailoring CSS for performance</a>は、複雑なCSSがブラウザのレンダリングに与える影響を考えている人が少ないということを指摘している興味深い記事です。</li>
+</ul>
+<!-- * [Can I Use...](http://caniuse.com/) is a compatibility table that shows
+  which versions of browsers implement specific CSS features. -->
+
+<ul>
+<li><a href="http://caniuse.com/">Can I Use...</a>は、特定のCSSの機能がどのブラウザのバージョンに対応しているかをまとめています。</li>
+</ul>
+<!-- ## CSS learning checklist -->
+
+<h2>CSSを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
+<!-- Create a simple HTML file with basic elements in it. Use the
 <code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
 <code>&lt;style&gt;&lt;/style&gt;</code> element within the <code>&lt;head&gt;</code> section in the HTML page. 
 Start playing with CSS within that style element to change the look and feel 
-of the page.</p>
+of the page. -->
+基本的な要素を含んだ簡単なHTMLを作りましょう。<code>python -m SimpleHTTPServer</code>コマンドを使って、サーバを起動し、HTMLを配信します。HTMLの<code>&lt;head&gt;</code>セクションに<code>&lt;style&gt;&lt;/style&gt;&lt;/style&gt;</code>を用意し、HTML内の要素に対して色々なスタイルを適用してみましょう。</p>
+<p><i class="fa fa-check-square-o"></i>
+<!-- Check out front end frameworks such as Bootstrap and Foundation and integrate
+one of those into the HTML page. -->
+BootstrapやFoundationのようなフロントエンドのフレームワークを調べて、実際に使ってみましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Check out front end frameworks such as Bootstrap and Foundation and integrate
-one of those into the HTML page.</p>
+<!-- Work through the framework's grid system, styling options and customization
+so you get comfortable with how to use the framework. -->
+フレームワークのグリッドシステム、スタイルオプション、カスタマイズ方法について学び、実際に使えるようになりましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the framework's grid system, styling options and customization
-so you get comfortable with how to use the framework.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Apply the framework to your web application and tweak the design until you
-have something that looks much better than generic HTML.</p>
-<h3>Once your app is styled what do you need to learn next?</h3>
+<!-- Apply the framework to your web application and tweak the design until you
+have something that looks much better than generic HTML. -->
+あなたのWebアプリケーションにCSSフレームワークを導入し、より良いデザインにしていきましょう。</p>
+<!-- ### Once your app is styled what do you need to learn next? -->
+
+<h3>アプリケーションのスタイルを作ったら、次に何をしますか？</h3>
 <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
+            <a href="./javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I create dynamic browser interaction with JavaScript?
+                JavaScriptを使ってインタラクティブなコンテンツを作るには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
+            <a href="./static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How should I host static content such as my CSS files?
+                CSSのような静的なファイルをホストするには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
+            <a href="./source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How can I save and version my code so it doesn't get lost?
+                どのようにコードのバージョン管理をすれば良いですか？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/application-programming-intefaces.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-2x"></i></a>
+            <a href="./application-programming-intefaces.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-2x"></i></a>
             <p class="under-btn">
-                What are APIs?
+                APIとは？
             </p>
         </div>
     </div>

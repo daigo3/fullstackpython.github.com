@@ -29,71 +29,90 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-      <h1>Web Design</h1>
-<p>Web design is the creation of a web application's style and user interaction
-using CSS and JavaScript.</p>
-<h2>Why is web design important?</h2>
-<p>You don't really expect users to use your 2014 web application if it looks
-like this, do you?</p>
+      <!-- # Web Design -->
+
+<h1>Webデザイン</h1>
+<p><!-- Web design is the creation of a web application's style and user interaction
+using CSS and JavaScript. -->
+WebデザインはCSSとJavaScriptを使ってWebアプリケーションの見た目やユーザインタラクションを作ることです。</p>
+<!-- ## Why is web design important? -->
+
+<h2>なぜWebデザインは重要？</h2>
+<p><!-- You don't really expect users to use your 2014 web application if it looks
+like this, do you? -->
+今時、このようなWebアプリケーションを使いたいと思うユーザがいると思いますか？</p>
 <p><img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> </p>
-<p>Creating web pages with their own style and interactivity so users can easily
-accomplish their tasks is a major part of building modern web applications.</p>
-<h2>Responsive design</h2>
-<p>Separating the content from the rules for how to display the content allows 
+<!-- Creating web pages with their own style and interactivity so users can easily
+accomplish their tasks is a major part of building modern web applications. -->
+
+<p>独自のスタイルとユーザが目的を達成することができるインタラクティブ性を考慮することは、モダンなWebアプリケーションを構築する上で最も重要な要素の一つです。</p>
+<!-- ## Responsive design -->
+
+<h2>レスポンシブデザイン</h2>
+<p><!-- Separating the content from the rules for how to display the content allows 
 devices to render the output differently based on factors such as screen size
 and device type. Displaying content differently based on varying screen 
-attributes is often called <em>responsive design</em>. The responsiveness is 
+attributes is often called *responsive design*. The responsiveness is 
 accomplished by implementing
 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
-in the <a href="/cascading-style-sheets.html">CSS</a>. </p>
-<p>For example, a mobile device does not have as much space to display a 
+in the <a href="/cascading-style-sheets.html">CSS</a>.  -->
+Webアプリケーションを表示しているスクリーンサイズやデバイスに最適なコンテンツの提供の仕方を、コンテンツそのものとは切り離して定義することができます。スクリーンの特徴に応じて異なるコンテンツを表示させることを<em>レスポンシブデザイン</em>と呼ぶことがあります。<a href="./cascading-style-sheets.html">CSS</a>で<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">CSS media queries</a>を使うことでレスポンシブなWebアプリケーションを構築することができます。</p>
+<!-- For example, a mobile device does not have as much space to display a 
 navigation bar on the side of a page so it is often pushed down 
 below the main content. The 
-<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> 
+[Bootstrap Blog example](http://getbootstrap.com/examples/blog/) 
 shows that navigation bar relocation scenario when you resize the browser 
-width.</p>
-<h2>Design resources</h2>
-<ul>
-<li>
-<p>The <a href="http://bootstrappingdesign.com/">Bootstrapping Design</a> book is one of 
+width. -->
+
+<p>例えば、モバイルデバイスにはページ上にナビゲーションバーを表示するための十分なスペースがありません。そこで、メインのコンテンツの下に置くことがあります。<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> を開き、ブラウザの横幅を狭くしてみると、右に位置していたエリアが、ページ下部に移動するのが確認できます。</p>
+<!-- ## Design resources -->
+
+<h2>デザインを学ぶためのリソース</h2>
+<!-- * The [Bootstrapping Design](http://bootstrappingdesign.com/) book is one of 
   the clearest and concise resources for learning design that I've ever read. 
   Highly recommended especially if you feel you have no design skills but 
-  need to learn them.</p>
-</li>
-<li>
-<p><a href="https://kuler.adobe.com/create/color-wheel/">Kuler</a> is a complementary
-  color picker by Adobe that helps choose colors for your designs.</p>
-</li>
-<li>
-<p>If you want to learn more about how browsers work behind the scenes, 
+  need to learn them. -->
+
+<ul>
+<li><a href="http://bootstrappingdesign.com/">Bootstrapping Design</a>は、著者がこれまで読んだデザインを学ぶための書籍として、最も完結でわかりやすいものです。</li>
+</ul>
+<!-- * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
+  color picker by Adobe that helps choose colors for your designs. -->
+
+<ul>
+<li><a href="https://kuler.adobe.com/create/color-wheel/">Kuler</a>はAdobe製のカラーピッカーで、色の選択をする際に役立ちます。</li>
+</ul>
+<!-- * If you want to learn more about how browsers work behind the scenes, 
   here's a 
-  <a href="http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html">blog post series on building a browser engine</a>
-  that will show you how to build a simple rendering engine.</p>
-</li>
+  [blog post series on building a browser engine](http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
+  that will show you how to build a simple rendering engine. -->
+
+<ul>
+<li>ブラウザについてもっと知りたければ、<a href="http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html">ブラウザエンジンを構築する</a>ブログ記事を読めば、単純なレンダリングエンジンの実装方法を学ぶことができます。</li>
 </ul>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-2x"></i></a>
+            <a href="./cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-2x"></i></a>
             <p class="under-btn">
-                How do I implement the design with CSS?
+                CSSでデザインするには？
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
+            <a href="./static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How should I host static content such as my CSS files?
+                CSSのような静的なファイルをホストするには？
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
+            <a href="./javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I create dynamic browser interaction with JavaScript?
+                JavaScriptを使ってインタラクティブなコンテンツを作るには？
             </p>
         </div>
     </div>
