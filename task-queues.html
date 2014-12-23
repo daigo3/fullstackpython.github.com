@@ -29,201 +29,273 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-      <h1>Task queues</h1>
-<p>Task queues manage background work that must be executed outside the usual
-HTTP request-response cycle.</p>
-<h2>Why are task queues necessary?</h2>
-<p>Tasks are handled asynchronously either because they are not initiated by 
+      <!-- # Task queues -->
+
+<h1>タスクキュー</h1>
+<p><!-- Task queues manage background work that must be executed outside the usual
+HTTP request-response cycle. -->
+タスクキューは通常のHTTPリクエスト/レスポンスのサイクルの外側で実行されるバックグラウンド処理を管理します。</p>
+<!-- ## Why are task queues necessary? -->
+
+<h2>なぜタスクキューは必要？</h2>
+<p><!-- Tasks are handled asynchronously either because they are not initiated by 
 an HTTP request or because they are long-running jobs that would dramatically
-reduce the performance of an HTTP response.</p>
-<p>For example, a web application could poll the GitHub API every 10 minutes to
+reduce the performance of an HTTP response. -->
+HTTPリクエストをきっかけに行われない、またはHTTPレスポンスを返す際のパフォーマンスを著しく低下させる恐れのある処理は非同期で扱います。</p>
+<!-- For example, a web application could poll the GitHub API every 10 minutes to
 collect the names of the top 100 starred repositories. A task queue would
 handle invoking code to call the GitHub API, process the results and store them
-in a persistent database for later use.</p>
-<p>Another example is when a database query would take too long during the HTTP
+in a persistent database for later use. -->
+
+<p>例えば、Webアプリケーションは10分毎にGitHub APIからスターが多い順に100個のレポジトリを取得しているとします。タスクキューを使ってGitHub APIの呼び出しを管理し、APIのレスポンスを処理してデータベースに保存しておきます。</p>
+<!-- Another example is when a database query would take too long during the HTTP
 request-response cycle. The query could be performed in the background on a
 fixed interval with the results stored in the database. When an
 HTTP request comes in that needs those results a query would simply fetch the
 precalculated result instead of re-executing the longer query.
-This precalculation scenario is a form of <a href="/caching.html">caching</a> enabled 
-by task queues.</p>
-<p>Other types of jobs for task queues include</p>
+This precalculation scenario is a form of [caching](/caching.html) enabled 
+by task queues. -->
+
+<p>他の例として、HTTPリクエスト/レスポンスのサイクルの中でデータベースへのクエリに時間がかかりすぎている場合を挙げましょう。クエリをバックグラウンドで一定時間ごとに実行し、データベースに保存することもできるでしょう。HTTPリクエストが来たら、時間のかかるクエリを発行する代わりに、事前にデータベースに保存した結果を取得するようにします。タスクキューで<a href="./caching.html">キャッシング</a> のよう形式で事前に処理しておくことができます。</p>
+<!-- Other types of jobs for task queues include -->
+
+<p>タスクキューでは以下の様な事もできます。</p>
+<!-- * spreading out large numbers of independent database inserts over time 
+  instead of inserting everything at once
+
+* aggregating collected data values on a fixed interval, such as every
+  15 minutes
+
+* scheduling periodic jobs such as batch processes -->
+
 <ul>
 <li>
-<p>spreading out large numbers of independent database inserts over time 
-  instead of inserting everything at once</p>
+<p>データベースへのデータの挿入を一度に全て行わずに、時間をかけて複数の独立したデータベースに行う。</p>
 </li>
 <li>
-<p>aggregating collected data values on a fixed interval, such as every
-  15 minutes</p>
+<p>15分毎など、一定間隔でデータの集計を行う。</p>
 </li>
 <li>
-<p>scheduling periodic jobs such as batch processes</p>
+<p>バッチ処理のような、一定の時間に行う処理をスケジュールする。</p>
 </li>
 </ul>
-<h2>Task queue projects</h2>
-<p>The defacto standard Python task queue is Celery. The other task queue 
+<!-- ## Task queue projects -->
+
+<h2>タスクキューのプロジェクト</h2>
+<p><!-- The defacto standard Python task queue is Celery. The other task queue 
 projects that arise tend to come from the perspective that Celery is overly
 complicated for simple use cases. My recommendation is to put the effort into
 Celery's reasonable learning curve as it is worth the time it takes to 
-understand how to use the project.</p>
-<ul>
-<li>
-<p>The <a href="http://www.celeryproject.org/">Celery</a> distributed task queue is the
+understand how to use the project. -->
+PythonでのタスクキューのデファクトスタンダードはCeleryです。他のタスクキュープロジェクトは、Celeryが単純な用途に使うには複雑すぎるという観点から開発されている傾向があります。著者はCeleryの使い方を時間をかけて学ぶことをお勧めします。</p>
+<!-- * The [Celery](http://www.celeryproject.org/) distributed task queue is the
   most commonly used Python library for handling asynchronous tasks and 
-  scheduling.</p>
-</li>
-<li>
-<p>The <a href="http://python-rq.org/">RQ (Redis Queue)</a> is a simple Python
+  scheduling. -->
+
+<ul>
+<li>The <a href="http://www.celeryproject.org/">Celery</a>は非同期タスクとスケジューリングを扱うための、最も利用されているPythonライブラリです。</li>
+</ul>
+<!-- * The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
   library for queueing jobs and processing them in the background with workers.
   RQ is backed by Redis and is designed to have a low barrier to entry.
-  The <a href="http://nvie.com/posts/introducing-rq/">intro post</a> contains information
-  on design decisions and how to use RQ.</p>
-</li>
-<li>
-<p><a href="https://github.com/dcramer/taskmaster">Taskmaster</a> is a lightweight simple
-  distributed queue for handling large volumes of one-off tasks. </p>
-</li>
-</ul>
-<h2>Hosted message and task queue services</h2>
-<p>Task queue third party services aim to solve the complexity issues that arise
-when scaling out a large deployment of distributed task queues.</p>
+  The [intro post](http://nvie.com/posts/introducing-rq/) contains information
+  on design decisions and how to use RQ. -->
+
 <ul>
-<li>
-<p><a href="http://www.iron.io/">Iron.io</a> is a distributed messaging service platform 
+<li>The <a href="http://python-rq.org/">RQ (Redis Queue)</a>はジョブをキューイングしたり、バックグラウンドで処理を行うためのシンプルなPythonライブラリです。Redisがベースになっていて、入門の敷居も低くなっています。<a href="http://nvie.com/posts/introducing-rq/">イントロダクション</a>はRQの使い方と設計に関する説明がされています。</li>
+</ul>
+<!-- * [Taskmaster](https://github.com/dcramer/taskmaster) is a lightweight simple
+  distributed queue for handling large volumes of one-off tasks.  -->
+
+<ul>
+<li><a href="https://github.com/dcramer/taskmaster">Taskmaster</a>は一度だけ行われる巨大なタスクを管理するための軽量でシンプルなタスクキューライブラリです。</li>
+</ul>
+<!-- ## Hosted message and task queue services -->
+
+<h2>メッセージキューとタスクキューのホスティングサービス</h2>
+<p><!-- Task queue third party services aim to solve the complexity issues that arise
+when scaling out a large deployment of distributed task queues. -->
+サードパーティのタスクキューサービスは、タスクキューのデプロイを大規模にスケールアウトする際に生じる複雑な問題を回避します。</p>
+<!-- * [Iron.io](http://www.iron.io/) is a distributed messaging service platform 
   that works with many types of task queues such as Celery. It also is built
   to work with other IaaS and PaaS environments such as Amazon Web Services
-  and Heroku.</p>
-</li>
-<li>
-<p><a href="http://aws.amazon.com/sqs/">Amazon Simple Queue Service (SQS)</a> is a
+  and Heroku. -->
+
+<ul>
+<li><a href="http://www.iron.io/">Iron.io</a>はCeleryを含めた様々なタスクキューシステムをサポートしているメッセージングサービスプラットフォームです。Amazon Web ServiceやHerokuなど、他のIaaSやPaaSと連携することもできます。</li>
+</ul>
+<!-- * [Amazon Simple Queue Service (SQS)](http://aws.amazon.com/sqs/) is a
   set of five APIs for creating, sending, receiving, modifying and deleting
-  messages.</p>
-</li>
-<li>
-<p><a href="http://www.cloudamqp.com/">CloudAMQP</a> is at its core managed servers with
+  messages. -->
+
+<ul>
+<li><a href="http://aws.amazon.com/sqs/">Amazon Simple Queue Service (SQS)</a>はメッセージの作成・送信・受信・変更・削除のためのAPIが用意されています。</li>
+</ul>
+<!-- * [CloudAMQP](http://www.cloudamqp.com/) is at its core managed servers with
   RabbitMQ installed and configured. This service is an option if you are 
   using RabbitMQ and do not want to maintain RabbitMQ installations on your 
-  own servers.</p>
-</li>
-</ul>
-<h2>Task queue resources</h2>
+  own servers. -->
+
 <ul>
-<li>
-<p><a href="http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/">Getting Started Scheduling Tasks with Celery</a>
+<li><a href="http://www.cloudamqp.com/">CloudAMQP</a>はRabbitMQが利用できるサーバを管理するのが本来のサービスです。自分のサーバでRabbitMQを使いたいが、インストールや管理が面倒という場合に利用することができます。</li>
+</ul>
+<!-- ## Task queue resources -->
+
+<h2>タスクキューを学ぶためのリソース</h2>
+<!-- * [Getting Started Scheduling Tasks with Celery](http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/)
   is a detailed walkthrough for setting up Celery with Django (although
-  Celery can also be used without a problem with other frameworks).</p>
-</li>
-<li>
-<p><a href="http://justcramer.com/2012/05/04/distributing-work-without-celery/">Distributing work without Celery</a>
+  Celery can also be used without a problem with other frameworks). -->
+
+<ul>
+<li><a href="http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/">Getting Started Scheduling Tasks with Celery</a>はDjangoでCeleryを利用するためのガイドです。(Celelyは他のフレームワークでも問題なく利用できます。)</li>
+</ul>
+<!-- * [Distributing work without Celery](http://justcramer.com/2012/05/04/distributing-work-without-celery/)
   provides a scenario in which Celery and RabbitMQ are not the right tool
-  for scheduling asynchronous jobs.</p>
-</li>
-<li>
-<p><a href="http://www.warski.org/blog/2014/07/evaluating-persistent-replicated-message-queues/">Evaluating persistent, replicated message queues</a>
+  for scheduling asynchronous jobs. -->
+
+<ul>
+<li><a href="http://justcramer.com/2012/05/04/distributing-work-without-celery/">Distributing work without Celery</a>は、CeleryとRabbitMQが非同期処理のスケジュールに向かないケースについて説明しています。</li>
+</ul>
+<!-- * [Evaluating persistent, replicated message queues](http://www.warski.org/blog/2014/07/evaluating-persistent-replicated-message-queues/)
   is a detailed comparison of Amazon SQS, MongoDB, RabbitMQ, HornetQ and
-  Kafka's designs and performance.</p>
-</li>
-<li>
-<p><a href="http://queues.io/">Queues.io</a> is a collection of task queue systems with
+  Kafka's designs and performance. -->
+
+<ul>
+<li><a href="http://www.warski.org/blog/2014/07/evaluating-persistent-replicated-message-queues/">Evaluating persistent, replicated message queues</a>はAmazon SQS、MongoDB、RabbitMQ、HornetQ、Kafkaの設計とパフォーマンスを比較しています。</li>
+</ul>
+<!-- * [Queues.io](http://queues.io/) is a collection of task queue systems with
   short summaries for each one. The task queues are not all compatible with
-  Python but ones that work with it are tagged with the "Python" keyword.</p>
-</li>
-<li>
-<p><a href="http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619">Why Task Queues</a> 
-  is a presentation for what task queues are and why they are needed. </p>
-</li>
-<li>
-<p>Flask by Example <a href="https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/">Implementing a Redis Task Queue</a>
+  Python but ones that work with it are tagged with the "Python" keyword. -->
+
+<ul>
+<li><a href="http://queues.io/">Queues.io</a>はタスクキューシステムの一覧とその概要を見ることができます。Pythonで利用できるもの以外のシステムもリストされていますが、Pythonで利用できるものは"Python"というキーワードでタグ付けされています。</li>
+</ul>
+<!-- * [Why Task Queues](http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619) 
+  is a presentation for what task queues are and why they are needed.  -->
+
+<ul>
+<li><a href="http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619">Why Task Queues</a>はタスクキューとは何なのか、そしてなぜ必要なのかを説明しているプレゼンテーションです。</li>
+</ul>
+<!-- * Flask by Example [Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   provides a detailed walkthrough of setting up workers to use RQ with
-  Redis.</p>
-</li>
-<li>
-<p><a href="https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps">How to use Celery with RabbitMQ</a>
-  is a detailed walkthrough for using these tools on an Ubuntu VPS.</p>
-</li>
-<li>
-<p>Heroku has a clear walkthrough for using 
-  <a href="https://devcenter.heroku.com/articles/python-rq">RQ for background tasks</a>.</p>
-</li>
-<li>
-<p><a href="http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/">Introducing Celery for Python+Django</a> 
-  provides an introduction to the Celery task queue.</p>
-</li>
-<li>
-<p><a href="https://denibertovic.com/posts/celery-best-practices/">Celery - Best Practices</a>
+  Redis. -->
+
+<ul>
+<li><a href="https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/">Implementing a Redis Task Queue</a>は、FlaskとRQを使う例です。</li>
+</ul>
+<!-- * [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
+  is a detailed walkthrough for using these tools on an Ubuntu VPS. -->
+
+<ul>
+<li><a href="https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps">How to use Celery with RabbitMQ</a>はUbuntuをインストールしているVPS上でCeleryとRabbitMQを使う例です。</li>
+</ul>
+<!-- * Heroku has a clear walkthrough for using 
+  [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq). -->
+
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/python-rq">RQ for background tasks</a>では、バックグラウンドタスクにRQを使う方法を解説しています。</li>
+</ul>
+<!-- * [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
+  provides an introduction to the Celery task queue. -->
+
+<ul>
+<li><a href="http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/">Introducing Celery for Python+Django</a>はCeleryによるタスクキューの入門記事です。</li>
+</ul>
+<!-- * [Celery - Best Practices](https://denibertovic.com/posts/celery-best-practices/)
   explains things you should not do with Celery and shows some underused 
-  features for making task queues easier to work with.</p>
-</li>
-<li>
-<p>The "Django in Production" series by 
-  <a href="https://twitter.com/robgolding63">Rob Golding</a> contains a post 
-  specifically on <a href="http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/">Background Tasks</a>.</p>
-</li>
-<li>
-<p><a href="http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/">Asynchronous Processing in Web Applications Part One</a> 
-  and <a href="http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/">Part Two</a>
+  features for making task queues easier to work with. -->
+
+<ul>
+<li><a href="https://denibertovic.com/posts/celery-best-practices/">Celery - Best Practices</a>では、Celeryでやってはいけないこと、タスクキューを簡単に活用するための方法が紹介されています。</li>
+</ul>
+<!-- * The "Django in Production" series by 
+  [Rob Golding](https://twitter.com/robgolding63) contains a post 
+  specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/). -->
+
+<ul>
+<li><a href="https://twitter.com/robgolding63">Rob Golding</a>による"Django in Production"シリーズに、<a href="http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/">Background Tasks</a>という記事があります。</li>
+</ul>
+<!-- * [Asynchronous Processing in Web Applications Part One](http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/) 
+  and [Part Two](http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/)
   are great reads for understanding the difference between a task queue and
-  why you shouldn't use your database as one.</p>
-</li>
-<li>
-<p><a href="http://www.caktusgroup.com/blog/2014/09/29/celery-production/">Celery in Production</a>
+  why you shouldn't use your database as one. -->
+
+<ul>
+<li><a href="http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/">Asynchronous Processing in Web Applications Part One</a>と<a href="http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/">Part Two</a>は、タスクキューとデータベースを利用して同等のことを行うことの違いについて理解するための素晴らしい記事です。</li>
+</ul>
+<!-- * [Celery in Production](http://www.caktusgroup.com/blog/2014/09/29/celery-production/)
   on the Caktus Group blog contains good practices from their experience 
   using Celery with RabbitMQ, monitoring tools and other aspects not often
-  discussed in existing documentation.</p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=68QWZU_gCDA">A 4 Minute Intro to Celery</a> is
-  a short introductory task queue screencast.</p>
-</li>
-<li>
-<p>Heroku wrote about how to 
-  <a href="https://engineering.heroku.com/blogs/2014-09-15-securing-celery">secure Celery</a>
-  when tasks are otherwise sent over unencrypted networks.</p>
-</li>
+  discussed in existing documentation. -->
+
+<ul>
+<li>Cuktus Gruopのブログの<a href="http://www.caktusgroup.com/blog/2014/09/29/celery-production/">Celery in Production</a>はCeleryとRabbitMQを利用した体験を基にした、監視ツールや他のドキュメントでは触れられることが少ない話題について言及している記事です。</li>
 </ul>
-<h2>Task queue learning checklist</h2>
+<!-- * [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
+  a short introductory task queue screencast. -->
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=68QWZU_gCDA">A 4 Minute Intro to Celery</a>はタスクキューに関する入門的なスクリーンキャストです。</li>
+</ul>
+<!-- * Heroku wrote about how to 
+  [secure Celery](https://engineering.heroku.com/blogs/2014-09-15-securing-celery)
+  when tasks are otherwise sent over unencrypted networks. -->
+
+<ul>
+<li>Herokuは<a href="https://engineering.heroku.com/blogs/2014-09-15-securing-celery">secure Celery</a>で、暗号化されていないネットワークでタスクを送信する際のCeleryをセキュアに運用する方法を解説しています。</li>
+</ul>
+<!-- ## Task queue learning checklist -->
+
+<h2>タスクキューを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i> 
-Pick a slow function in your project that is called during an HTTP request.</p>
+<!-- Pick a slow function in your project that is called during an HTTP request. -->
+あなたのWebアプリケーションの中で、HTTPリクエストに対する処理が遅い関数を探してください。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Determine if you can precompute the results on a fixed interval instead of
+<!-- Determine if you can precompute the results on a fixed interval instead of
 during the HTTP request. If so, create a separate function you can call
-from elsewhere then store the precomputed value in the database.</p>
+from elsewhere then store the precomputed value in the database. -->
+HTTPリクエストを受け取った際に処理を始める代わりに、一定間隔で事前に処理ができるかを検討します。できるのであれば、他の場所から呼び出し可能な別の関数を書いて、データベースに前もって処理結果を格納しておきましょう。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Read the Celery documentation and the links in the resources section below
-to understand how the project works.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Install a message broker such as RabbitMQ or Redis and then add Celery to your 
-project. Configure Celery to work with the installed message broker.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Use Celery to invoke the function from step one on a regular basis.</p>
+<!-- Read the Celery documentation and the links in the resources section below
+to understand how the project works. -->
+Celeryのドキュメントを読み、どのように利用できるのかを上記のリソースから学びましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Have the HTTP request function use the precomputed value instead of the 
-slow running code it originally relied upon.</p>
-<h3>What's next after task queues?</h3>
+<!-- Install a message broker such as RabbitMQ or Redis and then add Celery to your 
+project. Configure Celery to work with the installed message broker. -->
+RabbitMQやRedisのようなメッセージブローカーをインストールし、Celeryを導入してみましょう。インストールしたメッセージブローカーとCeleryが動作するように設定してみましょう。</p>
+<p><i class="fa fa-check-square-o"></i> 
+<!-- Use Celery to invoke the function from step one on a regular basis. -->
+最初のステップとしてCeleryで関数を実行してみましょう。</p>
+<p><i class="fa fa-check-square-o"></i>
+<!-- Have the HTTP request function use the precomputed value instead of the 
+slow running code it originally relied upon. -->
+HTTPリクエストを受け取る関数で事前に処理されたデータを利用するようにしてみましょう。</p>
+<!-- ### What's next after task queues? -->
+
+<h3>タスクキューの次は？</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/logging.html" class="btn btn-success btn-full"><i class="fa fa-align-left fa-inverse fa-2x"></i></a>
+            <a href="./logging.html" class="btn btn-success btn-full"><i class="fa fa-align-left fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I monitor my app and its task queues with logging?
+                Webアプリケーションとタスクキューのログを監視する方法は？
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="./web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How can I learn more about the users of my application?
+                アクセス解析をすることで、ユーザの何を学ぶことができますか？
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/monitoring.html" class="btn btn-success btn-full"><i class="fa fa-bar-chart-o fa-inverse fa-2x"></i></a>
+            <a href="./monitoring.html" class="btn btn-success btn-full"><i class="fa fa-bar-chart-o fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                What tools exist for monitoring a live web application?
+                運用中のWebアプリケーションをモニタリングするツールはありますか？
             </p>
         </div>
     </div>

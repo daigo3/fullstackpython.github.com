@@ -29,86 +29,108 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-      <h1>Caching</h1>
-<p>Caching can reduce the load on servers by storing the results of common 
-operations and serving the precomputed answers to clients. </p>
-<p>For example, instead of retrieving data from database tables that rarely 
+      <!-- # Caching -->
+
+<h1>キャッシング</h1>
+<p><!-- Caching can reduce the load on servers by storing the results of common 
+operations and serving the precomputed answers to clients.  -->
+キャッシングで、よくある操作の結果を保存しておいたり、クライアントへの応答を予め生成し配信することでサーバ上の負荷を減らすことができます。</p>
+<!-- For example, instead of retrieving data from database tables that rarely 
 change, you can store the values in-memory. Retrieving values from an 
 in-memory location is far faster than retrieving them from a database (which
 stores them on a persistent disk like a hard drive.) When the cached values 
 change the system can invalidate the cache and re-retrieve the updated values
-for future requests.</p>
-<p>A cache can be created for multiple layers of the stack. </p>
-<h2>Caching backends</h2>
+for future requests. -->
+
+<p>例えば、ほとんど変更が加えられないようなデータベースのデータを利用せずに、そのようなデータをメモリ上に保管しておく方法が考えられます。メモリ上のデータは、ハードディスクのようなディスクを利用してデータを管理するデータベース上のデータよりも高速に処理することができます。キャッシュされたデータに変更があったら、システムはキャッシュしたデータを無効にし、以降のリクエストに備えて再度キャッシュし直します。</p>
+<!-- A cache can be created for multiple layers of the stack.  -->
+
+<p>キャッシュは様々なアプリケーションレイヤーで利用できます。</p>
+<!-- ## Caching backends -->
+
+<h2>キャッシュに利用できるシステム</h2>
+<!-- * [memcached](http://memcached.org/) is a common in-memory caching system. -->
+
 <ul>
-<li>
-<p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
-</li>
-<li>
-<p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-  easily be configured for caching with libraries such as 
-  <a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
-</li>
+<li><a href="http://memcached.org/">memcached</a>は一般的に使われている、インメモリキャッシングシステムです。</li>
 </ul>
-<h2>Caching resources</h2>
+<!-- * [Redis](http://redis.io/) is a key-value in-memory data store that can
+  easily be configured for caching with libraries such as 
+  [django-redis-cache](https://github.com/sebleier/django-redis-cache). -->
+
 <ul>
-<li>
-<p>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"
+<li><a href="http://redis.io/">Redis</a>はキーバリュー形式のインメモリデータベースで、<a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>のようなライブラリを使って簡単に設定することができます。</li>
+</ul>
+<!-- ## Caching resources -->
+
+<h2>キャッシングを学ぶためのリソース</h2>
+<!-- * "[Caching: Varnish or Nginx?](https://bjornjohansen.no/caching-varnish-or-nginx)"
   reviews some considerations such as SSL and SPDY support when choosing
-  reverse proxy Nginx or Varnish.</p>
-</li>
-<li>
-<p><a href="http://bizcoder.com/caching-is-hard-draw-me-a-picture">Caching is Hard, Draw me a Picture</a>
+  reverse proxy Nginx or Varnish. -->
+
+<ul>
+<li>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"では、NginxやVarnishをリバースプロキシに使う際に、SSLやSPDYをサポートする方法について考察しています。</li>
+</ul>
+<!-- * [Caching is Hard, Draw me a Picture](http://bizcoder.com/caching-is-hard-draw-me-a-picture)
   has diagrams of how web request caching layers work. The post is relevant
   reading even though the author is describing his Microsoft code as the 
-  impetus for writing the content.</p>
-</li>
+  impetus for writing the content. -->
+
+<ul>
+<li><a href="http://bizcoder.com/caching-is-hard-draw-me-a-picture">Caching is Hard, Draw me a Picture</a>では、リクエストのキャッシュがどのように行われているかを図式化しています。</li>
 </ul>
-<h2>Caching learning checklist</h2>
+<!-- ## Caching learning checklist -->
+
+<h2>キャッシングを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Analyze your web application for the slowest parts. It's likely there are
+<!-- Analyze your web application for the slowest parts. It's likely there are
 complex database queries that can be precomputed and stored in an in-memory
-data store.</p>
+data store. -->
+あなたのWebアプリケーションの遅い部分を分析しましょう。それは、複雑なデータベースへのクエリで、インメモリデータストアで扱える可能性が高いです。</p>
 <p><i class="fa fa-check-square-o"></i>
-Leverage your existing in-memory data store already used for session data
+<!-- Leverage your existing in-memory data store already used for session data
 to cache the results of those complex database queries. 
 A <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
-on a regular basis and save them in the data store.</p>
+on a regular basis and save them in the data store. -->
+すでにセッションデータにインメモリデータストアを利用している場合は、複雑なデータベースへのクエリの結果をキャッシュするためにも利用しましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Incorporate a cache invalidation scheme so the precomputed results remain 
-accurate when served up to the user.</p>
-<h3>What do you want to learn now that your app is responding faster?</h3>
+<!-- Incorporate a cache invalidation scheme so the precomputed results remain 
+accurate when served up to the user. -->
+キャッシュデータが正確に配信されるようにキャッシュを無効にする方法を取り入れましょう。</p>
+<!-- ### What do you want to learn now that your app is responding faster? -->
+
+<h3>アプリケーションを高速化したら、何を学びますか？</h3>
 <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/task-queues.html" class="btn btn-success btn-full"><i class="fa fa-tasks fa-2x"></i></a>
+            <a href="./task-queues.html" class="btn btn-success btn-full"><i class="fa fa-tasks fa-2x"></i></a>
             <p class="under-btn">
-                How do I run Python outside the HTTP request-response cycle?
+                HTTPリクエスト・レスポンスのサイクル外でPythonを実行するには？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="./web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                What can I learn about my users through web analytics?
+                アクセス解析をすることで、ユーザの何を学ぶことができますか？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
+            <a href="./web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                What should I know about security to protect my app?
+                Webアプリケーションのセキュリティについて知っておくべきことは？
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-inverse fa-2x"></i></a>
+            <a href="./configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I automate the server configuration that I set up?
+                サーバの設定を自動化するには？
             </p>
         </div>
     </div>
