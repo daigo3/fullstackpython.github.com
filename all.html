@@ -3319,16 +3319,24 @@ pay dividends every time you deploy your project.</p>
 <p><i class="fa fa-check-square-o"></i>
 Hook the automated deployment tool into your existing deployment process.</p>
 <h3>What's next after automating your app configuration?</h3>
-              <h1>Static content</h1>
-<p>Some content on a website does not change and therefore should be served
+              <!-- # Static content -->
+
+<h1>静的コンテンツ</h1>
+<p><!-- Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
-Examples include JavaScript, image, and CSS files.</p>
-<h2>Types of static content</h2>
-<p>Static content can be either assets created as part of your development
+Examples include JavaScript, image, and CSS files. -->
+Webサイトのいくつかのコンテンツには、それ自体に変更を加えないため、直接WebサーバやContent Delivery Network(CDN)から配信することがあります。例えば、JavaScriptや画像、CSSのようなファイルです。</p>
+<!-- ## Types of static content -->
+
+<h2>静的コンテンツの種類</h2>
+<!-- Static content can be either assets created as part of your development
 process such as images on your landing page or user-generated content. The 
-Django framework calls these two categories <em>assets</em> and <em>media</em>.</p>
-<h2>Content delivery networks</h2>
-<p>A content delivery network (CDN) is a third party that stores and serves 
+Django framework calls these two categories *assets* and *media*. -->
+
+<!-- ## Content delivery networks -->
+
+<h2>Content Delivery Network</h2>
+<p><!-- A content delivery network (CDN) is a third party that stores and serves 
 static files. <a href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
 <a href="http://www.akamai.com/">Akamai</a>, and 
 <a href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a> 
@@ -3339,18 +3347,27 @@ acts as a front for a Green Unicorn WSGI server on a 512 megabyte
 virtual private server, the nginx server will run into resource 
 constraints under heavy traffic. A CDN can remove the need to serve static
 assets from that nginx server so it can purely act as a pass through for 
-requests to the Green Unicorn WSGI server.</p>
-<p>CDNs send content responses from data centers with the closest proximity to the requester.</p>
-<h2>Static Content Resources</h2>
+requests to the Green Unicorn WSGI server. -->
+Content Delivery Network(CDN)は静的コンテンツを保管し、配信するためのサービスです。<a href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>、<a href="http://www.akamai.com/">Akamai</a>や<a href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a>などがあります。CDNの目的は動的なWebコンテンツが扱う静的コンテンツへのリクエストの読み込みを無くすことです。例えば、512MBのVPSで静的コンテンツの配信と、Gunicorn WSGIサーバのフロントとしてNGINXを利用した場合、アクセスが多くなると圧迫した状態で動作することになります。CDNを利用することで静的コンテンツの配信をGunicornへのリクエストのパフォーマンスが下がること無く、静的コンテンツの配信を行うことができるようになります。</p>
+<!-- CDNs send content responses from data centers with the closest proximity to the requester. -->
+
+<p>CDNはリクエスト元に近いデータセンターからレスポンスが送られるようになっています。</p>
+<!-- ## Static Content Resources -->
+
+<h2>静的コンテンツを学ぶためのリソース</h2>
+<!-- * [The super stupid idiot's guide to getting started with Django, Pipeline, and S3](http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/)
+  shows how to host static content on S3 and use those files with Django. -->
+
+<ul>
+<li><a href="http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/">The super stupid idiot's guide to getting started with Django, Pipeline, and S3</a>では、S3で静的コンテンツをホストし、Djangoで利用する方法を解説しています。</li>
+</ul>
+<!-- * [Crushing, caching and CDN deployment in Django](http://tech.marksblogg.com/crushing-caching-cdn-django.html)
+  shows how to use django-compressor and a CDN to scale static and media
+  file serving.-->
+
 <ul>
 <li>
-<p><a href="http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/">The super stupid idiot's guide to getting started with Django, Pipeline, and S3</a>
-  shows how to host static content on S3 and use those files with Django.</p>
-</li>
-<li>
-<p><a href="http://tech.marksblogg.com/crushing-caching-cdn-django.html">Crushing, caching and CDN deployment in Django</a>
-  shows how to use django-compressor and a CDN to scale static and media
-  file serving.</p>
+<p><a href="http://tech.marksblogg.com/crushing-caching-cdn-django.html">Crushing, caching and CDN deployment in Django</a>では、Django Compressorの使い方、静的コンテンツとメディアファイルの配信のスケールにCDNを利用する方法を解説しています。</p>
 </li>
 <li>
 <p><a href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
@@ -3358,25 +3375,34 @@ requests to the Green Unicorn WSGI server.</p>
 <li>
 <p><a href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to</a></p>
 </li>
-<li>
-<p><a href="http://django-storages.readthedocs.org/en/latest/">django-storages</a> is 
-a Django library for managing static and media files on services such as
-Amazon S3 and other content delivery networks.</p>
-</li>
 </ul>
-<h2>Static content learning checklist</h2>
+<!-- * [django-storages](http://django-storages.readthedocs.org/en/latest/) is 
+a Django library for managing static and media files on services such as
+Amazon S3 and other content delivery networks. -->
+
+<ul>
+<li><a href="http://django-storages.readthedocs.org/en/latest/">django-storages</a>は、静的コンテンツ、メディアファイルをAmazonS3などのCDN上で管理するためのDjangoライブラリです。</li>
+</ul>
+<!-- ## Static content learning checklist -->
+
+<h2>静的コンテンツを学ぶためのチェックリスト</h2>
 <p><i class="fa fa-check-square-o"></i>
-Identify a content delivery network to offload serving static content files
+<!-- Identify a content delivery network to offload serving static content files
 from your local web server. I recommend using Amazon S3 with CloudFront as 
-it's easy to set up and will scale to high bandwidth demands.</p>
+it's easy to set up and will scale to high bandwidth demands. -->
+ローカルのWebサーバの代わりに、静的コンテンツを配信するために利用するCDNを決めましょう。Amazon S3とCloundFrontを使うと、セットアップやスケールアップを簡単にできます。</p>
 <p><i class="fa fa-check-square-o"></i>
-Update your web application deployment process so updated static files are
-uploaded to the CDN. </p>
+<!-- Update your web application deployment process so updated static files are
+uploaded to the CDN.  -->
+Webアプリケーションの開発プロセスで、静的コンテンツを更新したらCDNにアップロードされるようにしてみましょう。</p>
 <p><i class="fa fa-check-square-o"></i>
-Move static content serving from the www subdomain to a static (or similarly
+<!-- Move static content serving from the www subdomain to a static (or similarly
 named) subdomain so browsers will load static content in parallel to www
-HTTP requests.</p>
-<h3>What's next for building your app?</h3>
+HTTP requests. -->
+静的コンテンツをwwwサブドメインで提供する代わりに、static(または類似した名前）サブドメインで配信し、wwwサブドメインへのHTTPリクエストと分散するように静的コンテンツが読み込まれるようにしましょう。</p>
+<!-- ### What's next for building your app? -->
+
+<h3>Webアプリケーションを構築するために、次にすることは？</h3>
               <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
